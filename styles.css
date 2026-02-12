@@ -100,13 +100,14 @@ header {
 
 /* Mobile Menu */
 .mobile-menu-btn {
-  display: none;
+  display: flex;
   background: none;
   border: none;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 10px 20px;
+   margin-left: 90px;
 }
 
 .nav-links {
