@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AKTU CGPA to Percentage Calculator 2026 - Convert CGPA to percentage using official AKTU formula. Free online calculator.">
+  <meta name="keywords" content="aktu cgpa to percentage, cgpa to percentage calculator, aktu percentage formula">
+  <title>AKTU CGPA to Percentage Calculator 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">A</div>
+        <span>AKTU Results</span>
+      </a>
+      <button class="mobile-menu-btn">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aktu-result-2026.html">Results</a></li>
+          <li><a href="sgpa-cgpa-calculator.html">Calculators</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <span>CGPA to Percentage</span>
+    </div>
+  </div>
+
+  <section class="container">
+    <h1 class="text-center">AKTU CGPA to Percentage Calculator</h1>
+    <p class="text-center" style="margin-bottom: 2rem;">Convert your CGPA to percentage using official AKTU formula</p>
+
+    <div class="calculator-form">
+      <div class="form-group">
+        <label for="cgpaInput">Enter Your CGPA</label>
+        <input type="number" id="cgpaInput" step="0.01" min="0" max="10" placeholder="Enter CGPA (0-10)">
+      </div>
+
+      <button type="button" class="btn-calculate" onclick="calculatePercentage()">Convert to Percentage</button>
+
+      <div class="result-box">
+        <h3>Your Percentage</h3>
+        <div class="result-value" id="percentageResult">0.00%</div>
+        <p>CGPA: <span id="cgpaUsed">0.00</span></p>
+        <button type="button" class="card-btn" onclick="resetPercentage()" style="margin-top: 1rem;">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-block">
+      <h2>AKTU CGPA to Percentage Formula</h2>
+      <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+        <h3 class="text-center text-orange">Official Formula</h3>
+        <p class="text-center" style="font-size: 1.3rem; font-weight: 600;">
+          Percentage = CGPA × 9.5
+        </p>
+      </div>
+
+      <h3>Example:</h3>
+      <p>If your CGPA is <strong>8.5</strong>, then:</p>
+      <p>Percentage = 8.5 × 9.5 = <strong>80.75%</strong></p>
+
+      <h3>CGPA to Percentage Conversion Table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>CGPA</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>10.0</td><td>95.0%</td></tr>
+          <tr><td>9.5</td><td>90.25%</td></tr>
+          <tr><td>9.0</td><td>85.5%</td></tr>
+          <tr><td>8.5</td><td>80.75%</td></tr>
+          <tr><td>8.0</td><td>76.0%</td></tr>
+          <tr><td>7.5</td><td>71.25%</td></tr>
+          <tr><td>7.0</td><td>66.5%</td></tr>
+          <tr><td>6.5</td><td>61.75%</td></tr>
+          <tr><td>6.0</td><td>57.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="sgpa-cgpa-calculator.html">SGPA to CGPA</a></li>
+          <li><a href="attendance-calculator.html">Attendance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <strong>Disclaimer:</strong> akturesults.in is an independent educational information website.
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AKTU Results. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="calculators.js"></script>
+</body>
+</html>

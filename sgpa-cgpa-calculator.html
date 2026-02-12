@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AKTU SGPA to CGPA Calculator 2026 - Calculate your CGPA from SGPA marks of all semesters. Free online calculator for AKTU BTech students.">
+  <meta name="keywords" content="aktu sgpa to cgpa calculator, aktu cgpa calculator, sgpa calculator aktu, how to calculate cgpa from sgpa">
+  <title>AKTU SGPA to CGPA Calculator 2026 | Free Online Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://akturesults.in/sgpa-cgpa-calculator.html">
+</head>
+<body>
+  
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">A</div>
+        <span>AKTU Results</span>
+      </a>
+      <button class="mobile-menu-btn">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aktu-result-2026.html">Results</a></li>
+          <li><a href="sgpa-cgpa-calculator.html">Calculators</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <span>SGPA to CGPA Calculator</span>
+    </div>
+  </div>
+
+  <section class="container">
+    <h1 class="text-center">AKTU SGPA to CGPA Calculator 2026</h1>
+    <p class="text-center" style="margin-bottom: 2rem;">Calculate your CGPA from SGPA marks of all semesters</p>
+
+    <div class="calculator-form">
+      <h3 class="text-center mb-2">Enter Your SGPA for Each Semester</h3>
+      
+      <div class="form-group">
+        <label for="sem1">1st Semester SGPA</label>
+        <input type="number" id="sem1" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem2">2nd Semester SGPA</label>
+        <input type="number" id="sem2" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem3">3rd Semester SGPA</label>
+        <input type="number" id="sem3" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem4">4th Semester SGPA</label>
+        <input type="number" id="sem4" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem5">5th Semester SGPA (Optional)</label>
+        <input type="number" id="sem5" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem6">6th Semester SGPA (Optional)</label>
+        <input type="number" id="sem6" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem7">7th Semester SGPA (Optional)</label>
+        <input type="number" id="sem7" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <div class="form-group">
+        <label for="sem8">8th Semester SGPA (Optional)</label>
+        <input type="number" id="sem8" step="0.01" min="0" max="10" placeholder="Enter SGPA (0-10)">
+      </div>
+
+      <button type="button" class="btn-calculate" onclick="calculateCGPA()">Calculate CGPA</button>
+
+      <div class="result-box">
+        <h3>Your CGPA</h3>
+        <div class="result-value" id="cgpaResult">0.00</div>
+        <p>Based on <span id="totalSemesters">0</span> semesters</p>
+        <button type="button" class="card-btn" onclick="resetCGPA()" style="margin-top: 1rem;">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-block">
+      <h2>How to Calculate CGPA from SGPA?</h2>
+      <p><strong>CGPA (Cumulative Grade Point Average)</strong> sabhi semesters ke SGPA ka average hai. AKTU me CGPA calculate karne ka formula simple hai:</p>
+      
+      <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+        <h3 class="text-center text-orange">CGPA Formula</h3>
+        <p class="text-center" style="font-size: 1.2rem; font-weight: 600;">
+          CGPA = (SGPA₁ + SGPA₂ + SGPA₃ + ... + SGPA_n) / n
+        </p>
+        <p class="text-center">Where n = Number of semesters</p>
+      </div>
+
+      <h3>Example Calculation:</h3>
+      <p>Maan lo aapke semester marks ye hai:</p>
+      <ul>
+        <li>1st Semester SGPA: 7.5</li>
+        <li>2nd Semester SGPA: 8.0</li>
+        <li>3rd Semester SGPA: 7.8</li>
+        <li>4th Semester SGPA: 8.2</li>
+      </ul>
+      <p><strong>CGPA</strong> = (7.5 + 8.0 + 7.8 + 8.2) / 4 = 31.5 / 4 = <strong>7.875</strong></p>
+
+      <h3>Important Points:</h3>
+      <ul>
+        <li>CGPA is calculated on a <strong>10-point scale</strong></li>
+        <li>Sabhi semesters ka equal weightage hota hai</li>
+        <li>Failed subjects ka grade 0 hota hai (affects CGPA)</li>
+        <li>CGPA se percentage nikalne ke liye multiply by 9.5</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title">Other Useful Calculators</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>📊 CGPA to Percentage</h3>
+        <p>Convert your CGPA to percentage using AKTU formula</p>
+        <a href="cgpa-percentage-calculator.html" class="card-btn">Calculate</a>
+      </div>
+      <div class="card">
+        <h3>📅 Attendance Calculator</h3>
+        <p>Calculate your class attendance percentage</p>
+        <a href="attendance-calculator.html" class="card-btn">Calculate</a>
+      </div>
+      <div class="card">
+        <h3>📢 Check Result</h3>
+        <p>View your latest AKTU semester result</p>
+        <a href="aktu-result-2026.html" class="card-btn">View Result</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          CGPA kya hota hai?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>CGPA (Cumulative Grade Point Average) sabhi semesters ka combined grade point average hai. Ye 10-point scale par calculate hota hai.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          SGPA aur CGPA me difference kya hai?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>SGPA (Semester Grade Point Average) sirf ek semester ka GPA hai, jabki CGPA sabhi semesters ka combined average hai.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Kya back paper CGPA me count hota hai?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Haan, failed subjects ka grade 0 count hota hai CGPA me. Back paper clear karne ke baad new grade se CGPA recalculate hota hai.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="aktu-result-2026.html">AKTU Result 2026</a></li>
+          <li><a href="cgpa-percentage-calculator.html">CGPA to Percentage</a></li>
+          <li><a href="attendance-calculator.html">Attendance Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:diplomawithbtech@gmail.com">diplomawithbtech@gmail.com</a></p>
+        <p>Managed by AKTU Student (Pawan)</p>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <strong>Disclaimer:</strong> akturesults.in is an independent educational information website and is not affiliated with Dr. A.P.J. Abdul Kalam Technical University.
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AKTU Results. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="calculators.js"></script>
+</body>
+</html>
