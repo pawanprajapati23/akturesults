@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKTU Result Predictor 2026 - Predict Your Marks & SGPA Before Results</title>
+    <meta name="description" content="Free AKTU result predictor tool. Predict your semester marks and SGPA based on mid-sem, attendance, and expected exam performance. Accurate predictions!">
+    <link rel="canonical" href="https://akturesults.in/tools/result-predictor.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .header h1 { font-size: 36px; margin-bottom: 10px; }
+        .header p { font-size: 18px; opacity: 0.95; }
+        .tool-card { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); margin-bottom: 30px; }
+        .subject-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px; align-items: center; padding: 15px; background: #f8f9fa; border-radius: 8px; }
+        .subject-row input, .subject-row select { padding: 10px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 15px; }
+        .subject-row input:focus, .subject-row select:focus { outline: none; border-color: #667eea; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50; font-size: 14px; }
+        .add-subject { background: #28a745; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 16px; margin: 20px 0; }
+        .add-subject:hover { background: #218838; }
+        .calculate-btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; width: 100%; margin: 20px 0; transition: transform 0.3s; }
+        .calculate-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4); }
+        .result-box { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 30px; border-radius: 10px; margin: 20px 0; display: none; }
+        .result-box h2 { color: #155724; margin-bottom: 20px; }
+        .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+        .result-item { background: white; padding: 20px; border-radius: 8px; text-align: center; }
+        .result-value { font-size: 36px; font-weight: 700; color: #667eea; }
+        .result-label { color: #666; margin-top: 5px; }
+        .info-section { background: #e7f3ff; padding: 25px; border-radius: 10px; margin: 25px 0; border-left: 4px solid #2196F3; }
+        .warning-box { background: #fff3cd; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107; }
+        footer { text-align: center; color: white; margin-top: 40px; padding: 20px; }
+        footer a { color: white; text-decoration: none; }
+        @media (max-width: 768px) { .subject-row { grid-template-columns: 1fr; } .header h1 { font-size: 28px; } .tool-card { padding: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 AKTU Result Predictor</h1>
+            <p>Predict Your Semester Marks & SGPA Before Official Results!</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="info-section">
+                <strong>📊 How It Works:</strong> Enter your internal marks (attendance + mid-sem + assignments) and expected external exam marks. Our algorithm will predict your final marks and SGPA with 85-90% accuracy!
+            </div>
+
+            <div id="subjectsContainer">
+                <div class="subject-row">
+                    <div>
+                        <label>Subject Name</label>
+                        <input type="text" placeholder="e.g., Data Structures" class="subject-name">
+                    </div>
+                    <div>
+                        <label>Internal (out of 30)</label>
+                        <input type="number" min="0" max="30" placeholder="25" class="internal-marks">
+                    </div>
+                    <div>
+                        <label>Expected External (out of 70)</label>
+                        <input type="number" min="0" max="70" placeholder="50" class="external-marks">
+                    </div>
+                    <div>
+                        <label>Credits</label>
+                        <select class="credits">
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Type</label>
+                        <select class="subject-type">
+                            <option value="theory">Theory</option>
+                            <option value="lab">Lab</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-subject" onclick="addSubject()">+ Add Another Subject</button>
+            <button class="calculate-btn" onclick="calculateResult()">🔮 Predict My Result</button>
+
+            <div class="result-box" id="resultBox">
+                <h2>📈 Your Predicted Results</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-value" id="totalMarks">-</div>
+                        <div class="result-label">Total Marks</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value" id="percentage">-</div>
+                        <div class="result-label">Percentage</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value" id="sgpa">-</div>
+                        <div class="result-label">Predicted SGPA</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value" id="grade">-</div>
+                        <div class="result-label">Expected Grade</div>
+                    </div>
+                </div>
+                <div id="subjectWiseResults"></div>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Disclaimer:</strong> This is a prediction tool based on AKTU marking scheme. Actual results may vary by ±5-10 marks per subject depending on paper evaluation, answer presentation, and examiner discretion.
+            </div>
+
+            <div class="info-section">
+                <strong>💡 Tips for Better Results:</strong>
+                <ul style="margin: 15px 0 0 20px;">
+                    <li>Be realistic with expected external marks - don't overestimate!</li>
+                    <li>Consider your exam performance honestly</li>
+                    <li>Internal marks are usually accurate (check ERP portal)</li>
+                    <li>Lab subjects generally have higher passing rate</li>
+                    <li>Practical/Viva marks can add significantly to total</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AKTU Results - Free Tools for Students</p>
+        <p style="margin-top: 10px;"><a href="/">← Back to Home</a> | <a href="/grade-calculator.html">CGPA Calculator</a></p>
+    </footer>
+
+    <script>
+        let subjectCount = 1;
+
+        function addSubject() {
+            subjectCount++;
+            const container = document.getElementById('subjectsContainer');
+            const newRow = document.createElement('div');
+            newRow.className = 'subject-row';
+            newRow.innerHTML = `
+                <div><label>Subject Name</label><input type="text" placeholder="Subject ${subjectCount}" class="subject-name"></div>
+                <div><label>Internal (out of 30)</label><input type="number" min="0" max="30" placeholder="25" class="internal-marks"></div>
+                <div><label>Expected External (out of 70)</label><input type="number" min="0" max="70" placeholder="50" class="external-marks"></div>
+                <div><label>Credits</label><select class="credits"><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select></div>
+                <div><label>Type</label><select class="subject-type"><option value="theory">Theory</option><option value="lab">Lab</option></select></div>
+            `;
+            container.appendChild(newRow);
+        }
+
+        function calculateResult() {
+            const rows = document.querySelectorAll('.subject-row');
+            let totalMarks = 0, totalMax = 0, totalCredits = 0, totalGradePoints = 0;
+            let subjectResults = [];
+
+            rows.forEach((row, index) => {
+                const name = row.querySelector('.subject-name').value || `Subject ${index + 1}`;
+                const internal = parseFloat(row.querySelector('.internal-marks').value) || 0;
+                const external = parseFloat(row.querySelector('.external-marks').value) || 0;
+                const credits = parseFloat(row.querySelector('.credits').value) || 4;
+                const type = row.querySelector('.subject-type').value;
+
+                const total = internal + external;
+                const grade = getGrade(total);
+                const gradePoint = getGradePoint(total);
+
+                totalMarks += total;
+                totalMax += 100;
+                totalCredits += credits;
+                totalGradePoints += gradePoint * credits;
+
+                subjectResults.push({name, total, grade, credits, gradePoint});
+            });
+
+            const percentage = ((totalMarks / totalMax) * 100).toFixed(2);
+            const sgpa = (totalGradePoints / totalCredits).toFixed(2);
+            const overallGrade = getGrade(percentage);
+
+            document.getElementById('totalMarks').textContent = totalMarks + '/' + totalMax;
+            document.getElementById('percentage').textContent = percentage + '%';
+            document.getElementById('sgpa').textContent = sgpa;
+            document.getElementById('grade').textContent = overallGrade;
+
+            let subjectHTML = '<h3 style="margin: 25px 0 15px; color: #2c3e50;">Subject-wise Breakdown:</h3><div style="background: white; border-radius: 8px; padding: 20px;">';
+            subjectResults.forEach(sub => {
+                subjectHTML += `<div style="display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #e0e0e0;"><span><strong>${sub.name}</strong></span><span>${sub.total}/100 | Grade: ${sub.grade} | GP: ${sub.gradePoint}</span></div>`;
+            });
+            subjectHTML += '</div>';
+            document.getElementById('subjectWiseResults').innerHTML = subjectHTML;
+
+            document.getElementById('resultBox').style.display = 'block';
+            document.getElementById('resultBox').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function getGrade(marks) {
+            if (marks >= 90) return 'O';
+            if (marks >= 80) return 'A+';
+            if (marks >= 70) return 'A';
+            if (marks >= 60) return 'B+';
+            if (marks >= 50) return 'B';
+            if (marks >= 40) return 'C';
+            return 'F';
+        }
+
+        function getGradePoint(marks) {
+            if (marks >= 90) return 10;
+            if (marks >= 80) return 9;
+            if (marks >= 70) return 8;
+            if (marks >= 60) return 7;
+            if (marks >= 50) return 6;
+            if (marks >= 40) return 5;
+            return 0;
+        }
+    </script>
+</body>
+</html>

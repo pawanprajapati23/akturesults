@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare AKTU Colleges 2026 - Find Best College for You</title>
+    <meta name="description" content="Compare AKTU affiliated colleges side-by-side. Check placements, fees, cutoff, infrastructure, faculty ratings. Make informed decision!">
+    <link rel="canonical" href="https://akturesults.in/tools/college-comparison.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #333; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 36px; margin-bottom: 10px; }
+        .container { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
+        .selector-section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+        .college-selectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .selector-box { padding: 20px; background: #f8f9fa; border-radius: 8px; }
+        .selector-box h3 { color: #667eea; margin-bottom: 15px; }
+        select { width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 16px; }
+        select:focus { outline: none; border-color: #667eea; }
+        .compare-btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; margin: 20px 0; width: 100%; }
+        .compare-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4); }
+        .comparison-table { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 15px rgba(0,0,0,0.08); display: none; }
+        .comparison-table table { width: 100%; border-collapse: collapse; }
+        .comparison-table th { background: #667eea; color: white; padding: 20px; text-align: left; font-weight: 600; }
+        .comparison-table td { padding: 15px 20px; border-bottom: 1px solid #e0e0e0; }
+        .comparison-table tr:hover { background: #f8f9fa; }
+        .winner { background: #d4edda !important; font-weight: 600; }
+        .rating { color: #ffc107; font-size: 18px; }
+        .info-box { background: #e7f3ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #2196F3; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 50px; }
+        footer a { color: white; text-decoration: none; }
+        @media (max-width: 768px) { .header h1 { font-size: 28px; } .comparison-table { overflow-x: auto; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏫 AKTU College Comparison Tool</h1>
+        <p style="font-size: 18px; opacity: 0.95;">Compare colleges side-by-side and find your perfect match!</p>
+    </div>
+
+    <div class="container">
+        <div class="selector-section">
+            <h2 style="margin-bottom: 20px; color: #2c3e50;">Select Colleges to Compare</h2>
+            <div class="college-selectors">
+                <div class="selector-box">
+                    <h3>College 1</h3>
+                    <select id="college1">
+                        <option value="">-- Select College --</option>
+                        <option value="iet">IET Lucknow</option>
+                        <option value="kiet">KIET Ghaziabad</option>
+                        <option value="abes">ABES Ghaziabad</option>
+                        <option value="jss">JSS Noida</option>
+                        <option value="glbitm">GL Bajaj Mathura</option>
+                        <option value="psit">PSIT Kanpur</option>
+                        <option value="hbti">HBTI Kanpur</option>
+                        <option value="knit">KNIT Sultanpur</option>
+                    </select>
+                </div>
+                <div class="selector-box">
+                    <h3>College 2</h3>
+                    <select id="college2">
+                        <option value="">-- Select College --</option>
+                        <option value="iet">IET Lucknow</option>
+                        <option value="kiet">KIET Ghaziabad</option>
+                        <option value="abes">ABES Ghaziabad</option>
+                        <option value="jss">JSS Noida</option>
+                        <option value="glbitm">GL Bajaj Mathura</option>
+                        <option value="psit">PSIT Kanpur</option>
+                        <option value="hbti">HBTI Kanpur</option>
+                        <option value="knit">KNIT Sultanpur</option>
+                    </select>
+                </div>
+                <div class="selector-box">
+                    <h3>College 3 (Optional)</h3>
+                    <select id="college3">
+                        <option value="">-- Select College --</option>
+                        <option value="iet">IET Lucknow</option>
+                        <option value="kiet">KIET Ghaziabad</option>
+                        <option value="abes">ABES Ghaziabad</option>
+                        <option value="jss">JSS Noida</option>
+                        <option value="glbitm">GL Bajaj Mathura</option>
+                        <option value="psit">PSIT Kanpur</option>
+                        <option value="hbti">HBTI Kanpur</option>
+                        <option value="knit">KNIT Sultanpur</option>
+                    </select>
+                </div>
+            </div>
+            <button class="compare-btn" onclick="compareColleges()">🔍 Compare Now</button>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 How to Use:</strong> Select 2-3 colleges you're confused between. Our tool will show you detailed side-by-side comparison including placements, fees, cutoff, infrastructure, and ratings. Make data-driven decisions!
+        </div>
+
+        <div class="comparison-table" id="comparisonResult"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AKTU Results - Smart College Selection Tools</p>
+        <p style="margin-top: 10px;"><a href="/">← Back to Home</a></p>
+    </footer>
+
+    <script>
+        const collegeData = {
+            iet: {
+                name: "IET Lucknow",
+                location: "Lucknow",
+                type: "Government",
+                fees: "₹60,000/year",
+                placement: "95%",
+                avgPackage: "8.5 LPA",
+                highestPackage: "42 LPA",
+                cutoff: "95+ percentile (JEE Main)",
+                infrastructure: "4.5",
+                faculty: "4.7",
+                rating: "4.6",
+                companies: "Amazon, Microsoft, Adobe, Google",
+                hostel: "Yes (₹8,000/year)"
+            },
+            kiet: {
+                name: "KIET Ghaziabad",
+                location: "Ghaziabad",
+                type: "Private",
+                fees: "₹1,20,000/year",
+                placement: "85%",
+                avgPackage: "6.5 LPA",
+                highestPackage: "35 LPA",
+                cutoff: "85+ percentile (JEE Main)",
+                infrastructure: "4.2",
+                faculty: "4.0",
+                rating: "4.3",
+                companies: "Infosys, TCS, Wipro, Cognizant",
+                hostel: "Limited (₹80,000/year)"
+            },
+            abes: {
+                name: "ABES Ghaziabad",
+                location: "Ghaziabad",
+                type: "Private",
+                fees: "₹95,000/year",
+                placement: "75%",
+                avgPackage: "5.5 LPA",
+                highestPackage: "28 LPA",
+                cutoff: "75+ percentile (JEE Main)",
+                infrastructure: "4.0",
+                faculty: "3.9",
+                rating: "4.1",
+                companies: "TCS, Wipro, Tech Mahindra",
+                hostel: "Yes (₹65,000/year)"
+            },
+            jss: {
+                name: "JSS Noida",
+                location: "Noida",
+                type: "Private",
+                fees: "₹1,10,000/year",
+                placement: "80%",
+                avgPackage: "6.0 LPA",
+                highestPackage: "30 LPA",
+                cutoff: "80+ percentile (JEE Main)",
+                infrastructure: "4.1",
+                faculty: "4.0",
+                rating: "4.2",
+                companies: "Accenture, HCL, Capgemini",
+                hostel: "No"
+            },
+            glbitm: {
+                name: "GL Bajaj Mathura",
+                location: "Mathura",
+                type: "Private",
+                fees: "₹85,000/year",
+                placement: "70%",
+                avgPackage: "5.0 LPA",
+                highestPackage: "25 LPA",
+                cutoff: "70+ percentile (JEE Main)",
+                infrastructure: "3.8",
+                faculty: "3.7",
+                rating: "3.9",
+                companies: "Infosys, TCS, Wipro",
+                hostel: "Yes (₹55,000/year)"
+            },
+            psit: {
+                name: "PSIT Kanpur",
+                location: "Kanpur",
+                type: "Private",
+                fees: "₹90,000/year",
+                placement: "72%",
+                avgPackage: "5.2 LPA",
+                highestPackage: "26 LPA",
+                cutoff: "72+ percentile (JEE Main)",
+                infrastructure: "3.9",
+                faculty: "3.8",
+                rating: "4.0",
+                companies: "TCS, Cognizant, Wipro",
+                hostel: "Yes (₹60,000/year)"
+            },
+            hbti: {
+                name: "HBTI Kanpur",
+                location: "Kanpur",
+                type: "Government",
+                fees: "₹65,000/year",
+                placement: "90%",
+                avgPackage: "7.5 LPA",
+                highestPackage: "38 LPA",
+                cutoff: "90+ percentile (JEE Main)",
+                infrastructure: "4.3",
+                faculty: "4.5",
+                rating: "4.5",
+                companies: "Microsoft, Amazon, Flipkart",
+                hostel: "Yes (₹10,000/year)"
+            },
+            knit: {
+                name: "KNIT Sultanpur",
+                location: "Sultanpur",
+                type: "Government",
+                fees: "₹55,000/year",
+                placement: "88%",
+                avgPackage: "7.0 LPA",
+                highestPackage: "36 LPA",
+                cutoff: "88+ percentile (JEE Main)",
+                infrastructure: "4.1",
+                faculty: "4.3",
+                rating: "4.4",
+                companies: "Amazon, Adobe, Samsung",
+                hostel: "Yes (₹9,000/year)"
+            }
+        };
+
+        function compareColleges() {
+            const c1 = document.getElementById('college1').value;
+            const c2 = document.getElementById('college2').value;
+            const c3 = document.getElementById('college3').value;
+
+            if (!c1 || !c2) {
+                alert('Please select at least 2 colleges to compare!');
+                return;
+            }
+
+            let colleges = [c1, c2];
+            if (c3) colleges.push(c3);
+
+            let html = '<table><thead><tr><th>Parameter</th>';
+            colleges.forEach(c => html += `<th>${collegeData[c].name}</th>`);
+            html += '</tr></thead><tbody>';
+
+            const params = [
+                {label: 'Location', key: 'location'},
+                {label: 'Type', key: 'type'},
+                {label: 'Annual Fees', key: 'fees'},
+                {label: 'Placement Rate', key: 'placement'},
+                {label: 'Average Package', key: 'avgPackage'},
+                {label: 'Highest Package', key: 'highestPackage'},
+                {label: 'JEE Main Cutoff', key: 'cutoff'},
+                {label: 'Infrastructure Rating', key: 'infrastructure'},
+                {label: 'Faculty Rating', key: 'faculty'},
+                {label: 'Overall Rating', key: 'rating'},
+                {label: 'Top Recruiters', key: 'companies'},
+                {label: 'Hostel', key: 'hostel'}
+            ];
+
+            params.forEach(param => {
+                html += `<tr><td><strong>${param.label}</strong></td>`;
+                let values = colleges.map(c => parseFloat(collegeData[c][param.key]) || collegeData[c][param.key]);
+                let maxIndex = -1;
+                
+                if (param.key === 'placement' || param.key === 'infrastructure' || param.key === 'faculty' || param.key === 'rating') {
+                    let max = Math.max(...values.map(v => parseFloat(v)));
+                    maxIndex = values.findIndex(v => parseFloat(v) === max);
+                }
+
+                colleges.forEach((c, i) => {
+                    let value = collegeData[c][param.key];
+                    if (param.key === 'infrastructure' || param.key === 'faculty' || param.key === 'rating') {
+                        value = `<span class="rating">${'★'.repeat(Math.floor(parseFloat(value)))}</span> ${value}`;
+                    }
+                    let className = (i === maxIndex) ? 'winner' : '';
+                    html += `<td class="${className}">${value}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('comparisonResult').innerHTML = html;
+            document.getElementById('comparisonResult').style.display = 'block';
+            document.getElementById('comparisonResult').scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>

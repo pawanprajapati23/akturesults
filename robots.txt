@@ -1,0 +1,14 @@
+# robots.txt for akturesults.in
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://akturesults.in/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin or private directories (if any in future)
+# Disallow: /admin/
+# Disallow: /private/

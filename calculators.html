@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKTU Calculators & Tools 2026 - Free Student Tools</title>
+    <meta name="description" content="Free AKTU calculators: CGPA, Attendance, Result Predictor, College Comparison. All-in-one tools for AKTU students. Accurate, fast, mobile-friendly.">
+    <meta name="keywords" content="aktu calculators, cgpa calculator, attendance calculator, result predictor, college comparison, aktu tools">
+    <link rel="canonical" href="https://akturesults.in/calculators.html">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-83VE8HR3T8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-83VE8HR3T8');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; }
+        
+        .header { background: rgba(255,255,255,0.95); box-shadow: 0 2px 20px rgba(0,0,0,0.1); padding: 20px 0; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 700; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .back-home { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); }
+        .back-home:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5); }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        
+        .hero { text-align: center; color: white; margin-bottom: 60px; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .hero p { font-size: 20px; opacity: 0.95; max-width: 600px; margin: 0 auto; }
+        
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        
+        .tool-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; }
+        .tool-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+        
+        .tool-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; position: relative; overflow: hidden; }
+        .tool-header::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); }
+        .tool-icon { font-size: 64px; margin-bottom: 15px; display: block; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
+        .tool-header h3 { color: white; font-size: 26px; font-weight: 700; margin-bottom: 10px; }
+        .tool-header p { color: rgba(255,255,255,0.9); font-size: 15px; }
+        
+        .tool-body { padding: 30px; }
+        .tool-features { list-style: none; margin-bottom: 25px; }
+        .tool-features li { padding: 12px 0; color: #555; font-size: 15px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
+        .tool-features li:last-child { border-bottom: none; }
+        .tool-features li::before { content: '✓'; color: #28a745; font-weight: 700; font-size: 18px; }
+        
+        .tool-btn { display: block; width: 100%; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 16px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); }
+        .tool-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5); }
+        
+        .badge { position: absolute; top: 15px; right: 15px; background: #ffc107; color: #333; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; box-shadow: 0 2px 10px rgba(255, 193, 7, 0.3); }
+        
+        .features-section { background: white; border-radius: 20px; padding: 50px 40px; margin: 40px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .features-section h2 { text-align: center; font-size: 36px; color: #2c3e50; margin-bottom: 40px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-item { text-align: center; padding: 25px; }
+        .feature-item .emoji { font-size: 48px; margin-bottom: 15px; display: block; }
+        .feature-item h4 { color: #2c3e50; margin-bottom: 10px; font-size: 20px; }
+        .feature-item p { color: #666; font-size: 15px; line-height: 1.6; }
+        
+        footer { background: rgba(255,255,255,0.95); padding: 30px 20px; text-align: center; margin-top: 60px; border-radius: 20px; }
+        footer a { color: #667eea; text-decoration: none; font-weight: 600; }
+        footer a:hover { text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 20px 12px; }
+            .hero { margin-bottom: 25px; }
+            .hero h1 { font-size: 22px; margin-bottom: 10px; }
+            .hero p { font-size: 14px; }
+            .tools-grid { grid-template-columns: 1fr; gap: 18px; margin-bottom: 20px; }
+            .tool-card { margin-bottom: 0; }
+            .tool-header { padding: 22px 18px; }
+            .tool-icon { font-size: 40px; margin-bottom: 10px; }
+            .tool-header h3 { font-size: 18px; margin-bottom: 6px; }
+            .tool-header p { font-size: 13px; }
+            .tool-body { padding: 18px 15px; }
+            .tool-features li { padding: 7px 0; font-size: 13px; }
+            .tool-btn { padding: 11px; font-size: 14px; }
+            .features-section { padding: 20px 15px; margin: 20px 0; }
+            .features-section h2 { font-size: 22px; margin-bottom: 20px; }
+            .features-grid { gap: 15px; }
+            .feature-item { padding: 15px 12px; }
+            .feature-item .emoji { font-size: 32px; margin-bottom: 10px; }
+            .feature-item h4 { font-size: 15px; margin-bottom: 6px; }
+            .feature-item p { font-size: 13px; line-height: 1.4; }
+            .badge { top: 8px; right: 8px; padding: 3px 10px; font-size: 10px; }
+            .header { padding: 15px 0; }
+            .logo { font-size: 20px; }
+            .back-home { padding: 8px 20px; font-size: 14px; }
+            footer { padding: 20px 12px; }
+            footer p { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🎓 AKTU Results</div>
+            <a href="/" class="back-home">← Back to Home</a>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <nav style="background: rgba(255,255,255,0.95); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; font-size: 14px;">
+            <a href="/" style="color: #667eea; text-decoration: none;">Home</a>
+            <span style="color: #999; margin: 0 8px;">›</span>
+            <span style="color: #666;">Calculators & Tools</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>🧮 AKTU Calculators & Tools</h1>
+            <p>Free, accurate, and easy-to-use tools designed specifically for AKTU students. All calculations follow official AKTU guidelines.</p>
+            
+            <!-- AdSense - Top Ad -->
+            <div style="text-align: center; margin: 25px 0;">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5696239388754680"
+                     data-ad-slot="AUTO"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+
+        <!-- Tools Grid -->
+        <div class="tools-grid">
+            <!-- CGPA Calculator -->
+            <div class="tool-card">
+                <div class="tool-header">
+                    <span class="tool-icon">📊</span>
+                    <h3>CGPA Calculator</h3>
+                    <p>Calculate SGPA & CGPA instantly</p>
+                </div>
+                <div class="tool-body">
+                    <ul class="tool-features">
+                        <li>Calculate semester SGPA</li>
+                        <li>Calculate cumulative CGPA</li>
+                        <li>Add multiple semesters</li>
+                        <li>Credit-based calculation</li>
+                        <li>AKTU grading system</li>
+                        <li>Download result as PDF</li>
+                    </ul>
+                    <a href="/grade-calculator.html" class="tool-btn">Open Calculator →</a>
+                </div>
+            </div>
+
+            <!-- Attendance Calculator -->
+            <div class="tool-card">
+                <div class="tool-header">
+                    <span class="tool-icon">📅</span>
+                    <h3>Attendance Calculator</h3>
+                    <p>Track your attendance percentage</p>
+                </div>
+                <div class="tool-body">
+                    <ul class="tool-features">
+                        <li>Calculate current attendance</li>
+                        <li>Classes needed for 75%</li>
+                        <li>How many you can skip</li>
+                        <li>Subject-wise tracking</li>
+                        <li>Visual progress bar</li>
+                        <li>Smart predictions</li>
+                    </ul>
+                    <a href="/attendance-calculator.html" class="tool-btn">Open Calculator →</a>
+                </div>
+            </div>
+
+            <!-- Result Predictor -->
+            <div class="tool-card">
+                <span class="badge">UNIQUE</span>
+                <div class="tool-header">
+                    <span class="tool-icon">🔮</span>
+                    <h3>Result Predictor</h3>
+                    <p>Predict marks before results</p>
+                </div>
+                <div class="tool-body">
+                    <ul class="tool-features">
+                        <li>Predict semester marks</li>
+                        <li>Expected SGPA calculation</li>
+                        <li>Internal + External marks</li>
+                        <li>Subject-wise breakdown</li>
+                        <li>Pass/Fail prediction</li>
+                        <li>Grade estimation</li>
+                    </ul>
+                    <a href="/tools/result-predictor.html" class="tool-btn">Open Predictor →</a>
+                </div>
+            </div>
+
+            <!-- College Comparison -->
+            <div class="tool-card">
+                <span class="badge">NEW</span>
+                <div class="tool-header">
+                    <span class="tool-icon">⚖️</span>
+                    <h3>College Comparison</h3>
+                    <p>Compare colleges side-by-side</p>
+                </div>
+                <div class="tool-body">
+                    <ul class="tool-features">
+                        <li>Compare 2-3 colleges</li>
+                        <li>Placement statistics</li>
+                        <li>Fees comparison</li>
+                        <li>Infrastructure ratings</li>
+                        <li>Faculty reviews</li>
+                        <li>Winner highlighting</li>
+                    </ul>
+                    <a href="/tools/college-comparison.html" class="tool-btn">Compare Colleges →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <section style="background: white; border-radius: 20px; padding: 40px; margin: 30px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; font-size: 32px; color: #2c3e50; margin-bottom: 30px;">📚 Related Guides</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
+                    <h3 style="color: #667eea; margin-bottom: 10px; font-size: 18px;">
+                        <a href="/blog/how-to-score-9-cgpa-aktu.html" style="color: #667eea; text-decoration: none;">How to Score 9+ CGPA →</a>
+                    </h3>
+                    <p style="color: #666; font-size: 14px; line-height: 1.6;">Complete strategy from average student to university topper. Study tips, time management, and exam techniques.</p>
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #dc3545;">
+                    <h3 style="color: #dc3545; margin-bottom: 10px; font-size: 18px;">
+                        <a href="/blog/aktu-back-paper-strategy-clear-all-backlogs.html" style="color: #dc3545; text-decoration: none;">Clear All Backlogs →</a>
+                    </h3>
+                    <p style="color: #666; font-size: 14px; line-height: 1.6;">Proven strategy to clear multiple backlogs. Real student cleared 8 subjects in one semester!</p>
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #28a745;">
+                    <h3 style="color: #28a745; margin-bottom: 10px; font-size: 18px;">
+                        <a href="/check-result.html" style="color: #28a745; text-decoration: none;">Check AKTU Result →</a>
+                    </h3>
+                    <p style="color: #666; font-size: 14px; line-height: 1.6;">Step-by-step guide to check your result through One View or ERP portal. Quick and easy access.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>Why Use Our Calculators?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="emoji">⚡</span>
+                    <h4>Lightning Fast</h4>
+                    <p>Instant calculations without any delays or loading time</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">✅</span>
+                    <h4>100% Accurate</h4>
+                    <p>Based on official AKTU grading and calculation methods</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">📱</span>
+                    <h4>Mobile Friendly</h4>
+                    <p>Works perfectly on all devices - phone, tablet, desktop</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">🆓</span>
+                    <h4>Completely Free</h4>
+                    <p>No registration, no payment, no hidden charges ever</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">🔒</span>
+                    <h4>Private & Secure</h4>
+                    <p>No data stored, all calculations happen in your browser</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">🎯</span>
+                    <h4>Easy to Use</h4>
+                    <p>Simple interface, clear instructions, instant results</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="color: #2c3e50; font-size: 16px; margin-bottom: 15px;">🎓 <strong>AKTU Results</strong> - Your Trusted Student Platform</p>
+        <p style="color: #666; margin-bottom: 15px;">
+            <a href="/">Home</a> | 
+            <a href="/blog/">Blog</a> | 
+            <a href="/college-reviews.html">Reviews</a> | 
+            <a href="/about.html">About</a> | 
+            <a href="/contact.html">Contact</a>
+        </p>
+        <p style="color: #999; font-size: 14px;">&copy; 2026 AKTU Results. All calculators are free to use.</p>
+    </footer>
+</body>
+</html>

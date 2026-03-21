@@ -1,0 +1,73 @@
+{
+  "name": "AKTU Results 2026 - Official Portal",
+  "short_name": "AKTU Results",
+  "description": "Check AKTU semester results, CGPA calculator, exam dates, admissions and placement information. Install for instant access!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c2410c",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/favicon.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Check Result",
+      "short_name": "Result",
+      "description": "Check your AKTU result instantly",
+      "url": "/check-result.html",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "CGPA Calculator",
+      "short_name": "Calculator",
+      "description": "Calculate your CGPA",
+      "url": "/grade-calculator.html",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Exam Dates",
+      "short_name": "Exams",
+      "description": "View exam schedule",
+      "url": "/exams/",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

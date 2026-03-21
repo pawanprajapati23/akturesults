@@ -1,0 +1,109 @@
+<!-- FLOATING ACTION BUTTON - Add before </body> -->
+
+<!-- Floating "Check Result" Button -->
+<a href="/check-result.html" class="floating-action-btn" id="fabBtn">
+    <span class="fab-icon">🔍</span>
+    <span class="fab-text">Check Result</span>
+</a>
+
+<style>
+.floating-action-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    animation: fabPulse 2s infinite;
+}
+
+.floating-action-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(245, 87, 108, 0.6);
+}
+
+.fab-icon {
+    font-size: 24px;
+}
+
+.fab-text {
+    font-size: 16px;
+}
+
+@keyframes fabPulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 35px rgba(245, 87, 108, 0.7);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .floating-action-btn {
+        bottom: 20px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .fab-icon {
+        font-size: 20px;
+    }
+    
+    .fab-text {
+        font-size: 14px;
+    }
+}
+
+/* Hide on scroll down, show on scroll up */
+.fab-hidden {
+    transform: translateY(200px);
+    opacity: 0;
+}
+</style>
+
+<script>
+// Show/hide FAB on scroll
+let lastScroll = 0;
+const fab = document.getElementById('fabBtn');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 300) {
+        if (currentScroll > lastScroll) {
+            // Scrolling down
+            fab.classList.add('fab-hidden');
+        } else {
+            // Scrolling up
+            fab.classList.remove('fab-hidden');
+        }
+    } else {
+        fab.classList.remove('fab-hidden');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Track clicks
+fab.addEventListener('click', () => {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'click', {
+            event_category: 'FAB',
+            event_label: 'Check Result Button'
+        });
+    }
+});
+</script>
