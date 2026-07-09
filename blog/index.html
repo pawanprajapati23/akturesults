@@ -26,6 +26,24 @@
         .category { background: #e7f3ff; color: #2196F3; padding: 4px 12px; border-radius: 15px; font-size: 12px; display: inline-block; margin-bottom: 10px; }
         footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 50px; }
         @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
+        
+        /* Helpdesk & FAQ Hub Styles */
+        .helpdesk-section { background: white; border-radius: 15px; padding: 30px; margin-top: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .section-header { margin-bottom: 25px; text-align: center; }
+        .section-header h2 { font-size: 26px; color: #2c3e50; font-weight: 700; margin-bottom: 8px; }
+        .section-header p { color: #666; font-size: 15px; }
+        .search-container { position: relative; max-width: 600px; margin: 0 auto 30px; }
+        .faq-search { width: 100%; padding: 15px 20px 15px 50px; font-size: 16px; border: 2px solid #e0e0e0; border-radius: 30px; outline: none; transition: border-color 0.3s; }
+        .faq-search:focus { border-color: #667eea; }
+        .search-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #aaa; }
+        .faq-list { display: flex; flex-direction: column; gap: 15px; }
+        .faq-item { border: 1px solid #eef2f5; border-radius: 10px; overflow: hidden; transition: all 0.3s; }
+        .faq-item.active { border-color: #667eea; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.1); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; background: #fafbfc; font-size: 16px; font-weight: 600; color: #2c3e50; cursor: pointer; user-select: none; transition: background 0.3s; }
+        .faq-question:hover { background: #f3f5f8; }
+        .faq-question span.arrow { font-size: 14px; transition: transform 0.3s; color: #667eea; }
+        .faq-item.active .faq-question span.arrow { transform: rotate(180deg); }
+        .faq-answer { display: none; padding: 18px 20px; background: white; font-size: 15px; color: #555; border-top: 1px solid #f5f7fa; line-height: 1.6; }
     </style>
     <!-- ===== NON-ADSENSE ADS ===== -->
     <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f">
@@ -77,6 +95,72 @@
     
 <script src="https://quge5.com/88/tag.min.js" data-zone="257546" async data-cfasync="false"></script>
     <script>(function(s){s.dataset.zone='11257064',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    
+    <!-- FAQPage JSON-LD Schema for Google Search Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the passing marks criteria in AKTU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In AKTU, you need to score at least 30% marks in the external end-semester theory exam (30 out of 100 marks, or 21 out of 70 marks) and an overall combined score of 40% (internal sessional marks + external theory exam marks combined) to pass a subject."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Grace Marks rule in AKTU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AKTU allows up to 10 grace marks per academic year (maximum 5 marks in one semester) to students who are failing in up to 3 subjects, provided they have cleared all other subjects in that year and maintained a minimum annual SGPA of 5.0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AKTU convert CGPA/SGPA to Percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To convert SGPA or CGPA to percentage in AKTU, use the official formula: Percentage = (CGPA - 0.75) * 10. For example, if your CGPA is 8.0, your percentage is (8.0 - 0.75) * 10 = 72.5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I apply for AKTU Revaluation / Challenge Evaluation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can apply online through your AKTU ERP dashboard within 15-30 days after results are announced. The process consists of Stage 1 (paying Rs. 300 to view your digital answer sheet) and Stage 2 (paying Rs. 2500 for a complete recheck by a different evaluator)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Year Back (YPT / Year Promotion Tentative) rule in AKTU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AKTU promotional criteria requires students to clear a minimum credit limit annually. Generally, B.Tech students must clear at least 50% of the total credits offered in the academic year to get promoted to the next year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to download AKTU original marksheet or degree certificate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can request original degrees, duplicate marksheets, migration certificates, or transcripts through the AKTU Student Service portal on the ERP. After paying the required online fee, the university dispatches the hard copy directly to your college or home address."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AKTU One View and how to check results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AKTU One View is a direct results dashboard (oneview.aktu.ac.in) where any student can check their complete academic record, subject-wise marks, and semester-wise results by just entering their Roll Number."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -85,6 +169,62 @@
             <p class="tagline">Real Stories, Real Tips, Real Success - By Students, For Students</p>
         </div>
     </header>
+
+    <div class="container">
+        <section class="helpdesk-section">
+            <div class="section-header">
+                <h2>💡 AKTU Student Helpdesk & FAQ Hub</h2>
+                <p>Search and get instant answers to common AKTU rules, exams, revaluation, grace marks, and backlog questions.</p>
+            </div>
+            
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="faqSearchInput" class="faq-search" placeholder="Type your question (e.g. grace marks, passing marks, ERP, backlog)..." onkeyup="filterFAQs()">
+            </div>
+            
+            <div class="faq-list" id="faqListContainer">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What is the passing marks criteria in AKTU? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">In AKTU, you need to score at least 30% marks in the external end-semester theory exam (30 out of 100 marks, or 21 out of 70 marks) and an overall combined score of 40% (internal sessional marks + external theory exam marks combined) to pass a subject.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What is the Grace Marks rule in AKTU? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">AKTU allows up to 10 grace marks per academic year (maximum 5 marks in one semester) to students who are failing in up to 3 subjects, provided they have cleared all other subjects in that year and maintained a minimum annual SGPA of 5.0.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How does AKTU convert CGPA/SGPA to Percentage? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">To convert SGPA or CGPA to percentage in AKTU, use the official formula: Percentage = (CGPA - 0.75) * 10. For example, if your CGPA is 8.0, your percentage is (8.0 - 0.75) * 10 = 72.5%. You can use our online converter on the homepage.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How do I apply for AKTU Revaluation / Challenge Evaluation? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">You can apply online through your AKTU ERP dashboard within 15-30 days after results are announced. The process consists of Stage 1 (paying Rs. 300 to view your digital answer sheet) and Stage 2 (paying Rs. 2500 for a complete recheck by a different evaluator if you find discrepancy).</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What is Year Back (YPT / Year Promotion Tentative) rule in AKTU? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">AKTU promotional criteria requires students to clear a minimum credit limit annually. Generally, B.Tech students must clear at least 50% of the total credits offered in the academic year to get promoted to the next year. If you fail to earn these credits, you will get a Year Back (YPT).</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">How to download AKTU original marksheet or degree certificate? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">You can request original degrees, duplicate marksheets, migration certificates, or transcripts through the AKTU Student Service portal on the ERP. After paying the required online fee, the university dispatches the hard copy directly to your college or home address.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">What is AKTU One View and how to check results? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">AKTU One View is a direct results dashboard (oneview.aktu.ac.in) where any student can check their complete academic record, subject-wise marks, and semester-wise results by just entering their Roll Number. No login password is required.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">When are carry-over or backlog exam results declared? <span class="arrow">▼</span></div>
+                    <div class="faq-answer">Backlog or carry-over (COP) exam results are typically declared by AKTU 45 to 60 days after the end of the examinations. Once processed, the grades are updated directly inside your AKTU One View portal marksheet list.</div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <div class="container">
         <div class="blog-grid">
@@ -238,5 +378,46 @@
             <p style="margin-top: 10px;"><a href="/" style="color: white;">← Back to Main Site</a></p>
         </div>
     </footer>
+    <script>
+        // Toggle accordion
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
+            
+            // Close all active FAQs
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                const ans = i.querySelector('.faq-answer');
+                if (ans) ans.style.display = 'none';
+            });
+            
+            // Toggle clicked FAQ
+            if (!isActive) {
+                item.classList.add('active');
+                if (answer) answer.style.display = 'block';
+            }
+        }
+        
+        // Search and filter FAQs
+        function filterFAQs() {
+            const input = document.getElementById('faqSearchInput');
+            const filter = input.value.toLowerCase();
+            const container = document.getElementById('faqListContainer');
+            if (!container) return;
+            const items = container.getElementsByClassName('faq-item');
+            
+            for (let i = 0; i < items.length; i++) {
+                const question = items[i].querySelector('.faq-question').textContent.toLowerCase();
+                const answer = items[i].querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(filter) || answer.includes(filter)) {
+                    items[i].style.display = '';
+                } else {
+                    items[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
