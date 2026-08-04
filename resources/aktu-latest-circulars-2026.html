@@ -84,47 +84,26 @@
     <div class="container">
         <section class="hero-banner">
             <h1>📢 AKTU Official Circulars & Notifications Live Feed</h1>
-            <p>Download official university circular PDFs issued by Dr. A.P.J. Abdul Kalam Technical University (Lucknow).</p>
+            <p>Live auto-syncing official university circular PDFs issued by Dr. A.P.J. Abdul Kalam Technical University (Lucknow).</p>
+            <div style="margin-top:15px; display:flex; justify-content:center; align-items:center; gap:15px; flex-wrap:wrap;">
+                <div id="syncStatus" style="background:rgba(255,255,255,0.15); padding:6px 16px; border-radius:20px; font-size:14px;">Initializing Live Fetcher...</div>
+                <button onclick="fetchAKTULiveCirculars('liveCircularsContainer', 'syncStatus')" style="background:#16a34a; color:white; border:none; padding:8px 18px; border-radius:20px; font-weight:700; cursor:pointer;">🔄 Refresh Live Feed</button>
+            </div>
         </section>
 
-        <div class="circular-list">
-            <div class="circular-card">
-                <div>
-                    <span class="circ-tag">🔴 UPTAC ADMISSION</span>
-                    <div class="circ-title">UPTAC 2026 Counselling Registration & Choice Filling Extension Notice</div>
-                    <div class="circ-date">Published: August 04, 2026 | Ref: AKTU/VC/UPTAC/2026/894</div>
-                </div>
-                <a href="https://aktu.ac.in" target="_blank" rel="noopener" class="btn-pdf">Download Official PDF →</a>
-            </div>
-
-            <div class="circular-card">
-                <div>
-                    <span class="circ-tag" style="background:#dcfce7; color:#15803d;">📊 EXAMINATION RESULT</span>
-                    <div class="circ-title">Declaration of Even Semester (2nd, 4th, 6th, 8th) Regular & Carryover Exam Results 2026</div>
-                    <div class="circ-date">Published: August 01, 2026 | Ref: AKTU/COE/Result/2026/782</div>
-                </div>
-                <a href="/results/aktu-one-view-result-2026.html" class="btn-pdf" style="background:#16a34a;">Check Result via One View →</a>
-            </div>
-
-            <div class="circular-card">
-                <div>
-                    <span class="circ-tag" style="background:#fef3c7; color:#b45309;">📝 REVALUATION / UFM</span>
-                    <div class="circ-title">Notice Regarding Online Portal for Challenge Evaluation & Stage-2 Scrutiny Copy Request</div>
-                    <div class="circ-date">Published: July 28, 2026 | Ref: AKTU/COE/Reval/2026/410</div>
-                </div>
-                <a href="https://aktu.ac.in" target="_blank" rel="noopener" class="btn-pdf">Download Circular PDF →</a>
-            </div>
-
-            <div class="circular-card">
-                <div>
-                    <span class="circ-tag">🎓 DEGREE & CONVOCATION</span>
-                    <div class="circ-title">Dispatch of Digital Degree Certificates & Consolidate Marksheets to College Digilocker Portal</div>
-                    <div class="circ-date">Published: July 20, 2026 | Ref: AKTU/Exam/Degree/2026/305</div>
-                </div>
-                <a href="https://aktu.ac.in" target="_blank" rel="noopener" class="btn-pdf">Download Circular PDF →</a>
-            </div>
+        <!-- Live Dynamic Container -->
+        <div id="liveCircularsContainer" class="circular-list">
+            <!-- Populated dynamically via js/aktu-announcements-fetcher.js -->
         </div>
     </div>
+
+    <!-- Live Announcements Script -->
+    <script src="/js/aktu-announcements-fetcher.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchAKTULiveCirculars('liveCircularsContainer', 'syncStatus');
+        });
+    </script>
 
     <footer>
         <div class="container">
