@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKTU Attendance & Bunk Calculator 2026 | Kitne Bunk Maar Sakte Hain?</title>
+    <meta name="description"
+        content="Free AKTU 75% Attendance & Bunk Calculator 2026. Calculate exact number of classes you can bunk safely or how many consecutive classes you must attend to avoid ERP debarred list." />
+    <meta name="keywords"
+        content="aktu attendance calculator, kitne bunk maar sakte hain, aktu 75 percent attendance rule, aktu debarred list 2026, aktu attendance shortage calculator" />
+    <link rel="canonical" href="https://akturesults.in/tools/aktu-attendance-bunk-calculator.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #0284c7;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --border-color: #cbd5e1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; padding: 25px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .site-title { font-size: 28px; font-weight: 800; text-decoration: none; color: white; }
+        .site-title span { color: #38bdf8; }
+
+        .breadcrumb { background: white; padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb span { margin: 0 8px; color: #64748b; }
+
+        .hero-banner { background: linear-gradient(135deg, #312e81 0%, #4f46e5 100%); color: white; padding: 35px 25px; border-radius: 16px; margin: 25px 0; text-align: center; }
+        .hero-banner h1 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+
+        .calc-card { background: white; border-radius: 16px; padding: 30px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
+
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .form-group label { font-size: 13px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 6px; }
+        .form-control { width: 100%; padding: 12px 14px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 15px; outline: none; font-weight: 600; }
+
+        .btn-calc { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; }
+
+        .res-box { display: none; margin-top: 25px; padding: 25px; border-radius: 14px; border-left: 6px solid var(--primary); }
+
+        footer { background: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
+    </style>
+
+    <!-- ===== NON-ADSENSE ADS INTEGRATION ===== -->
+    <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+    <script src="https://quge5.com/88/tag.min.js" data-zone="257542" async data-cfasync="false"></script>
+    <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="site-title">🎓 AKTU Results <span>2026</span></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> <span>›</span> <a href="/tools/">Tools</a> <span>›</span> <span>AKTU Attendance Bunk Calculator</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-banner">
+            <h1>😎 AKTU 75% Attendance & Bunk Calculator</h1>
+            <p>Calculate your current attendance percentage, exact safe bunk limit, or required consecutive classes to avoid AKTU ERP debarred list.</p>
+        </section>
+
+        <section class="calc-card">
+            <form onsubmit="calculateBunk(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="classesHeld">Total Classes Conducted So Far *</label>
+                        <input type="number" id="classesHeld" class="form-control" placeholder="e.g. 60" required min="1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classesAttended">Classes Attended by You *</label>
+                        <input type="number" id="classesAttended" class="form-control" placeholder="e.g. 50" required min="0" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-calc">💥 Calculate Safe Bunks & Attendance %</button>
+            </form>
+
+            <div id="resBox" class="res-box">
+                <div id="resHeading" style="font-size:22px; font-weight:800; margin-bottom:8px;"></div>
+                <div id="resBody" style="font-size:16px;"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function calculateBunk(e) {
+            e.preventDefault();
+            const held = parseInt(document.getElementById('classesHeld').value);
+            const attended = parseInt(document.getElementById('classesAttended').value);
+
+            if (attended > held) {
+                alert("Attended classes cannot be greater than total classes held!");
+                return;
+            }
+
+            const perc = ((attended / held) * 100).toFixed(2);
+            const resBox = document.getElementById('resBox');
+            const heading = document.getElementById('resHeading');
+            const body = document.getElementById('resBody');
+
+            if (perc >= 75) {
+                // Formula for safe bunks: floor((attended - 0.75 * held) / 0.75)
+                const safeBunks = Math.floor((attended - 0.75 * held) / 0.75);
+                resBox.style.background = '#dcfce7';
+                resBox.style.borderColor = '#16a34a';
+                heading.style.color = '#15803d';
+                heading.innerText = `🎉 Safe Zone! Current Attendance: ${perc}%`;
+                body.innerHTML = `You can safely <strong>BUNK next ${safeBunks} classes</strong> and your attendance will still stay at or above 75%!`;
+            } else {
+                // Formula for required consecutive classes: ceil((0.75 * held - attended) / 0.25)
+                const reqClasses = Math.ceil((0.75 * held - attended) / 0.25);
+                resBox.style.background = '#fee2e2';
+                resBox.style.borderColor = '#dc2626';
+                heading.style.color = '#b91c1c';
+                heading.innerText = `🚨 Shortage Alert! Current Attendance: ${perc}%`;
+                body.innerHTML = `You are below 75%! You MUST attend the next <strong>${reqClasses} CONSECUTIVE classes</strong> without missing any to reach 75% safe attendance.`;
+            }
+
+            resBox.style.display = 'block';
+        }
+    </script>
+
+    <footer>
+        <div class="container"><p>&copy; 2026 AKTU Results Portal. All rights reserved.</p></div>
+    </footer>
+</body>
+
+</html>
