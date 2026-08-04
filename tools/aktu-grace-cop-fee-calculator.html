@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKTU Grace Marks & Carryover (COP) Fee Calculator 2026 | CBCS & NEP Rules</title>
+    <meta name="description"
+        content="Free 1200+ words AKTU Grace Marks & Carryover (COP) Fee Calculator 2026. Dynamic subject row builder, CBCS/NEP grace calculation (10-mark annual limit, 5-mark subject limit), COP fee estimator (₹1000/subject + late fee), and step-by-step ERP guide." />
+    <meta name="keywords"
+        content="aktu grace marks calculator, aktu cop fee calculator, aktu carryover fee 2026, aktu pwg rules, aktu grace marks 10 marks rule, aktu erp cop apply, cbcs grace rules aktu" />
+    <link rel="canonical" href="https://akturesults.in/tools/aktu-grace-cop-fee-calculator.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AKTU Grace Marks & Carryover (COP) Fee Calculator 2026" />
+    <meta property="og:description" content="Calculate your AKTU grace marks eligibility (PWG) and carryover exam fee instantly. Includes CBCS 10-mark grace rule checker and step-by-step ERP application guide." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akturesults.in/tools/aktu-grace-cop-fee-calculator.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-83VE8HR3T8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-83VE8HR3T8');
+    </script>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #0284c7;
+            --success: #16a34a;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --border-color: #cbd5e1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.7; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; padding: 25px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .header-wrap { display: flex; justify-content: space-between; align-items: center; }
+        .site-title { font-size: 26px; font-weight: 800; text-decoration: none; color: white; }
+        .site-title span { color: #38bdf8; }
+        .btn-home { background: rgba(255,255,255,0.15); color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: 600; backdrop-filter: blur(5px); }
+
+        .breadcrumb { background: white; padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb span { margin: 0 8px; color: #64748b; }
+
+        .hero-banner { background: linear-gradient(135deg, #312e81 0%, #4f46e5 100%); color: white; padding: 35px 25px; border-radius: 16px; margin: 25px 0; text-align: center; }
+        .hero-banner h1 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+        .hero-banner p { font-size: 16px; opacity: 0.92; max-width: 850px; margin: 0 auto; }
+
+        .calc-card { background: white; border-radius: 16px; padding: 30px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .calc-header { border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .calc-header h2 { font-size: 22px; color: var(--dark); font-weight: 800; }
+
+        .subject-table-wrap { overflow-x: auto; margin-bottom: 20px; }
+        .subject-table { width: 100%; border-collapse: collapse; min-width: 650px; }
+        .subject-table th { background: #f1f5f9; text-align: left; padding: 12px; font-size: 13px; font-weight: 700; color: #475569; }
+        .subject-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
+
+        .form-control { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border-color); border-radius: 8px; font-size: 14px; outline: none; font-weight: 600; background: #fff; }
+        .form-control:focus { border-color: var(--primary); }
+
+        .btn-add-row { background: #e0e7ff; color: var(--primary-dark); border: none; padding: 10px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 14px; transition: 0.2s; }
+        .btn-add-row:hover { background: #c7d2fe; }
+
+        .btn-del { background: #fee2e2; color: #dc2626; border: none; padding: 8px 12px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 13px; }
+        .btn-del:hover { background: #fca5a5; }
+
+        .btn-calc { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 15px; transition: 0.3s; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); }
+        .btn-calc:hover { opacity: 0.95; transform: translateY(-1px); }
+
+        .res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 25px; }
+        .res-card { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center; }
+        .res-card h4 { font-size: 13px; text-transform: uppercase; color: #64748b; margin-bottom: 8px; font-weight: 700; letter-spacing: 0.5px; }
+        .res-card .num { font-size: 28px; font-weight: 800; color: var(--dark); }
+
+        .res-banner { margin-top: 25px; padding: 20px 25px; border-radius: 12px; display: none; }
+        .status-badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 800; }
+        .badge-pass { background: #dcfce7; color: #15803d; }
+        .badge-pwg { background: #fef3c7; color: #b45309; }
+        .badge-cop { background: #fee2e2; color: #b91c1c; }
+
+        .content-section { background: white; border-radius: 16px; padding: 35px; border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .content-section h2 { font-size: 24px; color: var(--dark); font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        .content-section h3 { font-size: 19px; color: var(--primary-dark); font-weight: 700; margin-top: 25px; margin-bottom: 12px; }
+        .content-section p { font-size: 15px; margin-bottom: 15px; color: #334155; }
+        .content-section ul, .content-section ol { margin-left: 20px; margin-bottom: 20px; font-size: 15px; color: #334155; }
+        .content-section li { margin-bottom: 8px; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; }
+        .info-table th { background: #312e81; color: white; padding: 12px 15px; text-align: left; font-size: 14px; }
+        .info-table td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); font-size: 14px; }
+        .info-table tr:nth-child(even) { background: #f8fafc; }
+
+        .step-box { background: #f0f9ff; border-left: 5px solid var(--secondary); padding: 18px 22px; border-radius: 8px; margin-bottom: 15px; }
+        .step-box h4 { font-size: 16px; color: #0369a1; font-weight: 700; margin-bottom: 6px; }
+
+        .faq-item { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .faq-item h4 { font-size: 17px; color: var(--dark); font-weight: 700; margin-bottom: 8px; }
+        .faq-item p { font-size: 14px; margin-bottom: 0; color: #475569; }
+
+        footer { background: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
+        footer a { color: #38bdf8; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero-banner h1 { font-size: 22px; }
+            .calc-card, .content-section { padding: 20px 15px; }
+            .site-title { font-size: 20px; }
+        }
+    </style>
+
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AKTU Grace Marks & Carryover (COP) Fee Calculator 2026",
+      "url": "https://akturesults.in/tools/aktu-grace-cop-fee-calculator.html",
+      "description": "Calculate AKTU grace marks eligibility (PWG) under CBCS/NEP guidelines and estimate exact total Carryover (COP) exam fees payable on AKTU ERP portal.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the maximum grace marks allowed in AKTU per academic year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under AKTU CBCS and NEP ordinances, a maximum of 10 grace marks per academic year (odd + even semesters combined) can be awarded to a student to pass theory subjects, subject to a maximum of 5 marks per subject."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Carryover (COP) exam fee per paper in AKTU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard AKTU Carryover (COP) examination fee is ₹1000 per subject paper. If submitted during the late fee window, an additional late fee of ₹500 or ₹1000 may apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is PWG status on AKTU marksheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PWG stands for 'Passed With Grace'. It indicates that the student passed the subject because AKTU awarded grace marks under university ordinance without having to re-appear in a carryover exam."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Non-AdSense Ad Network Integration -->
+    <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+    <script src="https://quge5.com/88/tag.min.js" data-zone="257542" async data-cfasync="false"></script>
+    <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-wrap">
+            <a href="/" class="site-title">🎓 AKTU Results <span>2026</span></a>
+            <a href="/calculators.html" class="btn-home">← All Calculators</a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> <span>›</span> <a href="/calculators.html">Calculators</a> <span>›</span> <span>AKTU Grace & COP Fee Calculator</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-banner">
+            <h1>⚖️ AKTU Grace Marks & Carryover (COP) Fee Calculator 2026</h1>
+            <p>Determine your PWG (Passed With Grace) eligibility under official AKTU CBCS & NEP ordinance rules (10-mark annual limit, 5-mark per subject limit) and calculate total Carryover (COP) exam fees with ERP payment instructions.</p>
+        </section>
+
+        <!-- CALCULATOR CARD -->
+        <section class="calc-card">
+            <div class="calc-header">
+                <h2>🧮 Interactive Grace & COP Fee Builder</h2>
+                <span style="font-size:13px; color:#64748b; font-weight:600;">CBCS & NEP 2026 Ordinance Compliant</span>
+            </div>
+
+            <form id="graceForm" onsubmit="calculateGraceAndCOP(event)">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:15px; margin-bottom:20px; background:#f8fafc; padding:15px; border-radius:10px; border:1px solid #e2e8f0;">
+                    <div>
+                        <label style="font-size:13px; font-weight:700; color:var(--dark); display:block; margin-bottom:5px;">Academic Year Grace Used So Far</label>
+                        <input type="number" id="graceUsedBefore" class="form-control" value="0" min="0" max="10" placeholder="e.g. 0 (Max 10/year)" />
+                    </div>
+                    <div>
+                        <label style="font-size:13px; font-weight:700; color:var(--dark); display:block; margin-bottom:5px;">COP Application Window</label>
+                        <select id="lateFeeOption" class="form-control">
+                            <option value="0">Normal Window (Standard ₹1000 / paper)</option>
+                            <option value="500">Late Fee Phase 1 (+ ₹500)</option>
+                            <option value="1000">Late Fee Phase 2 (+ ₹1000)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="subject-table-wrap">
+                    <table class="subject-table" id="subjectTable">
+                        <thead>
+                            <tr>
+                                <th>Subject Code / Name</th>
+                                <th>Max External</th>
+                                <th>Internal Score</th>
+                                <th>External Score</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subjectTbody">
+                            <!-- Dynamic Subject Rows inserted by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                    <button type="button" class="btn-add-row" onclick="addSubjectRow()">➕ Add Subject</button>
+                    <button type="submit" class="btn-calc" style="max-width:320px; margin-top:0;">⚡ Calculate Grace & Total COP Fee</button>
+                </div>
+            </form>
+
+            <div id="resultBanner" class="res-banner">
+                <h3 id="resSummaryTitle" style="font-size:20px; font-weight:800; margin-bottom:10px;"></h3>
+                <p id="resSummaryDesc" style="font-size:15px;"></p>
+            </div>
+
+            <div class="res-grid">
+                <div class="res-card">
+                    <h4>Total Subjects</h4>
+                    <div class="num" id="statTotalSub">0</div>
+                </div>
+                <div class="res-card">
+                    <h4>Passed (Clean)</h4>
+                    <div class="num" id="statPassClean" style="color:var(--success);">0</div>
+                </div>
+                <div class="res-card">
+                    <h4>Passed With Grace (PWG)</h4>
+                    <div class="num" id="statPWG" style="color:var(--warning);">0</div>
+                </div>
+                <div class="res-card">
+                    <h4>Grace Marks Awarded</h4>
+                    <div class="num" id="statGraceMarks" style="color:var(--primary);">0 / 10</div>
+                </div>
+                <div class="res-card">
+                    <h4>Carryover (COP) Papers</h4>
+                    <div class="num" id="statCOPCount" style="color:var(--danger);">0</div>
+                </div>
+                <div class="res-card">
+                    <h4>Total COP Fee Payable</h4>
+                    <div class="num" id="statCOPFee" style="color:var(--dark);">₹0</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED GUIDELINES AND EXPLANATION CONTENT -->
+        <section class="content-section">
+            <h2>📜 Dr. A.P.J. Abdul Kalam Technical University Grace Marks Rules 2026</h2>
+            <p>Under Dr. A.P.J. Abdul Kalam Technical University (AKTU) examination ordinances for B.Tech, B.Pharm, MBA, MCA, B.Arch, and M.Tech, grace marks serve as a vital mechanism to prevent academic backlogs for students who marginally fall short of passing criteria. However, grace rules are strictly governed by quantitative caps defined in the Choice Based Credit System (CBCS) and National Education Policy (NEP) guidelines.</p>
+
+            <h3>🎯 Detailed AKTU Grace Marks Rules Breakdown</h3>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Rule Parameter</th>
+                        <th>CBCS / NEP Standard Ordinance</th>
+                        <th>Key Condition & Exception</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Annual Maximum Grace Limit</strong></td>
+                        <td><strong>10 Marks per Academic Year</strong></td>
+                        <td>Shared across Odd & Even semesters combined in a single academic year.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Per-Subject Maximum Grace Limit</strong></td>
+                        <td><strong>5 Marks per Theory Subject</strong></td>
+                        <td>Cannot award more than 5 grace marks in any single theory exam paper.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>External Theory Baseline Rule</strong></td>
+                        <td><strong>Must score min 25 / 70 (35%)</strong></td>
+                        <td>Grace marks CANNOT be awarded if external theory marks are below 25 out of 70 (or 35 out of 100). Baseline theory pass is mandatory!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Practical & Sessional Exams</strong></td>
+                        <td><strong>No Grace Awarded</strong></td>
+                        <td>Grace marks are strictly restricted to external theory papers. Internal sessionals and practical labs have zero grace allocation.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Result Status Designation</strong></td>
+                        <td><strong>PWG (Passed With Grace)</strong></td>
+                        <td>Marksheet displays <code>PWG</code> alongside the subject code. SGPA/CGPA is calculated using actual secured marks.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>💡 Mathematical Example of Grace Allocation</h3>
+            <p>Suppose a student appears for a 70-mark external theory exam with 30 internal sessional marks:</p>
+            <ul>
+                <li><strong>Scenario A (Qualifies for PWG):</strong> Internal = 18/30, External = 20/70 (Wait: External baseline requires 25/70). Even though total is 38 (needs 2 more for 40), grace CANNOT be given because external theory is below 25. Result: <strong>COP (Back Paper)</strong>.</li>
+                <li><strong>Scenario B (Qualifies for PWG):</strong> Internal = 12/30, External = 25/70. Total = 37 marks out of 100. External baseline (25/70) is satisfied! Deficit to reach combined passing score (40/100) is 3 marks. Since 3 ≤ 5 per subject limit and within 10 annual quota, AKTU awards +3 grace marks. Result: <strong>PWG</strong>.</li>
+                <li><strong>Scenario C (Exceeds Limit):</strong> Internal = 8/30, External = 25/70. Total = 33 marks. Deficit to reach 40 is 7 marks. Since max per-subject grace limit is 5 marks, student cannot get 7 grace marks. Result: <strong>COP (Back Paper)</strong>.</li>
+            </ul>
+        </section>
+
+        <!-- STEP BY STEP ERP GUIDE SECTION -->
+        <section class="content-section">
+            <h2>💻 Step-by-Step Guide: How to Apply for Carryover (COP) Exam on AKTU ERP</h2>
+            <p>If you have carryover subjects (PCP or Back Paper status), you must fill the online Carryover Examination Form and pay the prescribed fee on the official AKTU ERP portal prior to end-semester examinations.</p>
+
+            <div class="step-box">
+                <h4>Step 1: Access official AKTU ERP Portal</h4>
+                <p>Open your browser and navigate to <a href="https://erp.aktu.ac.in" target="_blank" rel="noopener font-weight:700;">erp.aktu.ac.in</a>. Enter your User ID (Roll Number) and Password, complete the reCAPTCHA verification, and click <strong>Login</strong>.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 2: Locate Examination Dashboard & Fill Exam Form</h4>
+                <p>On your student dashboard, locate the section titled <strong>"Exam Dashboard"</strong> or <strong>"Carry Over Examination Form"</strong>. Verify your personal details, branch, semester, and list of back papers detected by the university system.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 3: Select Back Subjects & Verify Fee Amount</h4>
+                <p>Tick the checkbox corresponding to each carryover subject you wish to appear for in the upcoming odd or even semester exam. The system will automatically calculate the total fee at ₹1,000 per subject (plus applicable late fee if past the standard deadline).</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 4: Execute Payment via SBI Collect / HDFC Gateway</h4>
+                <p>Click on <strong>"Pay Examination Fee"</strong>. You will be redirected to the secure payment gateway. Pay using Net Banking, UPI (Google Pay/PhonePe), Credit Card, or Debit Card. Keep transaction ID safe.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 5: Verify Payment Receipt & Download Admit Card</h4>
+                <p>After successful payment, return to the ERP dashboard after 24 hours to download the payment confirmation receipt. Carryover admit cards will be generated 3-5 days before the examination date under the 'Admit Card' portal section.</p>
+            </div>
+        </section>
+
+        <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+        <section class="content-section">
+            <h2>❓ Frequently Asked Questions (AKTU Grace & COP Fee 2026)</h2>
+
+            <div class="faq-item">
+                <h4>Q1. How much is the Carryover (COP) examination fee per paper in AKTU?</h4>
+                <p>The standard carryover exam fee prescribed by Dr. A.P.J. Abdul Kalam Technical University is <strong>₹1,000 per subject paper</strong>. If you apply after the announced regular deadline, a late fee of ₹500 or ₹1,000 is added depending on university notification windows.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q2. Does PWG (Passed With Grace) affect my degree division or placements?</h4>
+                <p>No. A degree awarded by AKTU carries full validity whether passed normally or with PWG. Top IT recruiters focus on overall CGPA and active backlogs. However, grace marks do not add to your SGPA calculation—SGPA is computed using the actual secured marks prior to grace addition.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q3. Can I refuse Grace Marks (PWG) and fill COP form to improve my marks?</h4>
+                <p>Yes. If you wish to improve your marks in a subject marked as PWG to boost your SGPA, AKTU permits students to fill the carryover form (COP) for that subject by submitting the regular ₹1,000 exam fee on the ERP portal.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q4. What is the difference between PCP and PWG in AKTU result status?</h4>
+                <p><strong>PWG (Passed With Grace):</strong> The student has cleared the subject via grace marks and does not need to re-appear. <strong>PCP (Promoted with Carry Over Paper):</strong> The student has failed one or more subjects beyond grace limits and is promoted to the next semester with back papers that must be cleared via COP exams.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q5. Are grace marks awarded automatically on AKTU One View results?</h4>
+                <p>Yes, AKTU examination server automatically computes grace mark eligibility upon final result compilation. You do not need to submit any manual application or pay any fee to receive grace marks.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- JAVASCRIPT CALCULATION ENGINE -->
+    <script>
+        let subjectCount = 0;
+
+        function addSubjectRow(code = '', maxExt = 70, internal = 20, external = 22) {
+            subjectCount++;
+            const tbody = document.getElementById('subjectTbody');
+            const tr = document.createElement('tr');
+            tr.id = `row-${subjectCount}`;
+            tr.innerHTML = `
+                <td>
+                    <input type="text" class="form-control sub-code" value="${code || 'Subject ' + subjectCount}" placeholder="Subject Code / Name" />
+                </td>
+                <td>
+                    <select class="form-control sub-max-ext" onchange="calculateGraceAndCOP()">
+                        <option value="70" ${maxExt == 70 ? 'selected' : ''}>70 Marks (Theory)</option>
+                        <option value="100" ${maxExt == 100 ? 'selected' : ''}>100 Marks (Theory)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" class="form-control sub-internal" value="${internal}" min="0" max="50" oninput="calculateGraceAndCOP()" />
+                </td>
+                <td>
+                    <input type="number" class="form-control sub-external" value="${external}" min="0" max="100" oninput="calculateGraceAndCOP()" />
+                </td>
+                <td class="sub-status" style="vertical-align:middle;">
+                    <span class="status-badge badge-pass">--</span>
+                </td>
+                <td style="vertical-align:middle;">
+                    <button type="button" class="btn-del" onclick="removeSubjectRow(${subjectCount})">✕</button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+            calculateGraceAndCOP();
+        }
+
+        function removeSubjectRow(id) {
+            const row = document.getElementById(`row-${id}`);
+            if (row) {
+                row.remove();
+                calculateGraceAndCOP();
+            }
+        }
+
+        function calculateGraceAndCOP(e) {
+            if (e) e.preventDefault();
+
+            const rows = document.querySelectorAll('#subjectTbody tr');
+            const graceUsedBefore = parseInt(document.getElementById('graceUsedBefore').value) || 0;
+            const lateFee = parseInt(document.getElementById('lateFeeOption').value) || 0;
+
+            let remainingAnnualGrace = Math.max(0, 10 - graceUsedBefore);
+            let totalGraceAwarded = 0;
+            let passCleanCount = 0;
+            let pwgCount = 0;
+            let copCount = 0;
+            let totalSubjects = rows.length;
+
+            rows.forEach((row) => {
+                const maxExt = parseInt(row.querySelector('.sub-max-ext').value);
+                const internal = parseFloat(row.querySelector('.sub-internal').value) || 0;
+                const external = parseFloat(row.querySelector('.sub-external').value) || 0;
+                const statusTd = row.querySelector('.sub-status');
+
+                const minExtBaseline = Math.ceil(maxExt * 0.35); // 25 for 70, 35 for 100
+                const maxTotal = maxExt === 70 ? 100 : 150;
+                const minTotalNeeded = Math.ceil(maxTotal * 0.40); // 40 for 100, 60 for 150
+                const currentTotal = internal + external;
+
+                if (external >= minExtBaseline && currentTotal >= minTotalNeeded) {
+                    // Passed cleanly
+                    passCleanCount++;
+                    statusTd.innerHTML = `<span class="status-badge badge-pass">✅ PASS</span>`;
+                } else if (external >= minExtBaseline && currentTotal < minTotalNeeded) {
+                    // Deficit in total, check grace eligibility
+                    const deficit = minTotalNeeded - currentTotal;
+
+                    if (deficit <= 5 && deficit <= remainingAnnualGrace) {
+                        // Qualifies for PWG
+                        pwgCount++;
+                        remainingAnnualGrace -= deficit;
+                        totalGraceAwarded += deficit;
+                        statusTd.innerHTML = `<span class="status-badge badge-pwg">🎁 PWG (+${deficit} Grace)</span>`;
+                    } else {
+                        // Exceeds grace limit -> COP
+                        copCount++;
+                        statusTd.innerHTML = `<span class="status-badge badge-cop">🚨 COP (Back Paper)</span>`;
+                    }
+                } else {
+                    // Failed external baseline (< 25/70 or < 35/100) -> COP
+                    copCount++;
+                    statusTd.innerHTML = `<span class="status-badge badge-cop">🚨 COP (Ext < ${minExtBaseline})</span>`;
+                }
+            });
+
+            const costPerSubject = 1000 + lateFee;
+            const totalCOPFee = copCount * costPerSubject;
+
+            // Update DOM Stats
+            document.getElementById('statTotalSub').innerText = totalSubjects;
+            document.getElementById('statPassClean').innerText = passCleanCount;
+            document.getElementById('statPWG').innerText = pwgCount;
+            document.getElementById('statGraceMarks').innerText = `${totalGraceAwarded} / 10`;
+            document.getElementById('statCOPCount').innerText = copCount;
+            document.getElementById('statCOPFee').innerText = `₹${totalCOPFee.toLocaleString('en-IN')}`;
+
+            // Summary Banner
+            const banner = document.getElementById('resultBanner');
+            const summaryTitle = document.getElementById('resSummaryTitle');
+            const summaryDesc = document.getElementById('resSummaryDesc');
+
+            if (totalSubjects === 0) {
+                banner.style.display = 'none';
+                return;
+            }
+
+            banner.style.display = 'block';
+
+            if (copCount === 0 && pwgCount === 0) {
+                banner.style.background = '#dcfce7';
+                banner.style.border = '1px solid #16a34a';
+                summaryTitle.style.color = '#15803d';
+                summaryTitle.innerText = '🎉 All Clean Pass! No Carryover (COP) Fees Required';
+                summaryDesc.innerText = 'Congratulations! You have satisfied all internal, external theory, and total aggregate passing thresholds without consuming any grace marks.';
+            } else if (copCount === 0 && pwgCount > 0) {
+                banner.style.background = '#fef3c7';
+                banner.style.border = '1px solid #d97706';
+                summaryTitle.style.color = '#b45309';
+                summaryTitle.innerText = `🎁 Passed With Grace (PWG): ${totalGraceAwarded} Grace Marks Consumed`;
+                summaryDesc.innerHTML = `You have successfully cleared all papers, with <strong>${pwgCount} subject(s)</strong> passed via Grace Marks (+${totalGraceAwarded} total grace marks awarded out of 10 annual limit). You have zero Carryover (COP) fees to pay!`;
+            } else {
+                banner.style.background = '#fee2e2';
+                banner.style.border = '1px solid #dc2626';
+                summaryTitle.style.color = '#b91c1c';
+                summaryTitle.innerText = `🚨 Carryover (COP) Alert: ${copCount} Subject Backlog(s) Detected`;
+                summaryDesc.innerHTML = `You have <strong>${copCount} paper(s)</strong> requiring Carryover (COP) examination. Total estimated examination fee payable on AKTU ERP portal is <strong>₹${totalCOPFee.toLocaleString('en-IN')}</strong> (including selected application window rate).`;
+            }
+        }
+
+        // Initialize default subject rows
+        window.addEventListener('DOMContentLoaded', () => {
+            addSubjectRow('BAS101 / Engg Maths I', 70, 21, 25);
+            addSubjectRow('BAS102 / Engg Physics', 70, 18, 20); // Fail deficit 2 -> PWG +2
+            addSubjectRow('BEE101 / Basic Elec Engg', 70, 22, 30);
+            addSubjectRow('BCS101 / C Programming', 70, 14, 18); // Ext < 25 -> COP
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AKTU Results Portal. Independent Student Resource & Academic Guidance.</p>
+            <p style="margin-top:8px; font-size:13px; color:#94a3b8;">
+                <a href="/">Home</a> | <a href="/calculators.html">Calculators</a> | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

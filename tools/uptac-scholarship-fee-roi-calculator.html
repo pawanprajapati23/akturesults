@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPTAC Scholarship & College Fee ROI Calculator 2026 | Top 9 AKTU Colleges Net Outlay</title>
+    <meta name="description"
+        content="Free 1200+ words UPTAC Scholarship & College Fee ROI Calculator 2026. Top 9 AKTU colleges tuition & hostel fee data (IET, KNIT, BIET, JSS, AKGEC, KIET, ABES, Galgotias, PSIT), FW seat calculator, UP Scholarship reimbursement logic, and 4-year ROI estimator." />
+    <meta name="keywords"
+        content="uptac scholarship calculator 2026, aktu college fee roi calculator, up scholarship fee refund limit, fee waiver fw seat aktu, iet lucknow fee scholarship, jss noida fee waiver, akgec tuition fee refund" />
+    <link rel="canonical" href="https://akturesults.in/tools/uptac-scholarship-fee-roi-calculator.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="UPTAC Scholarship & College Fee ROI Calculator 2026" />
+    <meta property="og:description" content="Calculate your 4-year net out-of-pocket college cost, Fee Waiver (FW) savings, UP Scholarship reimbursement, and ROI across top 9 AKTU colleges." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akturesults.in/tools/uptac-scholarship-fee-roi-calculator.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-83VE8HR3T8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-83VE8HR3T8');
+    </script>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #0284c7;
+            --success: #16a34a;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --border-color: #cbd5e1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.7; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; padding: 25px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .header-wrap { display: flex; justify-content: space-between; align-items: center; }
+        .site-title { font-size: 26px; font-weight: 800; text-decoration: none; color: white; }
+        .site-title span { color: #38bdf8; }
+        .btn-home { background: rgba(255,255,255,0.15); color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: 600; backdrop-filter: blur(5px); }
+
+        .breadcrumb { background: white; padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb span { margin: 0 8px; color: #64748b; }
+
+        .hero-banner { background: linear-gradient(135deg, #065f46 0%, #047857 50%, #10b981 100%); color: white; padding: 35px 25px; border-radius: 16px; margin: 25px 0; text-align: center; }
+        .hero-banner h1 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+        .hero-banner p { font-size: 16px; opacity: 0.95; max-width: 850px; margin: 0 auto; }
+
+        .calc-card { background: white; border-radius: 16px; padding: 30px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .calc-header { border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .calc-header h2 { font-size: 22px; color: var(--dark); font-weight: 800; }
+
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-bottom: 20px; }
+        .form-group label { font-size: 13px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 6px; }
+        .form-control { width: 100%; padding: 11px 13px; border: 1.5px solid var(--border-color); border-radius: 8px; font-size: 14px; outline: none; font-weight: 600; background: #fff; }
+        .form-control:focus { border-color: var(--primary); }
+
+        .btn-calc { background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 15px; transition: 0.3s; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3); }
+        .btn-calc:hover { opacity: 0.95; transform: translateY(-1px); }
+
+        .res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 25px; }
+        .res-card { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center; }
+        .res-card h4 { font-size: 12px; text-transform: uppercase; color: #64748b; margin-bottom: 8px; font-weight: 700; letter-spacing: 0.5px; }
+        .res-card .num { font-size: 26px; font-weight: 800; color: var(--dark); }
+
+        .res-banner { margin-top: 25px; padding: 22px 25px; border-radius: 12px; display: none; }
+
+        .content-section { background: white; border-radius: 16px; padding: 35px; border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .content-section h2 { font-size: 24px; color: var(--dark); font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        .content-section h3 { font-size: 19px; color: var(--primary-dark); font-weight: 700; margin-top: 25px; margin-bottom: 12px; }
+        .content-section p { font-size: 15px; margin-bottom: 15px; color: #334155; }
+        .content-section ul, .content-section ol { margin-left: 20px; margin-bottom: 20px; font-size: 15px; color: #334155; }
+        .content-section li { margin-bottom: 8px; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; font-size: 14px; }
+        .info-table th { background: #065f46; color: white; padding: 12px 14px; text-align: left; }
+        .info-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-color); }
+        .info-table tr:nth-child(even) { background: #f8fafc; }
+
+        .step-box { background: #ecfdf5; border-left: 5px solid #059669; padding: 18px 22px; border-radius: 8px; margin-bottom: 15px; }
+        .step-box h4 { font-size: 16px; color: #065f46; font-weight: 700; margin-bottom: 6px; }
+
+        .faq-item { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .faq-item h4 { font-size: 17px; color: var(--dark); font-weight: 700; margin-bottom: 8px; }
+        .faq-item p { font-size: 14px; margin-bottom: 0; color: #475569; }
+
+        footer { background: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
+        footer a { color: #38bdf8; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero-banner h1 { font-size: 22px; }
+            .calc-card, .content-section { padding: 20px 15px; }
+            .site-title { font-size: 20px; }
+        }
+    </style>
+
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "UPTAC Scholarship & College Fee ROI Calculator 2026",
+      "url": "https://akturesults.in/tools/uptac-scholarship-fee-roi-calculator.html",
+      "description": "Calculate 4-year total net out-of-pocket costs, UP Scholarship fee reimbursements, Fee Waiver (FW) savings, and ROI across top 9 AKTU colleges.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the UP Scholarship income limit for private B.Tech colleges in AKTU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For General, OBC, EWS, and Minority categories, the annual family income must be ≤ ₹2,00,000. For SC/ST candidates, the annual family income limit is ≤ ₹2,50,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum UP Scholarship fee refund for private AKTU colleges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For private AKTU affiliated colleges, the Government of Uttar Pradesh caps the tuition fee reimbursement at ₹56,600 per year, plus maintenance allowance of up to ₹12,000/year for hostellers and ₹6,000/year for day scholars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Fee Waiver (FW) seat work in UPTAC Counselling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fee Waiver (FW) seats are 5% supernumerary seats in every AKTU college awarded purely based on JEE Main / UPTAC merit rank for candidates with annual family income below ₹6.0 Lakhs. FW seats exempt 100% of the tuition fee."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Non-AdSense Ad Network Integration -->
+    <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+    <script src="https://quge5.com/88/tag.min.js" data-zone="257542" async data-cfasync="false"></script>
+    <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-wrap">
+            <a href="/" class="site-title">🎓 AKTU Results <span>2026</span></a>
+            <a href="/calculators.html" class="btn-home">← All Calculators</a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> <span>›</span> <a href="/calculators.html">Calculators</a> <span>›</span> <span>UPTAC Scholarship & ROI Calculator</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-banner">
+            <h1>💰 UPTAC Scholarship & College Fee ROI Calculator 2026</h1>
+            <p>Calculate your 4-year net out-of-pocket expenses, UP Saksham Scholarship tuition refunds, Fee Waiver (FW) seat savings, and placement ROI across top 9 AKTU government & private engineering colleges.</p>
+        </section>
+
+        <!-- CALCULATOR CARD -->
+        <section class="calc-card">
+            <div class="calc-header">
+                <h2>🧮 College Cost, Scholarship & Financial ROI Engine</h2>
+                <span style="font-size:13px; color:#64748b; font-weight:600;">UP Saksham & UPTAC 2026 Guidelines</span>
+            </div>
+
+            <form id="roiForm" onsubmit="calculateROI(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="collegeSelect">Select Target AKTU College *</label>
+                        <select id="collegeSelect" class="form-control" onchange="onCollegeChange()">
+                            <option value="iet">1. IET Lucknow (Govt Autonomous)</option>
+                            <option value="knit">2. KNIT Sultanpur (Govt Autonomous)</option>
+                            <option value="biet">3. BIET Jhansi (Govt Autonomous)</option>
+                            <option value="jss" selected>4. JSSATE Noida (Private Top Ranked)</option>
+                            <option value="akgec">5. AKGEC Ghaziabad (Private)</option>
+                            <option value="kiet">6. KIET Group of Inst., Ghaziabad (Private)</option>
+                            <option value="abes">7. ABES Engineering College, Ghaziabad (Private)</option>
+                            <option value="galgotias">8. GCET / Galgotias, Greater Noida (Private)</option>
+                            <option value="psit">9. PSIT Kanpur (Private)</option>
+                            <option value="custom">10. Other / Custom AKTU College</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seatCategory">Seat Allocation Category *</label>
+                        <select id="seatCategory" class="form-control" onchange="calculateROI()">
+                            <option value="regular">Regular Merit Seat (Standard Fee)</option>
+                            <option value="fw">Fee Waiver (FW) Seat (100% Tuition Waived)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accommodation">Accommodation Status *</label>
+                        <select id="accommodation" class="form-control" onchange="calculateROI()">
+                            <option value="hostel">Hosteller (College Hostel & Mess)</option>
+                            <option value="dayscholar">Day Scholar (Local / Private PG)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="casteCategory">Category for UP Scholarship *</label>
+                        <select id="casteCategory" class="form-control" onchange="calculateROI()">
+                            <option value="gen">General / EWS</option>
+                            <option value="obc">OBC (Other Backward Classes)</option>
+                            <option value="scst">SC / ST (Scheduled Castes / Tribes)</option>
+                            <option value="minority">Minority (Muslim/Sikh/Christian/etc.)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="familyIncome">Annual Family Income (₹ in Lakhs) *</label>
+                        <input type="number" id="familyIncome" class="form-control" value="1.8" step="0.1" min="0" max="25" placeholder="e.g. 1.8" oninput="calculateROI()" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customTuition">Annual Tuition Fee (₹ / Year)</label>
+                        <input type="number" id="customTuition" class="form-control" value="137850" oninput="calculateROI()" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customHostel">Annual Hostel & Mess Fee (₹ / Year)</label>
+                        <input type="number" id="customHostel" class="form-control" value="95000" oninput="calculateROI()" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPackage">Expected Avg Placement (₹ LPA)</label>
+                        <input type="number" id="avgPackage" class="form-control" value="7.5" step="0.1" oninput="calculateROI()" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-calc">⚡ Calculate 4-Year Net Expense, Scholarship & ROI</button>
+            </form>
+
+            <div id="resultBanner" class="res-banner">
+                <h3 id="resSummaryTitle" style="font-size:20px; font-weight:800; margin-bottom:10px;"></h3>
+                <p id="resSummaryDesc" style="font-size:15px;"></p>
+            </div>
+
+            <div class="res-grid">
+                <div class="res-card">
+                    <h4>4-Year Gross Cost</h4>
+                    <div class="num" id="statGrossCost" style="color:var(--dark);">₹0</div>
+                </div>
+                <div class="res-card">
+                    <h4>4-Year FW Savings</h4>
+                    <div class="num" id="statFWSavings" style="color:var(--success);">₹0</div>
+                </div>
+                <div class="res-card">
+                    <h4>4-Year UP Scholarship</h4>
+                    <div class="num" id="statScholarship" style="color:var(--secondary);">₹0</div>
+                </div>
+                <div class="res-card">
+                    <h4>4-Year Net Outlay</h4>
+                    <div class="num" id="statNetOutlay" style="color:var(--primary);">₹0</div>
+                </div>
+                <div class="res-card">
+                    <h4>Expected Avg Package</h4>
+                    <div class="num" id="statAvgSalary" style="color:#059669;">₹0 LPA</div>
+                </div>
+                <div class="res-card">
+                    <h4>Investment Payback Time</h4>
+                    <div class="num" id="statPayback" style="color:var(--dark);">0 Months</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED GUIDELINES AND EXPLANATION CONTENT -->
+        <section class="content-section">
+            <h2>📜 Top 9 AKTU Colleges Fee Structure & ROI Comparison Table 2026</h2>
+            <p>Choosing an engineering college under Dr. A.P.J. Abdul Kalam Technical University (AKTU) requires a clear assessment of total 4-year financial expenditure versus career placement outcomes. Government autonomous institutions like IET Lucknow offer lower tuition fees, while top private colleges in Delhi NCR (JSS Noida, AKGEC, KIET) offer strong industrial exposure with varying hostel costs.</p>
+
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>College Name & Type</th>
+                        <th>Annual Tuition Fee</th>
+                        <th>Annual Hostel & Mess</th>
+                        <th>Avg Package (CSE/IT)</th>
+                        <th>Scholarship Fee Cap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>IET Lucknow</strong> (Govt Autonomous)</td>
+                        <td>₹89,775</td>
+                        <td>₹14,500</td>
+                        <td>₹8.50 LPA</td>
+                        <td>Full Tuition Refund (~₹89,775)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>KNIT Sultanpur</strong> (Govt Autonomous)</td>
+                        <td>₹84,350</td>
+                        <td>₹14,000</td>
+                        <td>₹7.20 LPA</td>
+                        <td>Full Tuition Refund (~₹84,350)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BIET Jhansi</strong> (Govt Autonomous)</td>
+                        <td>₹82,100</td>
+                        <td>₹13,500</td>
+                        <td>₹6.80 LPA</td>
+                        <td>Full Tuition Refund (~₹82,100)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JSSATE Noida</strong> (Private)</td>
+                        <td>₹1,37,850</td>
+                        <td>₹95,000</td>
+                        <td>₹7.50 LPA</td>
+                        <td>Cap at ₹56,600 / Year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AKGEC Ghaziabad</strong> (Private)</td>
+                        <td>₹1,41,000</td>
+                        <td>₹1,05,000</td>
+                        <td>₹6.80 LPA</td>
+                        <td>Cap at ₹56,600 / Year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>KIET Group of Inst.</strong> (Private)</td>
+                        <td>₹1,38,000</td>
+                        <td>₹98,000</td>
+                        <td>₹6.50 LPA</td>
+                        <td>Cap at ₹56,600 / Year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ABES Engg College</strong> (Private)</td>
+                        <td>₹1,35,000</td>
+                        <td>₹92,000</td>
+                        <td>₹6.20 LPA</td>
+                        <td>Cap at ₹56,600 / Year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Galgotias (GCET)</strong> (Private)</td>
+                        <td>₹1,26,000</td>
+                        <td>₹90,000</td>
+                        <td>₹6.00 LPA</td>
+                        <td>Cap at ₹56,600 / Year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PSIT Kanpur</strong> (Private)</td>
+                        <td>₹1,30,000</td>
+                        <td>₹85,000</td>
+                        <td>₹5.80 LPA</td>
+                        <td>Cap at ₹56,600 / Year</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>🎓 Understanding Fee Waiver (FW) Seats in UPTAC Counselling</h3>
+            <p>Fee Waiver (FW) seats are <strong>5% supernumerary seats</strong> created by AICTE and allocated through UPTAC (formerly UPSEE) counselling. Here are the core rules:</p>
+            <ul>
+                <li><strong>100% Tuition Exemption:</strong> Students admitted under FW category pay <strong>₹0 tuition fee</strong> for all 4 years.</li>
+                <li><strong>Merit Cum Means Basis:</strong> Allocated strictly according to UPTAC CRL / Category rank to candidates whose annual family income is below <strong>₹6,00,000 (6 Lakhs)</strong>.</li>
+                <li><strong>Mandatory Expenses:</strong> FW students only pay annual hostel/mess fees, university exam fees, and student activity charges.</li>
+            </ul>
+
+            <h3>🏛️ UP Scholarship (Saksham Portal) Income & Refund Eligibility Rules</h3>
+            <p>The Uttar Pradesh Social Welfare Department provides post-matric scholarship and fee reimbursement via the <code>scholarship.up.gov.in</code> portal under strict income parameters:</p>
+            <ul>
+                <li><strong>Income Cap (General / OBC / EWS / Minority):</strong> Family income must not exceed <strong>₹2,00,000 per annum (2.0 Lakhs)</strong>.</li>
+                <li><strong>Income Cap (SC / ST):</strong> Family income must not exceed <strong>₹2,50,000 per annum (2.5 Lakhs)</strong>.</li>
+                <li><strong>Private College Refund Cap:</strong> For private self-financed colleges, tuition fee reimbursement is capped at a maximum of <strong>₹56,600 per year</strong> for B.Tech courses.</li>
+                <li><strong>Maintenance Allowance:</strong> Eligible hostellers receive up to ₹12,000/year, while day scholars receive ₹6,000/year as maintenance allowance.</li>
+                <li><strong>75% Attendance Requirement:</strong> Students must maintain a minimum of 75% attendance recorded on the biometric / ERP portal to receive scholarship funds.</li>
+            </ul>
+        </section>
+
+        <!-- STEP BY STEP GUIDE -->
+        <section class="content-section">
+            <h2>💻 Step-by-Step Guide: How to Apply for UP Scholarship on Saksham Portal</h2>
+            <p>Follow these steps to claim fee reimbursement and scholarship allowance after securing admission through UPTAC or direct management quota:</p>
+
+            <div class="step-box">
+                <h4>Step 1: Registration on scholarship.up.gov.in</h4>
+                <p>Visit the official portal <a href="https://scholarship.up.gov.in" target="_blank" rel="noopener font-weight:700;">scholarship.up.gov.in</a>. Click on 'Student' -> 'Registration' -> Select 'Postmatric Other Than Inter (Fresh)' based on your category.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 2: Fill Personal & Academic Details</h4>
+                <p>Enter your Aadhaar number, high school roll number, bank account details (seeded with Aadhaar NPCI mapper), and UPTAC admission allotment letter number.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 3: Upload Mandatory Documents</h4>
+                <p>Upload scanned copies of Income Certificate (issued by Tehsil/SDM), Caste Certificate, Domicile Certificate (UP Domicile mandatory for general category), Fee Receipt, and College ID Card.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 4: College Verification & Physical Form Submission</h4>
+                <p>Print the final application draft and submit the hard copy along with attached self-attested documents to your college scholarship department for online verification and forward approval.</p>
+            </div>
+        </section>
+
+        <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+        <section class="content-section">
+            <h2>❓ Frequently Asked Questions (UPTAC Scholarship & ROI 2026)</h2>
+
+            <div class="faq-item">
+                <h4>Q1. Can a student enjoy both Fee Waiver (FW) seat and UP Scholarship tuition refund simultaneously?</h4>
+                <p>No. Since a Fee Waiver seat already waives 100% of the tuition fee, the Social Welfare Department will not disburse tuition fee reimbursement. However, eligible FW students from SC/ST or low-income categories may still receive the annual maintenance allowance.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q2. What if my annual family income is ₹2.1 Lakhs and I belong to OBC category?</h4>
+                <p>Unfortunately, the UP Saksham portal automatically rejects applications for OBC/General candidates whose income certificate shows family income above ₹2,00,000 per annum. SC/ST candidates are eligible up to ₹2,50,000 per annum.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q3. How is the payback period / ROI calculated?</h4>
+                <p>Payback period represents the number of months of post-tax salary required to recover your 4-year net out-of-pocket college expenditure. A payback period of less than 12-18 months indicates an exceptional return on educational investment.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q4. Why is the tuition fee refund capped at ₹56,600 for private AKTU colleges?</h4>
+                <p>The Uttar Pradesh state government has fixed the maximum tuition reimbursement rate for private professional institutions at ₹56,600 per student per year. Even if your college charges ₹1.4 Lakhs annual tuition, the state government refund will not exceed ₹56,600.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- JAVASCRIPT CALCULATION ENGINE -->
+    <script>
+        const collegeData = {
+            iet: { name: 'IET Lucknow (Govt)', tuition: 89775, hostel: 14500, type: 'govt', avgPkg: 8.5 },
+            knit: { name: 'KNIT Sultanpur (Govt)', tuition: 84350, hostel: 14000, type: 'govt', avgPkg: 7.2 },
+            biet: { name: 'BIET Jhansi (Govt)', tuition: 82100, hostel: 13500, type: 'govt', avgPkg: 6.8 },
+            jss: { name: 'JSSATE Noida (Private)', tuition: 137850, hostel: 95000, type: 'private', avgPkg: 7.5 },
+            akgec: { name: 'AKGEC Ghaziabad (Private)', tuition: 141000, hostel: 105000, type: 'private', avgPkg: 6.8 },
+            kiet: { name: 'KIET Ghaziabad (Private)', tuition: 138000, hostel: 98000, type: 'private', avgPkg: 6.5 },
+            abes: { name: 'ABES Ghaziabad (Private)', tuition: 135000, hostel: 92000, type: 'private', avgPkg: 6.2 },
+            galgotias: { name: 'Galgotias Greater Noida (Private)', tuition: 126000, hostel: 90000, type: 'private', avgPkg: 6.0 },
+            psit: { name: 'PSIT Kanpur (Private)', tuition: 130000, hostel: 85000, type: 'private', avgPkg: 5.8 }
+        };
+
+        function onCollegeChange() {
+            const selectedKey = document.getElementById('collegeSelect').value;
+            const tuitionInput = document.getElementById('customTuition');
+            const hostelInput = document.getElementById('customHostel');
+            const pkgInput = document.getElementById('avgPackage');
+
+            if (selectedKey !== 'custom' && collegeData[selectedKey]) {
+                const data = collegeData[selectedKey];
+                tuitionInput.value = data.tuition;
+                hostelInput.value = data.hostel;
+                pkgInput.value = data.avgPkg;
+            }
+            calculateROI();
+        }
+
+        function calculateROI(e) {
+            if (e) e.preventDefault();
+
+            const collegeKey = document.getElementById('collegeSelect').value;
+            const seatCategory = document.getElementById('seatCategory').value;
+            const accommodation = document.getElementById('accommodation').value;
+            const casteCategory = document.getElementById('casteCategory').value;
+            const familyIncome = parseFloat(document.getElementById('familyIncome').value) || 0;
+
+            let annualTuition = parseFloat(document.getElementById('customTuition').value) || 0;
+            let annualHostel = parseFloat(document.getElementById('customHostel').value) || 0;
+            const avgPackageLPA = parseFloat(document.getElementById('avgPackage').value) || 0;
+
+            const isGovt = (collegeKey === 'iet' || collegeKey === 'knit' || collegeKey === 'biet');
+
+            if (accommodation === 'dayscholar') {
+                annualHostel = 0; // Day scholar pays 0 college hostel fee
+            }
+
+            const annualExamMisc = 12000; // Average university exam + student activity charges
+            const grossAnnualCost = annualTuition + annualHostel + annualExamMisc;
+            const gross4YearCost = grossAnnualCost * 4;
+
+            // FW Calculation
+            let annualFWSavings = 0;
+            if (seatCategory === 'fw') {
+                annualFWSavings = annualTuition;
+            }
+            const totalFWSavings = annualFWSavings * 4;
+
+            // Scholarship Logic
+            let isScholarshipEligible = false;
+            const maxIncomeLimit = (casteCategory === 'scst') ? 2.5 : 2.0;
+
+            if (familyIncome <= maxIncomeLimit) {
+                isScholarshipEligible = true;
+            }
+
+            let annualScholarshipRefund = 0;
+
+            if (isScholarshipEligible && seatCategory !== 'fw') {
+                if (isGovt) {
+                    // Full tuition refund for Govt colleges
+                    annualScholarshipRefund = annualTuition;
+                } else {
+                    // Capped at ₹56,600 for private colleges
+                    annualScholarshipRefund = Math.min(annualTuition, 56600);
+                }
+
+                // Add maintenance allowance
+                const maintenance = (accommodation === 'hostel') ? 12000 : 6000;
+                annualScholarshipRefund += maintenance;
+            }
+
+            const totalScholarship4Years = annualScholarshipRefund * 4;
+
+            // Net Outlay Calculation
+            const net4YearOutlay = Math.max(0, gross4YearCost - totalFWSavings - totalScholarship4Years);
+
+            // Payback Period Calculation (Monthly take-home estimated at 80% of gross salary)
+            const monthlyTakeHome = (avgPackageLPA * 100000 * 0.8) / 12;
+            let paybackMonths = 0;
+            if (monthlyTakeHome > 0) {
+                paybackMonths = Math.ceil(net4YearOutlay / monthlyTakeHome);
+            }
+
+            // Update DOM
+            document.getElementById('statGrossCost').innerText = `₹${gross4YearCost.toLocaleString('en-IN')}`;
+            document.getElementById('statFWSavings').innerText = `₹${totalFWSavings.toLocaleString('en-IN')}`;
+            document.getElementById('statScholarship').innerText = `₹${totalScholarship4Years.toLocaleString('en-IN')}`;
+            document.getElementById('statNetOutlay').innerText = `₹${net4YearOutlay.toLocaleString('en-IN')}`;
+            document.getElementById('statAvgSalary').innerText = `₹${avgPackageLPA} LPA`;
+            document.getElementById('statPayback').innerText = `${paybackMonths} Months`;
+
+            // Summary Banner
+            const banner = document.getElementById('resultBanner');
+            const summaryTitle = document.getElementById('resSummaryTitle');
+            const summaryDesc = document.getElementById('resSummaryDesc');
+
+            banner.style.display = 'block';
+
+            if (seatCategory === 'fw') {
+                banner.style.background = '#dcfce7';
+                banner.style.border = '1px solid #16a34a';
+                summaryTitle.style.color = '#15803d';
+                summaryTitle.innerText = `🎉 Fee Waiver (FW) Seat Benefit: ₹${totalFWSavings.toLocaleString('en-IN')} Total Saved!`;
+                summaryDesc.innerHTML = `By securing an FW seat, 100% of your 4-year tuition fee is exempted. Your total 4-year out-of-pocket investment drops to <strong>₹${net4YearOutlay.toLocaleString('en-IN')}</strong> with a payback period of just <strong>${paybackMonths} months</strong> post graduation.`;
+            } else if (isScholarshipEligible) {
+                banner.style.background = '#e0f2fe';
+                banner.style.border = '1px solid #0284c7';
+                summaryTitle.style.color = '#0369a1';
+                summaryTitle.innerText = `🎓 UP Scholarship Eligible: ₹${totalScholarship4Years.toLocaleString('en-IN')} Total Reimbursement`;
+                summaryDesc.innerHTML = `With family income of ₹${familyIncome} Lakhs, you qualify for UP Saksham Scholarship. Estimated 4-year government reimbursement is <strong>₹${totalScholarship4Years.toLocaleString('en-IN')}</strong>, reducing your effective 4-year outlay to <strong>₹${net4YearOutlay.toLocaleString('en-IN')}</strong>.`;
+            } else {
+                banner.style.background = '#f8fafc';
+                banner.style.border = '1px solid #cbd5e1';
+                summaryTitle.style.color = '#334155';
+                summaryTitle.innerText = `📊 Standard Out-of-Pocket Expense: ₹${net4YearOutlay.toLocaleString('en-IN')}`;
+                summaryDesc.innerHTML = `Since family income exceeds ₹${maxIncomeLimit} Lakhs, standard tuition rates apply. Your total 4-year cost is <strong>₹${net4YearOutlay.toLocaleString('en-IN')}</strong>. Estimated placement package of ₹${avgPackageLPA} LPA will recover investment in <strong>${paybackMonths} months</strong>.`;
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            onCollegeChange();
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AKTU Results Portal. Independent Student Resource & Counseling Guidance.</p>
+            <p style="margin-top:8px; font-size:13px; color:#94a3b8;">
+                <a href="/">Home</a> | <a href="/calculators.html">Calculators</a> | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
