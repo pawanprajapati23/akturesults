@@ -1,3 +1,9 @@
+try {
+    importScripts('/sw.js');
+} catch (e) {
+    console.log('Sw import notice:', e);
+}
+
 const CACHE_NAME = 'aktu-results-v1';
 const urlsToCache = [
   '/',
