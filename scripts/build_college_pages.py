@@ -30,7 +30,7 @@ def page(c):
 <html lang="en">
 <head>
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{c["name"]} ({c["code"]}) {c["city"]} | Fees, Placements, Branches & Cutoff 2026</title>
+<title>{c["name"]} ({c["code"]}) {c["city"]} | Fees, Placements, Branches & Cutoff | Updated Annually</title>
 <meta name="description" content="Complete 2026 guide for {c["short"]} (AKTU Code {c["code"]}). Verified fee structure (Rs {c["fee_tuition"]:,}/yr), hostel charges, branch-wise intake, {c["highest_pkg"]} highest package, NIRF {c["nirf_rank"]}, NAAC {c["naac"]}, top recruiters & campus life." />
 <meta name="keywords" content="{c["short"].lower()} fees 2026, {c["short"].lower()} placement, aktu code {c["code"]} cutoff, {c["short"].lower()} hostel fee, {c["short"].lower()} branches, {c["short"].lower()} nirf ranking, {c["short"].lower()} admission 2026, {c["city"].lower()} engineering college aktu" />
 <link rel="canonical" href="https://akturesults.in/colleges/profiles/{c["slug"]}.html" />
@@ -118,7 +118,7 @@ footer a{{color:#38bdf8;text-decoration:none;}}
 <div class="stats">
 <div class="stat"><div class="stat-v" style="color:#4ade80;">{c["highest_pkg"]}</div><div class="stat-l">Highest Package</div></div>
 <div class="stat"><div class="stat-v">{c["avg_pkg_cse"]}</div><div class="stat-l">Avg CSE Package</div></div>
-<div class="stat"><div class="stat-v">{c["placement_pct"]}%</div><div class="stat-l">Placed 2026</div></div>
+<div class="stat"><div class="stat-v">{c["placement_pct"]}%</div><div class="stat-l">Placement Rate</div></div>
 <div class="stat"><div class="stat-v">{c["total_intake"]:,}</div><div class="stat-l">Total Intake</div></div>
 <div class="stat"><div class="stat-v">NIRF</div><div class="stat-l">{c["nirf_rank"]}</div></div>
 </div>
@@ -162,7 +162,7 @@ footer a{{color:#38bdf8;text-decoration:none;}}
 </div>
 
 <div class="card">
-<h2 class="ctitle">🎓 Branches, Intake & Department Heads 2026</h2>
+<h2 class="ctitle">🎓 Branches, Intake & Department Heads</h2>
 <div style="overflow-x:auto;">
 <table class="bt">
 <thead><tr><th>Branch / Programme</th><th>Intake</th><th>Department HOD</th><th>Dept Grade</th></tr></thead>
@@ -172,13 +172,13 @@ footer a{{color:#38bdf8;text-decoration:none;}}
 </div>
 
 <div class="card">
-<h2 class="ctitle">💼 Placement 2026 — Companies & Packages</h2>
+<h2 class="ctitle">💼 Latest Placements — Companies & Packages</h2>
 <div class="rg" style="margin-bottom:16px;">
 <div class="rc"><div class="rv" style="color:#16a34a;">{c["highest_pkg"]}</div><div class="rl">Highest Package</div></div>
 <div class="rc"><div class="rv">{c["avg_pkg_cse"]}</div><div class="rl">Avg CSE Package</div></div>
 <div class="rc"><div class="rv">{c["placement_pct"]}%</div><div class="rl">Students Placed</div></div>
 </div>
-<h3 style="font-size:15px;font-weight:700;margin-bottom:9px;">🏢 Top Visiting Recruiters (2026 Campus Drive):</h3>
+<h3 style="font-size:15px;font-weight:700;margin-bottom:9px;">🏢 Top Visiting Recruiters (Latest Campus Drive):</h3>
 <div>{rec}</div>
 <div style="margin-top:13px;background:#f0fdf4;border-left:4px solid #16a34a;padding:13px;border-radius:8px;">
 <p style="font-size:13px;"><strong>Tier 1 Product MNCs:</strong> Amazon, Google, Microsoft, Adobe — ₹12 LPA to ₹50+ LPA</p>
