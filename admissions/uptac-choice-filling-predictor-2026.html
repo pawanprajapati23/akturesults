@@ -176,14 +176,25 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="branchSelect">Preferred Branch *</label>
+                        <label for="branchSelect">Preferred Course / Branch *</label>
                         <select id="branchSelect" class="form-control" required>
-                            <option value="ALL">All Branches (Recommended)</option>
-                            <option value="CSE">Computer Science (CSE / IT / AI / ML)</option>
-                            <option value="ECE">Electronics & Comm. (ECE)</option>
-                            <option value="ME">Mechanical Engineering (ME)</option>
-                            <option value="CE">Civil Engineering (CE)</option>
-                            <option value="OTHER">MBA / MCA / B.Pharm</option>
+                            <option value="ALL">All Branches & Courses (Recommended)</option>
+                            <option value="CSE">B.Tech Computer Science (CSE Core)</option>
+                            <option value="AIML">B.Tech CSE (AI & Machine Learning)</option>
+                            <option value="DS">B.Tech CSE (Data Science)</option>
+                            <option value="CY">B.Tech CSE (Cyber Security)</option>
+                            <option value="IT">B.Tech Information Technology (IT)</option>
+                            <option value="ECE">B.Tech Electronics & Comm. (ECE)</option>
+                            <option value="EEE">B.Tech Electrical & Electronics (EEE/EE)</option>
+                            <option value="ME">B.Tech Mechanical Engineering (ME)</option>
+                            <option value="CE">B.Tech Civil Engineering (CE)</option>
+                            <option value="CHE">B.Tech Chemical Engineering (CHE)</option>
+                            <option value="BT">B.Tech Biotechnology (BT)</option>
+                            <option value="MBA">MBA (Master of Business Admin)</option>
+                            <option value="MCA">MCA (Master of Computer Applications)</option>
+                            <option value="BPHARM">B.Pharm (Bachelor of Pharmacy)</option>
+                            <option value="BARCH">B.Arch (Bachelor of Architecture)</option>
+                            <option value="LEET">B.Tech Lateral Entry (2nd Year Direct)</option>
                         </select>
                     </div>
 
@@ -268,16 +279,20 @@
     </div>
 
     <!-- JavaScript logic for Predictor Tool -->
-    <script>
         const collegesDatabase = [
             { name: "IET Lucknow", code: "052", type: "GOVT", branch: "CSE", fee: "₹89,775", cutoff: 35000, avgPkg: "₹9.2 LPA" },
+            { name: "IET Lucknow", code: "052", type: "GOVT", branch: "AIML", fee: "₹89,775", cutoff: 42000, avgPkg: "₹9.0 LPA" },
             { name: "IET Lucknow", code: "052", type: "GOVT", branch: "ECE", fee: "₹89,775", cutoff: 58000, avgPkg: "₹7.5 LPA" },
             { name: "KNIT Sultanpur", code: "104", type: "GOVT", branch: "CSE", fee: "₹84,350", cutoff: 52000, avgPkg: "₹8.0 LPA" },
+            { name: "KNIT Sultanpur", code: "104", type: "GOVT", branch: "IT", fee: "₹84,350", cutoff: 62000, avgPkg: "₹7.8 LPA" },
             { name: "BIET Jhansi", code: "043", type: "GOVT", branch: "CSE", fee: "₹78,500", cutoff: 65000, avgPkg: "₹7.2 LPA" },
+            { name: "BIET Jhansi", code: "043", type: "GOVT", branch: "ECE", fee: "₹78,500", cutoff: 82000, avgPkg: "₹6.5 LPA" },
             { name: "JSS Academy of Tech Ed, Noida", code: "091", type: "PRIVATE", branch: "CSE", fee: "₹1,38,000", cutoff: 75000, avgPkg: "₹7.8 LPA" },
+            { name: "JSS Academy of Tech Ed, Noida", code: "091", type: "PRIVATE", branch: "AIML", fee: "₹1,38,000", cutoff: 85000, avgPkg: "₹7.5 LPA" },
             { name: "Ajay Kumar Garg Engg College (AKGEC)", code: "027", type: "PRIVATE", branch: "CSE", fee: "₹1,32,000", cutoff: 95000, avgPkg: "₹6.8 LPA" },
+            { name: "Ajay Kumar Garg Engg College (AKGEC)", code: "027", type: "PRIVATE", branch: "DS", fee: "₹1,32,000", cutoff: 105000, avgPkg: "₹6.5 LPA" },
             { name: "KIET Group of Institutions, Ghaziabad", code: "029", type: "PRIVATE", branch: "CSE", fee: "₹1,29,500", cutoff: 110000, avgPkg: "₹6.5 LPA" },
-            { name: "KNIT Sultanpur", code: "104", type: "GOVT", branch: "ME", fee: "₹84,350", cutoff: 120000, avgPkg: "₹5.5 LPA" },
+            { name: "KIET Group of Institutions, Ghaziabad", code: "029", type: "PRIVATE", branch: "CY", fee: "₹1,29,500", cutoff: 120000, avgPkg: "₹6.3 LPA" },
             { name: "ABES Engineering College, Ghaziabad", code: "032", type: "PRIVATE", branch: "CSE", fee: "₹1,35,000", cutoff: 135000, avgPkg: "₹6.2 LPA" },
             { name: "GL Bajaj Inst of Tech & Mgmt, Gr. Noida", code: "192", type: "PRIVATE", branch: "CSE", fee: "₹1,30,000", cutoff: 145000, avgPkg: "₹6.5 LPA" },
             { name: "Noida Inst of Engg & Tech (NIET)", code: "133", type: "PRIVATE", branch: "CSE", fee: "₹1,28,000", cutoff: 180000, avgPkg: "₹5.8 LPA" },
@@ -285,7 +300,10 @@
             { name: "PSIT Kanpur", code: "164", type: "PRIVATE", branch: "CSE", fee: "₹1,40,000", cutoff: 195000, avgPkg: "₹5.6 LPA" },
             { name: "REC Bijnor", code: "733", type: "GOVT", branch: "CSE", fee: "₹65,000", cutoff: 110000, avgPkg: "₹5.0 LPA" },
             { name: "REC Banda", code: "734", type: "GOVT", branch: "CSE", fee: "₹65,000", cutoff: 115000, avgPkg: "₹5.0 LPA" },
-            { name: "REC Kannauj", code: "735", type: "GOVT", branch: "CSE", fee: "₹65,000", cutoff: 125000, avgPkg: "₹4.8 LPA" }
+            { name: "IET Lucknow", code: "052", type: "GOVT", branch: "MBA", fee: "₹75,000", cutoff: 500, avgPkg: "₹6.5 LPA" },
+            { name: "KIET Ghaziabad", code: "029", type: "PRIVATE", branch: "MBA", fee: "₹1,20,000", cutoff: 2500, avgPkg: "₹5.2 LPA" },
+            { name: "JSS Noida", code: "091", type: "PRIVATE", branch: "MCA", fee: "₹1,25,000", cutoff: 1200, avgPkg: "₹6.0 LPA" },
+            { name: "KIET Ghaziabad", code: "029", type: "PRIVATE", branch: "BPHARM", fee: "₹1,30,000", cutoff: 3500, avgPkg: "₹4.5 LPA" }
         ];
 
         function calculatePredictor(e) {
