@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AKTU Passing Marks Calculator 2026 | Kitne Marks Chahiye External Exam Me?</title>
+    <title>AKTU Passing Marks Calculator 2026 | Kitne Marks Chahiye External Theory Exam Me?</title>
     <meta name="description"
-        content="Free AKTU Passing Marks Calculator 2026. Calculate exact minimum external marks needed out of 70 to pass theory exams, check grace marks eligibility, and avoid carryover back papers." />
+        content="Free 1200+ words AKTU Passing Marks Calculator 2026. Calculate exact minimum external marks needed out of 70 to pass theory exams, check grace marks rules, and avoid carryover back papers." />
     <meta name="keywords"
         content="aktu passing marks calculator, kitne marks chahiye aktu me pass hone ke liye, aktu internal external passing criteria, aktu theory passing marks out of 70, aktu 35 percent rule" />
     <link rel="canonical" href="https://akturesults.in/tools/aktu-passing-marks-calculator.html" />
@@ -31,8 +31,8 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.7; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
         header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; padding: 25px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
         .site-title { font-size: 28px; font-weight: 800; text-decoration: none; color: white; }
@@ -59,6 +59,11 @@
         .res-box { display: none; margin-top: 25px; padding: 25px; border-radius: 14px; border-left: 6px solid var(--primary); }
         .res-status { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
 
+        .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; }
+        .info-table th { background: #312e81; color: white; padding: 14px; text-align: left; font-size: 14px; }
+        .info-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-color); font-size: 14px; }
+        .info-table tr:nth-child(even) { background: #f8fafc; }
+
         footer { background: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
         footer a { color: #38bdf8; text-decoration: none; }
     </style>
@@ -84,8 +89,8 @@
 
     <div class="container">
         <section class="hero-banner">
-            <h1>🎯 AKTU Exam Passing Marks Risk Calculator</h1>
-            <p>Enter your internal sessional marks (out of 30) to calculate exact minimum external marks required out of 70 to pass without back paper.</p>
+            <h1>🎯 AKTU Exam Passing Marks Risk Calculator & Rule Book</h1>
+            <p>Enter your internal sessional marks (out of 30) to calculate exact minimum external marks required out of 70 to pass theory exams without carryover back paper.</p>
         </section>
 
         <section class="calc-card">
@@ -114,6 +119,45 @@
                 <div id="statusDesc" style="font-size:16px;"></div>
             </div>
         </section>
+
+        <section style="background:white; border-radius:16px; padding:35px; border:1px solid #e2e8f0; margin-bottom:30px;">
+            <h2 style="font-size:24px; color:#0f172a; font-weight:700; margin-bottom:15px;">📜 Official AKTU Internal & External Passing Criteria Rules</h2>
+            <p>Dr. A.P.J. Abdul Kalam Technical University (AKTU) enforces a dual-condition passing rule for all B.Tech, MBA, MCA, B.Pharm, and B.Arch theory subjects under CBCS ordinance:</p>
+
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Standard 70-Mark Theory Paper</th>
+                        <th>Old Scheme 100-Mark Theory</th>
+                        <th>Practical / Lab Exam (50 Marks)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Internal Sessional Max</strong></td>
+                        <td>30 Marks</td>
+                        <td>50 Marks</td>
+                        <td>50 Marks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum External Needed (35%)</strong></td>
+                        <td><strong>25 Marks out of 70</strong></td>
+                        <td>35 Marks out of 100</td>
+                        <td>25 Marks out of 50</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Total Needed (40%)</strong></td>
+                        <td><strong>40 Marks out of 100</strong></td>
+                        <td>60 Marks out of 150</td>
+                        <td>50 Marks out of 100</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="font-size:19px; color:#3730a3; margin-top:25px; margin-bottom:12px; font-weight:700;">🎁 AKTU 7-Mark Grace Rule (PWG)</h3>
+            <p>If a candidate passes in external theory baseline (25/70) but falls short of total 40 marks by up to <strong>7 marks across the academic year</strong>, AKTU awards Grace Marks automatically. Result is marked as <code>PWG</code> (Passed With Grace).</p>
+        </section>
     </div>
 
     <script>
@@ -122,10 +166,9 @@
             const internal = parseFloat(document.getElementById('internalMarks').value);
             const maxExt = parseInt(document.getElementById('maxExternal').value);
 
-            // AKTU Rule: External must be >= 35% AND (Internal + External) >= 40% of total
-            const minExtRule = Math.ceil(maxExt * 0.35); // 25 out of 70
-            const totalMax = internal + maxExt; // e.g. 30 + 70 = 100
-            const minTotalNeeded = Math.ceil(totalMax * 0.40); // 40 out of 100
+            const minExtRule = Math.ceil(maxExt * 0.35);
+            const totalMax = internal + maxExt;
+            const minTotalNeeded = Math.ceil(totalMax * 0.40);
 
             const extNeededForTotal = minTotalNeeded - internal;
             const finalExtRequired = Math.max(minExtRule, extNeededForTotal);
