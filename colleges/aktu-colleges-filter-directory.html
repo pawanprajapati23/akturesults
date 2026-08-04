@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AKTU Affiliated Colleges Directory | Filter by City, Fees, Branch & NAAC Grade</title>
-  <meta name="description" content="Explore and filter 800+ AKTU colleges by city (Noida, Lucknow, Ghaziabad, Kanpur), annual fee bracket, engineering branches (CSE, AI, ECE), NAAC grades and highest placement packages. Interactive college directory updated annually.">
+  <meta name="description" content="Explore and filter 800+ AKTU colleges by city (Noida, Lucknow, Ghaziabad, Kanpur, Meerut), annual fee bracket, engineering branches (CSE, AI, ECE), NAAC grades and highest placement packages. Interactive college directory updated annually.">
   <meta name="keywords" content="aktu college filter, aktu colleges list, aktu fees list, top aktu colleges cse, best aktu government colleges, uptac college predictor">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://akturesults.in/colleges/aktu-colleges-filter-directory.html">
@@ -58,7 +58,7 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 1240px;
+      max-width: 1260px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -97,7 +97,7 @@
     .hero {
       background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
       color: #ffffff;
-      padding: 60px 0 50px;
+      padding: 55px 0 45px;
       text-align: center;
     }
     .hero-badge {
@@ -108,21 +108,21 @@
       font-size: 13px;
       font-weight: 700;
       display: inline-block;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       backdrop-filter: blur(8px);
     }
     .hero h1 {
       font-size: 38px;
       font-weight: 900;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       line-height: 1.25;
       letter-spacing: -0.02em;
     }
     .hero p {
-      font-size: 17px;
+      font-size: 16px;
       opacity: 0.9;
       max-width: 760px;
-      margin: 0 auto 26px;
+      margin: 0 auto 24px;
     }
     .search-box-wrapper {
       max-width: 680px;
@@ -148,43 +148,95 @@
       background: #ffffff;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      padding: 26px 30px;
-      margin: -30px auto 36px;
+      padding: 24px 28px;
+      margin: -25px auto 32px;
       position: relative;
       z-index: 10;
       border: 1px solid var(--border);
     }
+    .filter-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-header-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .btn-reset {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-reset:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+      align-items: center;
+    }
+    .preset-pill {
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .preset-pill:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
     .filter-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
     .filter-row:last-child {
       margin-bottom: 0;
     }
     .filter-label {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--text-muted);
-      min-width: 100px;
+      min-width: 90px;
     }
     .pill-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
       flex: 1;
     }
     .filter-pill {
       background: #f1f5f9;
       border: 1px solid #e2e8f0;
       color: #334155;
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -206,48 +258,47 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       flex-wrap: wrap;
       gap: 12px;
     }
     .results-count {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 800;
       color: var(--dark);
     }
     .sort-wrapper {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
     .sort-select {
       padding: 8px 14px;
       border-radius: 8px;
       border: 1px solid var(--border);
       background: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
       outline: none;
       font-family: inherit;
     }
 
     .college-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 22px;
       margin-bottom: 50px;
     }
     .college-card {
       background: #ffffff;
       border-radius: 14px;
       border: 1px solid var(--border);
-      padding: 24px;
+      padding: 22px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-      position: relative;
     }
     .college-card:hover {
       transform: translateY(-4px);
@@ -258,15 +309,15 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 12px;
-      gap: 10px;
+      margin-bottom: 10px;
+      gap: 8px;
     }
     .badge-city {
       background: #eff6ff;
       color: #1d4ed8;
       font-size: 11px;
       font-weight: 800;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 12px;
       text-transform: uppercase;
     }
@@ -275,7 +326,7 @@
       color: #047857;
       font-size: 11px;
       font-weight: 800;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 12px;
     }
     .badge-govt {
@@ -283,77 +334,95 @@
       color: #b45309;
       font-size: 11px;
       font-weight: 800;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 12px;
     }
     .card-title {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
       color: var(--dark);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 1.35;
     }
     .card-code {
       font-size: 12px;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .card-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 6px;
       background: #f8fafc;
       border-radius: 10px;
-      padding: 12px 10px;
+      padding: 10px 8px;
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .stat-val {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 900;
       color: var(--primary);
     }
     .stat-lbl {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--text-muted);
       margin-top: 2px;
-      font-weight: 600;
+      font-weight: 700;
+      text-transform: uppercase;
     }
     .branch-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 14px;
+      gap: 5px;
+      margin-bottom: 12px;
     }
     .branch-tag {
       background: #f1f5f9;
       color: #475569;
       font-size: 11px;
       font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
+      padding: 2px 7px;
+      border-radius: 5px;
     }
     .recruiters-list {
       font-size: 12px;
       color: #334155;
-      margin-bottom: 18px;
-      line-height: 1.5;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
     }
     .card-btn {
-      display: block;
-      width: 100%;
+      flex: 1;
       text-align: center;
       background: var(--primary);
       color: #ffffff;
       text-decoration: none;
-      padding: 11px 0;
+      padding: 10px 0;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       transition: background 0.2s;
     }
     .card-btn:hover {
       background: var(--primary-light);
+    }
+    .card-btn-secondary {
+      background: #f1f5f9;
+      color: #334155;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .card-btn-secondary:hover {
+      background: #e2e8f0;
+      color: #0f172a;
     }
     .empty-state {
       grid-column: 1 / -1;
@@ -380,9 +449,9 @@
       text-decoration: none;
     }
     @media(max-width: 768px) {
-      .hero h1 { font-size: 28px; }
-      .filter-section { padding: 20px; margin-top: -15px; }
-      .filter-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .hero h1 { font-size: 26px; }
+      .filter-section { padding: 18px; margin-top: -15px; }
+      .filter-row { flex-direction: column; align-items: flex-start; gap: 6px; }
       .college-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -407,7 +476,7 @@
       <h1>Find Your Best AKTU College</h1>
       <p>Instant filter by City, Fees, Branches, NAAC Accreditation, and Highest Placements across Dr. A.P.J. Abdul Kalam Technical University.</p>
       <div class="search-box-wrapper">
-        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search college by name, city, or branch (e.g. IET, KIET, Noida, CSE)...">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search college by name, city, or branch (e.g. IET, KIET, Noida, CSE, 027)...">
       </div>
     </div>
   </div>
@@ -415,6 +484,20 @@
   <div class="container">
     <!-- Filter Controls -->
     <div class="filter-section">
+      <div class="filter-header-bar">
+        <div class="filter-header-title">⚡ Interactive Filter Engine</div>
+        <button id="resetFiltersBtn" class="btn-reset">🔄 Reset All Filters</button>
+      </div>
+
+      <!-- Preset Shortcuts -->
+      <div class="presets-row">
+        <span style="font-size:12px;font-weight:800;color:var(--text-muted);">Quick Presets:</span>
+        <span class="preset-pill" onclick="applyPreset('govt')">🏛️ Top Govt Colleges</span>
+        <span class="preset-pill" onclick="applyPreset('ncr')">🏙️ Top NCR Colleges</span>
+        <span class="preset-pill" onclick="applyPreset('high_pkg')">💼 Highest Packages (>40 LPA)</span>
+        <span class="preset-pill" onclick="applyPreset('budget')">💰 Under ₹1 Lakh Budget</span>
+      </div>
+
       <!-- City Filter -->
       <div class="filter-row">
         <div class="filter-label">🏙️ City:</div>
@@ -427,11 +510,14 @@
           <span class="filter-pill" data-filter="city" data-val="Kanpur">Kanpur</span>
           <span class="filter-pill" data-filter="city" data-val="Meerut">Meerut</span>
           <span class="filter-pill" data-filter="city" data-val="Prayagraj">Prayagraj</span>
+          <span class="filter-pill" data-filter="city" data-val="Varanasi">Varanasi</span>
+          <span class="filter-pill" data-filter="city" data-val="Gorakhpur">Gorakhpur</span>
           <span class="filter-pill" data-filter="city" data-val="Jhansi">Jhansi</span>
-          <span class="filter-pill" data-filter="city" data-val="Moradabad">Moradabad</span>
-          <span class="filter-pill" data-filter="city" data-val="Sultanpur">Sultanpur</span>
           <span class="filter-pill" data-filter="city" data-val="Bareilly">Bareilly</span>
+          <span class="filter-pill" data-filter="city" data-val="Moradabad">Moradabad</span>
           <span class="filter-pill" data-filter="city" data-val="Agra">Agra</span>
+          <span class="filter-pill" data-filter="city" data-val="Mathura">Mathura</span>
+          <span class="filter-pill" data-filter="city" data-val="Aligarh">Aligarh</span>
         </div>
       </div>
 
@@ -477,21 +563,21 @@
 
     <!-- Results Header -->
     <div class="results-bar">
-      <div class="results-count" id="resultsCount">Showing 33 Verified Colleges</div>
+      <div class="results-count" id="resultsCount">Loading Verified Colleges...</div>
       <div class="sort-wrapper">
         <label for="sortSelect" style="font-size:13px;font-weight:700;color:var(--text-muted);">Sort By:</label>
         <select id="sortSelect" class="sort-select">
           <option value="pkg_desc">Highest Package (High to Low)</option>
           <option value="placement_desc">Placement Rate (High to Low)</option>
           <option value="fee_asc">Annual Fee (Low to High)</option>
-          <option value="nirf_asc">NIRF Ranking Rank</option>
+          <option value="nirf_asc">NIRF / Seniority Rank</option>
         </select>
       </div>
     </div>
 
     <!-- Colleges Grid -->
     <div class="college-grid" id="collegeGrid">
-      <!-- Populated via JavaScript -->
+      <!-- Populated dynamically -->
     </div>
   </div>
 
@@ -503,2545 +589,7 @@
   </div>
 
   <script>
-    const collegesData = [
-  {
-    "name": "Institute of Engineering and Technology (IET Lucknow)",
-    "code": "052",
-    "city": "Lucknow",
-    "type": "Government Autonomous",
-    "est": 1984,
-    "naac": "A+",
-    "nirf": "151-200",
-    "fee": 85000,
-    "highest_pkg": 49.0,
-    "avg_pkg": 10.5,
-    "placement_pct": 94,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "EE",
-      "CE",
-      "Chemical"
-    ],
-    "recruiters": [
-      "Google",
-      "Amazon",
-      "Microsoft",
-      "Adobe",
-      "Samsung",
-      "Paytm",
-      "TCS Digital"
-    ],
-    "url": "/colleges/profiles/iet-lucknow-profile-2026.html"
-  },
-  {
-    "name": "Harcourt Butler Technical University (HBTU Kanpur)",
-    "code": "061",
-    "city": "Kanpur",
-    "type": "Government University",
-    "est": 1921,
-    "naac": "A+",
-    "nirf": "76-100",
-    "fee": 62000,
-    "highest_pkg": 65.0,
-    "avg_pkg": 12.5,
-    "placement_pct": 96,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "Chemical",
-      "IT",
-      "EE"
-    ],
-    "recruiters": [
-      "Google",
-      "Amazon",
-      "Microsoft",
-      "Goldman Sachs",
-      "Morgan Stanley",
-      "Flipkart",
-      "IBM"
-    ],
-    "url": "/colleges/profiles/hbtu-kanpur-profile.html"
-  },
-  {
-    "name": "Kamla Nehru Institute of Technology (KNIT Sultanpur)",
-    "code": "104",
-    "city": "Sultanpur",
-    "type": "Government Autonomous",
-    "est": 1979,
-    "naac": "A",
-    "nirf": "151-200",
-    "fee": 64350,
-    "highest_pkg": 45.0,
-    "avg_pkg": 8.8,
-    "placement_pct": 88,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "EE",
-      "CE",
-      "IT",
-      "MCA"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Samsung",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "L&T",
-      "BHEL"
-    ],
-    "url": "/colleges/profiles/knit-sultanpur-profile-2026.html"
-  },
-  {
-    "name": "Bundelkhand Institute of Engineering & Technology (BIET Jhansi)",
-    "code": "043",
-    "city": "Jhansi",
-    "type": "Government Autonomous",
-    "est": 1960,
-    "naac": "A",
-    "nirf": "151-200",
-    "fee": 61800,
-    "highest_pkg": 42.0,
-    "avg_pkg": 8.5,
-    "placement_pct": 87,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "EE",
-      "CE",
-      "IT",
-      "Chemical"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Samsung",
-      "L&T",
-      "BHEL"
-    ],
-    "url": "/colleges/profiles/biet-jhansi-profile.html"
-  },
-  {
-    "name": "JSS Academy of Technical Education (JSS Noida)",
-    "code": "091",
-    "city": "Noida",
-    "type": "Private Autonomous",
-    "est": 1998,
-    "naac": "A",
-    "nirf": "101-150",
-    "fee": 138000,
-    "highest_pkg": 57.0,
-    "avg_pkg": 9.8,
-    "placement_pct": 92,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "EE",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Adobe",
-      "Amazon",
-      "Cisco",
-      "TCS Digital",
-      "Palo Alto",
-      "Commvault",
-      "Infosys SP"
-    ],
-    "url": "/colleges/profiles/jss-noida-profile-2026.html"
-  },
-  {
-    "name": "KIET Group of Institutions (KIET Ghaziabad)",
-    "code": "029",
-    "city": "Ghaziabad",
-    "type": "Private Autonomous",
-    "est": 1998,
-    "naac": "A+",
-    "nirf": "76-100",
-    "fee": 139000,
-    "highest_pkg": 48.5,
-    "avg_pkg": 9.5,
-    "placement_pct": 93,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-DS",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Atlassian",
-      "Amazon",
-      "Capgemini",
-      "TCS Digital",
-      "Wipro Elite",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/kiet-ghaziabad-profile-2026.html"
-  },
-  {
-    "name": "Ajay Kumar Garg Engineering College (AKGEC Ghaziabad)",
-    "code": "027",
-    "city": "Ghaziabad",
-    "type": "Private Autonomous",
-    "est": 1998,
-    "naac": "A",
-    "nirf": "101-150",
-    "fee": 141000,
-    "highest_pkg": 44.0,
-    "avg_pkg": 9.2,
-    "placement_pct": 91,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-DS",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Microsoft",
-      "IBM",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/akgec-ghaziabad-profile-2026.html"
-  },
-  {
-    "name": "GL Bajaj Institute of Technology & Management",
-    "code": "192",
-    "city": "Greater Noida",
-    "type": "Private Autonomous",
-    "est": 2005,
-    "naac": "A+",
-    "nirf": "76-100",
-    "fee": 128000,
-    "highest_pkg": 58.0,
-    "avg_pkg": 9.0,
-    "placement_pct": 95,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-DS",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Palo Alto Networks",
-      "Commvault",
-      "Amazon",
-      "Microsoft",
-      "TCS Digital",
-      "Infosys"
-    ],
-    "url": "/colleges/profiles/gl-bajaj-greater-noida-profile-2026.html"
-  },
-  {
-    "name": "Galgotias College of Engineering and Technology",
-    "code": "097",
-    "city": "Greater Noida",
-    "type": "Private Autonomous",
-    "est": 1999,
-    "naac": "A",
-    "nirf": "101-150",
-    "fee": 125000,
-    "highest_pkg": 52.0,
-    "avg_pkg": 9.2,
-    "placement_pct": 93,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "IT",
-      "CSE-DS"
-    ],
-    "recruiters": [
-      "Google",
-      "Amazon",
-      "Microsoft",
-      "Adobe",
-      "Cisco",
-      "TCS Digital",
-      "Wipro Elite"
-    ],
-    "url": "/colleges/profiles/galgotias-college-greater-noida-profile.html"
-  },
-  {
-    "name": "ABES Engineering College (ABES EC Ghaziabad)",
-    "code": "032",
-    "city": "Ghaziabad",
-    "type": "Private Autonomous",
-    "est": 2000,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 135000,
-    "highest_pkg": 50.0,
-    "avg_pkg": 8.2,
-    "placement_pct": 90,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Microsoft",
-      "Google",
-      "Amazon",
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/abes-engineering-ghaziabad-profile-2026.html"
-  },
-  {
-    "name": "Pranveer Singh Institute of Technology (PSIT Kanpur)",
-    "code": "164",
-    "city": "Kanpur",
-    "type": "Private Autonomous",
-    "est": 2004,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 120000,
-    "highest_pkg": 40.0,
-    "avg_pkg": 7.8,
-    "placement_pct": 88,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "IT",
-      "MBA"
-    ],
-    "recruiters": [
-      "TCS Digital",
-      "Infosys SP",
-      "Wipro Elite",
-      "HCL",
-      "Tech Mahindra",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/psit-kanpur-profile-2026.html"
-  },
-  {
-    "name": "Noida Institute of Engineering & Technology (NIET)",
-    "code": "133",
-    "city": "Greater Noida",
-    "type": "Private Autonomous",
-    "est": 2001,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 130000,
-    "highest_pkg": 44.0,
-    "avg_pkg": 8.0,
-    "placement_pct": 91,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-DS",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Samsung R&D",
-      "TCS Digital",
-      "Infosys",
-      "Capgemini",
-      "Wipro",
-      "Amazon"
-    ],
-    "url": "/colleges/profiles/niet-greater-noida-profile-2026.html"
-  },
-  {
-    "name": "Meerut Institute of Engineering & Technology (MIET Meerut)",
-    "code": "108",
-    "city": "Meerut",
-    "type": "Private Autonomous",
-    "est": 1995,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 118000,
-    "highest_pkg": 35.0,
-    "avg_pkg": 7.5,
-    "placement_pct": 86,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Amazon",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/miet-meerut-profile.html"
-  },
-  {
-    "name": "IMS Engineering College (IMS EC Ghaziabad)",
-    "code": "070",
-    "city": "Ghaziabad",
-    "type": "Private Autonomous",
-    "est": 2001,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 128000,
-    "highest_pkg": 38.0,
-    "avg_pkg": 7.8,
-    "placement_pct": 88,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS Digital",
-      "Infosys SP",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/ims-ghaziabad-profile.html"
-  },
-  {
-    "name": "Raj Kumar Goel Institute of Technology (RKGIT Ghaziabad)",
-    "code": "126",
-    "city": "Ghaziabad",
-    "type": "Private Autonomous",
-    "est": 2000,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 122000,
-    "highest_pkg": 30.0,
-    "avg_pkg": 7.0,
-    "placement_pct": 84,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "TCS",
-      "Amazon",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/raj-kumar-goel-ghaziabad-profile.html"
-  },
-  {
-    "name": "Shri Ramswaroop Memorial College (SRMCEM Lucknow)",
-    "code": "130",
-    "city": "Lucknow",
-    "type": "Private Autonomous",
-    "est": 2001,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 115000,
-    "highest_pkg": 32.0,
-    "avg_pkg": 7.2,
-    "placement_pct": 85,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT",
-      "MBA"
-    ],
-    "recruiters": [
-      "TCS Digital",
-      "Amazon",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/shri-ramswaroop-memorial-lucknow-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Banda (REC Banda)",
-    "code": "842",
-    "city": "Banda",
-    "type": "Government",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 58000,
-    "highest_pkg": 15.0,
-    "avg_pkg": 5.5,
-    "placement_pct": 75,
-    "branches": [
-      "CSE",
-      "ECE",
-      "EE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "BHEL",
-      "L&T"
-    ],
-    "url": "/colleges/profiles/rec-banda-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Bijnor (REC Bijnor)",
-    "code": "843",
-    "city": "Bijnor",
-    "type": "Government",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 58000,
-    "highest_pkg": 16.5,
-    "avg_pkg": 5.6,
-    "placement_pct": 76,
-    "branches": [
-      "CSE",
-      "IT",
-      "EE",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Capgemini",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/rec-bijnor-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Azamgarh (REC Azamgarh)",
-    "code": "844",
-    "city": "Azamgarh",
-    "type": "Government",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 58000,
-    "highest_pkg": 14.5,
-    "avg_pkg": 5.2,
-    "placement_pct": 74,
-    "branches": [
-      "CSE",
-      "IT",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "HCL",
-      "Wipro",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/rec-azamgarh-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Ambedkar Nagar (REC Ambedkar Nagar)",
-    "code": "845",
-    "city": "Ambedkar Nagar",
-    "type": "Government",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 58000,
-    "highest_pkg": 15.5,
-    "avg_pkg": 5.4,
-    "placement_pct": 75,
-    "branches": [
-      "CSE",
-      "IT",
-      "EE",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/rec-ambedkar-nagar-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Kannauj (REC Kannauj)",
-    "code": "846",
-    "city": "Kannauj",
-    "type": "Government",
-    "est": 2015,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 56000,
-    "highest_pkg": 13.0,
-    "avg_pkg": 5.0,
-    "placement_pct": 72,
-    "branches": [
-      "CSE",
-      "ECE",
-      "EE",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/rec-kannauj-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Mainpuri (REC Mainpuri)",
-    "code": "847",
-    "city": "Mainpuri",
-    "type": "Government",
-    "est": 2015,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 56000,
-    "highest_pkg": 12.5,
-    "avg_pkg": 4.8,
-    "placement_pct": 70,
-    "branches": [
-      "CSE",
-      "ME",
-      "EE",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/rec-mainpuri-profile.html"
-  },
-  {
-    "name": "Rajkiya Engineering College Sonbhadra (REC Sonbhadra)",
-    "code": "848",
-    "city": "Sonbhadra",
-    "type": "Government",
-    "est": 2015,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 56000,
-    "highest_pkg": 14.0,
-    "avg_pkg": 5.1,
-    "placement_pct": 73,
-    "branches": [
-      "CSE",
-      "ECE",
-      "EE",
-      "Mining"
-    ],
-    "recruiters": [
-      "NTPC",
-      "Hindalco",
-      "TCS",
-      "Infosys",
-      "Wipro"
-    ],
-    "url": "/colleges/profiles/rec-sonbhadra-profile.html"
-  },
-  {
-    "name": "Rampur Engineering College (REC Rampur)",
-    "code": "128",
-    "city": "Rampur",
-    "type": "Government",
-    "est": 2010,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 55000,
-    "highest_pkg": 12.0,
-    "avg_pkg": 4.5,
-    "placement_pct": 68,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/rait-rampur-profile.html"
-  },
-  {
-    "name": "University Institute of Engineering and Technology (UIET CSJMU Kanpur)",
-    "code": "UIET-K",
-    "city": "Kanpur",
-    "type": "Government University",
-    "est": 1996,
-    "naac": "A+",
-    "nirf": "151-200",
-    "fee": 75000,
-    "highest_pkg": 25.0,
-    "avg_pkg": 7.2,
-    "placement_pct": 84,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "Chemical",
-      "Materials"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Cognizant",
-      "L&T",
-      "Samsung"
-    ],
-    "url": "/colleges/profiles/uiet-csjmu-kanpur-profile.html"
-  },
-  {
-    "name": "Faculty of Engineering & Technology Lucknow University (LU FoET)",
-    "code": "LU-ENG",
-    "city": "Lucknow",
-    "type": "Government University",
-    "est": 2017,
-    "naac": "A++",
-    "nirf": "101-150",
-    "fee": 80000,
-    "highest_pkg": 28.0,
-    "avg_pkg": 7.5,
-    "placement_pct": 85,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Capgemini",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/uiet-lucknow-university-profile.html"
-  },
-  {
-    "name": "Faculty of Engineering & Technology MJPRU Bareilly",
-    "code": "MJPRU-ENG",
-    "city": "Bareilly",
-    "type": "Government University",
-    "est": 1995,
-    "naac": "A+",
-    "nirf": "151-200",
-    "fee": 68000,
-    "highest_pkg": 20.0,
-    "avg_pkg": 6.5,
-    "placement_pct": 80,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "EE",
-      "Chemical"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/foet-mjpru-bareilly-profile.html"
-  },
-  {
-    "name": "Babu Banarasi Das Institute of Technology & Management (BBDITM)",
-    "code": "091-L",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2000,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 105000,
-    "highest_pkg": 18.0,
-    "avg_pkg": 5.8,
-    "placement_pct": 78,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/bbditm-lucknow-profile.html"
-  },
-  {
-    "name": "BBD Northern India Institute of Technology (BBDNIIT Lucknow)",
-    "code": "056",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 1999,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 108000,
-    "highest_pkg": 20.0,
-    "avg_pkg": 6.0,
-    "placement_pct": 80,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/bbd-niit-lucknow-profile.html"
-  },
-  {
-    "name": "Babu Banarasi Das Engineering College (BBDEC Lucknow)",
-    "code": "508",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 95000,
-    "highest_pkg": 15.0,
-    "avg_pkg": 5.0,
-    "placement_pct": 72,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/bbdec-lucknow-profile.html"
-  },
-  {
-    "name": "SRM College of Engineering & Management (SRM Lucknow)",
-    "code": "195",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 110000,
-    "highest_pkg": 22.0,
-    "avg_pkg": 6.2,
-    "placement_pct": 80,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT",
-      "MBA"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/srmcem-lucknow-profile.html"
-  },
-  {
-    "name": "Goel Institute of Technology & Management (GITM Lucknow)",
-    "code": "392",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 98000,
-    "highest_pkg": 16.0,
-    "avg_pkg": 5.2,
-    "placement_pct": 74,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "IT",
-      "MBA"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/gitm-lucknow-profile.html"
-  },
-  {
-    "name": "Amity University Lucknow Campus Engineering",
-    "code": "AMITY-L",
-    "city": "Lucknow",
-    "type": "Private University",
-    "est": 2004,
-    "naac": "A+",
-    "nirf": "101-150",
-    "fee": 180000,
-    "highest_pkg": 35.0,
-    "avg_pkg": 8.0,
-    "placement_pct": 88,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "Biotech",
-      "CE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Microsoft",
-      "TCS Digital",
-      "Infosys",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/amity-lucknow-profile.html"
-  },
-  {
-    "name": "Integral University Faculty of Engineering",
-    "code": "INTEGRAL-L",
-    "city": "Lucknow",
-    "type": "Private University",
-    "est": 2004,
-    "naac": "A+",
-    "nirf": "151-200",
-    "fee": 125000,
-    "highest_pkg": 22.0,
-    "avg_pkg": 6.4,
-    "placement_pct": 81,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "EE",
-      "Biotech"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/integral-university-lucknow-profile.html"
-  },
-  {
-    "name": "Bansal Institute of Engineering & Technology (BIET Lucknow)",
-    "code": "422",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B+",
-    "nirf": "401-500",
-    "fee": 92000,
-    "highest_pkg": 14.0,
-    "avg_pkg": 4.8,
-    "placement_pct": 70,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/bansal-institute-lucknow-profile.html"
-  },
-  {
-    "name": "Hygia Institute of Technology & Management Lucknow",
-    "code": "567",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2005,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 88000,
-    "highest_pkg": 12.0,
-    "avg_pkg": 4.5,
-    "placement_pct": 68,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "B.Pharm"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Sun Pharma",
-      "Cipla"
-    ],
-    "url": "/colleges/profiles/hygia-institute-lucknow-profile.html"
-  },
-  {
-    "name": "R.R. Institute of Modern Technology (RRIMT Lucknow)",
-    "code": "406",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 85000,
-    "highest_pkg": 13.5,
-    "avg_pkg": 4.6,
-    "placement_pct": 69,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/rr-institute-lucknow-profile.html"
-  },
-  {
-    "name": "Mahatma Gandhi Institute of Technology Lucknow",
-    "code": "621",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2009,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 82000,
-    "highest_pkg": 11.0,
-    "avg_pkg": 4.2,
-    "placement_pct": 65,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Wipro",
-      "HCL",
-      "Teleperformance"
-    ],
-    "url": "/colleges/profiles/mgim-lucknow-profile.html"
-  },
-  {
-    "name": "B.N. College of Engineering & Technology (BNCET Lucknow)",
-    "code": "425",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 86000,
-    "highest_pkg": 12.5,
-    "avg_pkg": 4.5,
-    "placement_pct": 67,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/bncet-lucknow-profile.html"
-  },
-  {
-    "name": "Azad Institute of Engineering & Technology (AIET Lucknow)",
-    "code": "053",
-    "city": "Lucknow",
-    "type": "Private",
-    "est": 1998,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 95000,
-    "highest_pkg": 16.0,
-    "avg_pkg": 5.2,
-    "placement_pct": 73,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/azad-institute-lucknow-profile.html"
-  },
-  {
-    "name": "Rama University Faculty of Engineering & Technology Kanpur",
-    "code": "RAMA-K",
-    "city": "Kanpur",
-    "type": "Private University",
-    "est": 2008,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 110000,
-    "highest_pkg": 24.0,
-    "avg_pkg": 6.2,
-    "placement_pct": 80,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "Biotech"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/rama-university-kanpur-profile.html"
-  },
-  {
-    "name": "Axis Institute of Technology & Management (AITM Kanpur)",
-    "code": "514",
-    "city": "Kanpur",
-    "type": "Private",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 98000,
-    "highest_pkg": 18.0,
-    "avg_pkg": 5.5,
-    "placement_pct": 76,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/axis-colleges-kanpur-profile.html"
-  },
-  {
-    "name": "Maharana Pratap Engineering College (MPEC Kanpur)",
-    "code": "047",
-    "city": "Kanpur",
-    "type": "Private",
-    "est": 1999,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 105000,
-    "highest_pkg": 22.0,
-    "avg_pkg": 6.0,
-    "placement_pct": 81,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/maharana-pratap-kanpur-profile.html"
-  },
-  {
-    "name": "Kanpur Institute of Technology (KIT Kanpur)",
-    "code": "165",
-    "city": "Kanpur",
-    "type": "Private",
-    "est": 2004,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 98000,
-    "highest_pkg": 16.5,
-    "avg_pkg": 5.4,
-    "placement_pct": 75,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/kanpur-institute-technology-profile.html"
-  },
-  {
-    "name": "Apollo Institute of Technology (AIT Kanpur)",
-    "code": "428",
-    "city": "Kanpur",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 85000,
-    "highest_pkg": 12.0,
-    "avg_pkg": 4.4,
-    "placement_pct": 66,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/apollo-institute-kanpur-profile.html"
-  },
-  {
-    "name": "GNIOT Institute of Management and Technology Gr. Noida",
-    "code": "132",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2001,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 120000,
-    "highest_pkg": 30.0,
-    "avg_pkg": 7.2,
-    "placement_pct": 85,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/gniot-greater-noida-profile.html"
-  },
-  {
-    "name": "KCC Institute of Technology and Management Gr. Noida",
-    "code": "486",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2009,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 95000,
-    "highest_pkg": 16.0,
-    "avg_pkg": 5.2,
-    "placement_pct": 72,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/kcc-itm-greater-noida-profile.html"
-  },
-  {
-    "name": "I.T.S Engineering College Greater Noida",
-    "code": "222",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2006,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 115000,
-    "highest_pkg": 28.0,
-    "avg_pkg": 6.8,
-    "placement_pct": 83,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/its-greater-noida-profile.html"
-  },
-  {
-    "name": "Accurate Institute of Management and Technology Gr. Noida",
-    "code": "225",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2006,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 112000,
-    "highest_pkg": 24.0,
-    "avg_pkg": 6.2,
-    "placement_pct": 80,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/accurate-greater-noida-profile.html"
-  },
-  {
-    "name": "Dronacharya Group of Institutions Greater Noida",
-    "code": "230",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2006,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 118000,
-    "highest_pkg": 32.0,
-    "avg_pkg": 7.0,
-    "placement_pct": 84,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Cisco",
-      "TCS Digital",
-      "Infosys",
-      "Wipro"
-    ],
-    "url": "/colleges/profiles/dronacharya-greater-noida-profile.html"
-  },
-  {
-    "name": "IIMT College of Engineering Greater Noida",
-    "code": "216",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2005,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 110000,
-    "highest_pkg": 22.0,
-    "avg_pkg": 6.0,
-    "placement_pct": 79,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/iimt-greater-noida-profile.html"
-  },
-  {
-    "name": "Skyline Institute of Engineering and Technology Gr. Noida",
-    "code": "067",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2002,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 92000,
-    "highest_pkg": 14.0,
-    "avg_pkg": 4.8,
-    "placement_pct": 68,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/skyline-greater-noida-profile.html"
-  },
-  {
-    "name": "Lloyd Institute of Engineering and Technology Gr. Noida",
-    "code": "172",
-    "city": "Greater Noida",
-    "type": "Private",
-    "est": 2002,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 105000,
-    "highest_pkg": 20.0,
-    "avg_pkg": 5.8,
-    "placement_pct": 77,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/lloyd-greater-noida-profile.html"
-  },
-  {
-    "name": "Mangalayatan University Faculty of Engineering Aligarh",
-    "code": "MANG-AL",
-    "city": "Aligarh",
-    "type": "Private University",
-    "est": 2006,
-    "naac": "A+",
-    "nirf": "151-200",
-    "fee": 115000,
-    "highest_pkg": 26.0,
-    "avg_pkg": 6.5,
-    "placement_pct": 82,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "Biotech"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/mangalayatan-aligarh-profile.html"
-  },
-  {
-    "name": "School of Engineering and Technology Sharda University",
-    "code": "SHARDA-GN",
-    "city": "Greater Noida",
-    "type": "Private University",
-    "est": 2009,
-    "naac": "A+",
-    "nirf": "87",
-    "fee": 195000,
-    "highest_pkg": 48.0,
-    "avg_pkg": 8.8,
-    "placement_pct": 91,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-Cyber",
-      "ECE",
-      "ME",
-      "CE",
-      "Biotech"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Microsoft",
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/sharda-university-greater-noida-profile.html"
-  },
-  {
-    "name": "Bennett University School of Engineering Greater Noida",
-    "code": "BENNETT-GN",
-    "city": "Greater Noida",
-    "type": "Private University",
-    "est": 2016,
-    "naac": "A+",
-    "nirf": "51-100",
-    "fee": 360000,
-    "highest_pkg": 57.0,
-    "avg_pkg": 11.2,
-    "placement_pct": 95,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-DS",
-      "ECE",
-      "ME",
-      "Biotech"
-    ],
-    "recruiters": [
-      "Google",
-      "Amazon",
-      "Microsoft",
-      "Adobe",
-      "Goldman Sachs",
-      "Cisco"
-    ],
-    "url": "/colleges/profiles/bennett-university-greater-noida-profile.html"
-  },
-  {
-    "name": "GLA University Institute of Engineering and Technology Mathura",
-    "code": "GLA-MATH",
-    "city": "Mathura",
-    "type": "Private University",
-    "est": 1998,
-    "naac": "A+",
-    "nirf": "101-150",
-    "fee": 165000,
-    "highest_pkg": 55.0,
-    "avg_pkg": 8.5,
-    "placement_pct": 92,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-Cyber",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Microsoft",
-      "TCS Digital",
-      "Infosys SP",
-      "Capgemini",
-      "Wipro"
-    ],
-    "url": "/colleges/profiles/gla-university-mathura-profile.html"
-  },
-  {
-    "name": "Hindustan College of Science and Technology (HCST Mathura)",
-    "code": "064",
-    "city": "Mathura",
-    "type": "Private",
-    "est": 1996,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 115000,
-    "highest_pkg": 28.0,
-    "avg_pkg": 6.8,
-    "placement_pct": 82,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "Chemical"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/hindustan-mathura-profile.html"
-  },
-  {
-    "name": "Anand Engineering College (AEC Agra)",
-    "code": "001",
-    "city": "Agra",
-    "type": "Private",
-    "est": 1998,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 118000,
-    "highest_pkg": 30.0,
-    "avg_pkg": 7.0,
-    "placement_pct": 83,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE",
-      "Biotech"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/anand-engineering-agra-profile.html"
-  },
-  {
-    "name": "Faculty of Engineering & Technology Agra College",
-    "code": "062",
-    "city": "Agra",
-    "type": "Private",
-    "est": 1999,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 95000,
-    "highest_pkg": 16.0,
-    "avg_pkg": 5.2,
-    "placement_pct": 74,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/agra-college-engineering-profile.html"
-  },
-  {
-    "name": "Raja Balwant Singh Engineering Technical Campus Bichpuri Agra",
-    "code": "127",
-    "city": "Agra",
-    "type": "Private",
-    "est": 2001,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 98000,
-    "highest_pkg": 22.0,
-    "avg_pkg": 6.0,
-    "placement_pct": 78,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "Food Tech",
-      "Chemical"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Nestle",
-      "PepsiCo"
-    ],
-    "url": "/colleges/profiles/rbs-engineering-agra-profile.html"
-  },
-  {
-    "name": "ABES Institute of Technology (ABESIT Ghaziabad)",
-    "code": "290",
-    "city": "Ghaziabad",
-    "type": "Private",
-    "est": 2007,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 125000,
-    "highest_pkg": 32.0,
-    "avg_pkg": 7.2,
-    "placement_pct": 85,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "CSE-DS",
-      "IT",
-      "ECE",
-      "ME"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/abesit-ghaziabad-profile.html"
-  },
-  {
-    "name": "Raj Kumar Goel Engineering College (RKGEC Ghaziabad)",
-    "code": "246",
-    "city": "Ghaziabad",
-    "type": "Private",
-    "est": 2007,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 110000,
-    "highest_pkg": 20.0,
-    "avg_pkg": 5.8,
-    "placement_pct": 78,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/rkgit-ghaziabad-profile.html"
-  },
-  {
-    "name": "HR Institute of Technology (HRIT Ghaziabad)",
-    "code": "220",
-    "city": "Ghaziabad",
-    "type": "Private",
-    "est": 2005,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 102000,
-    "highest_pkg": 18.0,
-    "avg_pkg": 5.4,
-    "placement_pct": 75,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/hr-institute-ghaziabad-profile.html"
-  },
-  {
-    "name": "Sunder Deep Engineering College (SDEC Ghaziabad)",
-    "code": "240",
-    "city": "Ghaziabad",
-    "type": "Private",
-    "est": 2006,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 105000,
-    "highest_pkg": 19.0,
-    "avg_pkg": 5.6,
-    "placement_pct": 76,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/sunder-deep-ghaziabad-profile.html"
-  },
-  {
-    "name": "Ideal Institute of Technology Ghaziabad",
-    "code": "028",
-    "city": "Ghaziabad",
-    "type": "Private",
-    "est": 1998,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 95000,
-    "highest_pkg": 15.0,
-    "avg_pkg": 4.8,
-    "placement_pct": 70,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/ideal-institute-ghaziabad-profile.html"
-  },
-  {
-    "name": "Bhagwant Institute of Technology (BIT Muzaffarnagar)",
-    "code": "119",
-    "city": "Muzaffarnagar",
-    "type": "Private",
-    "est": 2000,
-    "naac": "B+",
-    "nirf": "401-500",
-    "fee": 88000,
-    "highest_pkg": 14.0,
-    "avg_pkg": 4.8,
-    "placement_pct": 71,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/bhagwant-institute-muzaffarnagar-profile.html"
-  },
-  {
-    "name": "Shanti Institute of Technology (SIT Meerut)",
-    "code": "416",
-    "city": "Meerut",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 82000,
-    "highest_pkg": 12.0,
-    "avg_pkg": 4.4,
-    "placement_pct": 66,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/shanti-institute-meerut-profile.html"
-  },
-  {
-    "name": "Forte Institute of Technology Meerut",
-    "code": "109",
-    "city": "Meerut",
-    "type": "Private",
-    "est": 1998,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 85000,
-    "highest_pkg": 13.0,
-    "avg_pkg": 4.5,
-    "placement_pct": 68,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/forte-institute-meerut-profile.html"
-  },
-  {
-    "name": "Vidya College of Engineering Meerut",
-    "code": "233",
-    "city": "Meerut",
-    "type": "Private",
-    "est": 2006,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 110000,
-    "highest_pkg": 25.0,
-    "avg_pkg": 6.5,
-    "placement_pct": 82,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/vidya-college-engineering-meerut-profile.html"
-  },
-  {
-    "name": "IIMT Engineering College Meerut",
-    "code": "127-M",
-    "city": "Meerut",
-    "type": "Private",
-    "est": 2001,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 115000,
-    "highest_pkg": 28.0,
-    "avg_pkg": 6.8,
-    "placement_pct": 83,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "IT",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "Amazon",
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/iimt-engineering-meerut-profile.html"
-  },
-  {
-    "name": "Moradabad Institute of Technology (MIT Moradabad)",
-    "code": "082",
-    "city": "Moradabad",
-    "type": "Private",
-    "est": 1996,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 112000,
-    "highest_pkg": 28.0,
-    "avg_pkg": 7.0,
-    "placement_pct": 82,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS Digital",
-      "Infosys",
-      "Amazon",
-      "HCL",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/moradabad-institute-technology-profile.html"
-  },
-  {
-    "name": "Kashi Institute of Technology (KIT Varanasi)",
-    "code": "427",
-    "city": "Varanasi",
-    "type": "Private",
-    "est": 2008,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 105000,
-    "highest_pkg": 24.0,
-    "avg_pkg": 6.2,
-    "placement_pct": 81,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/kashi-institute-technology-varanasi-profile.html"
-  },
-  {
-    "name": "Ashoka Institute of Technology & Management Varanasi",
-    "code": "490",
-    "city": "Varanasi",
-    "type": "Private",
-    "est": 2010,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 98000,
-    "highest_pkg": 18.0,
-    "avg_pkg": 5.5,
-    "placement_pct": 77,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/ashoka-institute-varanasi-profile.html"
-  },
-  {
-    "name": "School of Management Sciences (SHEAT College Varanasi)",
-    "code": "370",
-    "city": "Varanasi",
-    "type": "Private",
-    "est": 2007,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 92000,
-    "highest_pkg": 16.0,
-    "avg_pkg": 5.2,
-    "placement_pct": 74,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/sheat-college-varanasi-profile.html"
-  },
-  {
-    "name": "Buddha Institute of Technology (BIT Gorakhpur)",
-    "code": "525",
-    "city": "Gorakhpur",
-    "type": "Private",
-    "est": 2009,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 94000,
-    "highest_pkg": 16.5,
-    "avg_pkg": 5.3,
-    "placement_pct": 75,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Cognizant"
-    ],
-    "url": "/colleges/profiles/buddha-institute-gorakhpur-profile.html"
-  },
-  {
-    "name": "Institute of Technology & Management (ITM Gorakhpur)",
-    "code": "120",
-    "city": "Gorakhpur",
-    "type": "Private",
-    "est": 2001,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 96000,
-    "highest_pkg": 18.0,
-    "avg_pkg": 5.5,
-    "placement_pct": 76,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/itms-gorakhpur-profile.html"
-  },
-  {
-    "name": "Kailash Institute of Engineering & Technology Gorakhpur",
-    "code": "654",
-    "city": "Gorakhpur",
-    "type": "Private",
-    "est": 2012,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 82000,
-    "highest_pkg": 11.0,
-    "avg_pkg": 4.2,
-    "placement_pct": 65,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Wipro",
-      "HCL",
-      "Teleperformance"
-    ],
-    "url": "/colleges/profiles/kuiet-gorakhpur-profile.html"
-  },
-  {
-    "name": "Shambhunath Institute of Engineering & Technology Allahabad",
-    "code": "162",
-    "city": "Prayagraj",
-    "type": "Private",
-    "est": 2004,
-    "naac": "A",
-    "nirf": "201-300",
-    "fee": 105000,
-    "highest_pkg": 22.0,
-    "avg_pkg": 6.2,
-    "placement_pct": 80,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/shambhunath-institute-allahabad-profile.html"
-  },
-  {
-    "name": "LDC Institute of Technical Studies Prayagraj",
-    "code": "387",
-    "city": "Prayagraj",
-    "type": "Private",
-    "est": 2007,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 92000,
-    "highest_pkg": 15.0,
-    "avg_pkg": 5.0,
-    "placement_pct": 72,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/ldc-institute-allahabad-profile.html"
-  },
-  {
-    "name": "S.P. Memorial Institute of Technology Prayagraj",
-    "code": "418",
-    "city": "Prayagraj",
-    "type": "Private",
-    "est": 2008,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 85000,
-    "highest_pkg": 13.0,
-    "avg_pkg": 4.6,
-    "placement_pct": 68,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/sp-memorial-allahabad-profile.html"
-  },
-  {
-    "name": "BBS College of Engineering & Technology Prayagraj",
-    "code": "138",
-    "city": "Prayagraj",
-    "type": "Private",
-    "est": 2002,
-    "naac": "B+",
-    "nirf": "301-400",
-    "fee": 95000,
-    "highest_pkg": 16.0,
-    "avg_pkg": 5.2,
-    "placement_pct": 74,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/bbs-college-allahabad-profile.html"
-  },
-  {
-    "name": "Prasad Institute of Technology Jaunpur",
-    "code": "144",
-    "city": "Jaunpur",
-    "type": "Private",
-    "est": 2002,
-    "naac": "B+",
-    "nirf": "401-500",
-    "fee": 88000,
-    "highest_pkg": 14.5,
-    "avg_pkg": 4.8,
-    "placement_pct": 70,
-    "branches": [
-      "CSE",
-      "IT",
-      "ECE",
-      "ME",
-      "CE",
-      "B.Pharm"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Sun Pharma"
-    ],
-    "url": "/colleges/profiles/prasad-institute-jaunpur-profile.html"
-  },
-  {
-    "name": "Kunwar Haribansh Singh College of Management & Tech Jaunpur",
-    "code": "489",
-    "city": "Jaunpur",
-    "type": "Private",
-    "est": 2009,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 82000,
-    "highest_pkg": 11.5,
-    "avg_pkg": 4.2,
-    "placement_pct": 66,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra"
-    ],
-    "url": "/colleges/profiles/kunwar-haribansh-jaunpur-profile.html"
-  },
-  {
-    "name": "Technical Education & Research Institute Ghazipur",
-    "code": "589",
-    "city": "Ghazipur",
-    "type": "Private",
-    "est": 2009,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 80000,
-    "highest_pkg": 10.5,
-    "avg_pkg": 4.0,
-    "placement_pct": 64,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/technical-education-society-ghazipur-profile.html"
-  },
-  {
-    "name": "Shri Ramswaroop Memorial University (SRMU Barabanki)",
-    "code": "SRMU-BBK",
-    "city": "Barabanki",
-    "type": "Private University",
-    "est": 2012,
-    "naac": "A+",
-    "nirf": "151-200",
-    "fee": 135000,
-    "highest_pkg": 34.0,
-    "avg_pkg": 7.5,
-    "placement_pct": 86,
-    "branches": [
-      "CSE",
-      "CSE-AI",
-      "ECE",
-      "ME",
-      "CE",
-      "Biotech"
-    ],
-    "recruiters": [
-      "Amazon",
-      "Microsoft",
-      "TCS Digital",
-      "Infosys",
-      "Wipro",
-      "Capgemini"
-    ],
-    "url": "/colleges/profiles/shri-ramswaroop-memorial-university-barabanki-profile.html"
-  },
-  {
-    "name": "Jahangirabad Institute of Technology (JIT Barabanki)",
-    "code": "442",
-    "city": "Barabanki",
-    "type": "Private",
-    "est": 2009,
-    "naac": "B+",
-    "nirf": "401-500",
-    "fee": 88000,
-    "highest_pkg": 14.0,
-    "avg_pkg": 4.8,
-    "placement_pct": 71,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE",
-      "EE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/jahangirabad-institute-barabanki-profile.html"
-  },
-  {
-    "name": "Saghir Fatima Memorial Institute of Technology Barabanki",
-    "code": "610",
-    "city": "Barabanki",
-    "type": "Private",
-    "est": 2010,
-    "naac": "B",
-    "nirf": "401-500",
-    "fee": 78000,
-    "highest_pkg": 10.0,
-    "avg_pkg": 3.8,
-    "placement_pct": 62,
-    "branches": [
-      "CSE",
-      "ECE",
-      "ME",
-      "CE"
-    ],
-    "recruiters": [
-      "TCS",
-      "Wipro",
-      "HCL"
-    ],
-    "url": "/colleges/profiles/saghir-fatima-barabanki-profile.html"
-  }
-];
+    const collegesData = [{"name": "Institute of Engineering and Technology (IET Lucknow)", "code": "052", "city": "Lucknow", "type": "Government Autonomous", "est": 1984, "naac": "A+", "nirf": "151-200", "fee": 85000, "highest_pkg": 49.0, "avg_pkg": 10.5, "placement_pct": 94, "branches": ["CSE", "CSE-AI", "ECE", "ME", "EE", "CE", "Chemical"], "recruiters": ["Google", "Amazon", "Microsoft", "Adobe", "Samsung", "Paytm", "TCS Digital"], "url": "/colleges/profiles/iet-lucknow-profile-2026.html"}, {"name": "Harcourt Butler Technical University (HBTU Kanpur)", "code": "061", "city": "Kanpur", "type": "Government University", "est": 1921, "naac": "A+", "nirf": "76-100", "fee": 62000, "highest_pkg": 65.0, "avg_pkg": 12.5, "placement_pct": 96, "branches": ["CSE", "ECE", "ME", "CE", "Chemical", "IT", "EE"], "recruiters": ["Google", "Amazon", "Microsoft", "Goldman Sachs", "Morgan Stanley", "Flipkart", "IBM"], "url": "/colleges/profiles/hbtu-kanpur-profile.html"}, {"name": "Kamla Nehru Institute of Technology (KNIT Sultanpur)", "code": "104", "city": "Sultanpur", "type": "Government Autonomous", "est": 1979, "naac": "A", "nirf": "151-200", "fee": 64350, "highest_pkg": 45.0, "avg_pkg": 8.8, "placement_pct": 88, "branches": ["CSE", "ECE", "ME", "EE", "CE", "IT", "MCA"], "recruiters": ["Amazon", "Samsung", "TCS", "Infosys", "Wipro", "L&T", "BHEL"], "url": "/colleges/profiles/knit-sultanpur-profile-2026.html"}, {"name": "Bundelkhand Institute of Engineering & Technology (BIET Jhansi)", "code": "043", "city": "Jhansi", "type": "Government Autonomous", "est": 1960, "naac": "A", "nirf": "151-200", "fee": 61800, "highest_pkg": 42.0, "avg_pkg": 8.5, "placement_pct": 87, "branches": ["CSE", "ECE", "ME", "EE", "CE", "IT", "Chemical"], "recruiters": ["Amazon", "TCS", "Infosys", "Wipro", "Samsung", "L&T", "BHEL"], "url": "/colleges/profiles/biet-jhansi-profile.html"}, {"name": "JSS Academy of Technical Education (JSS Noida)", "code": "091", "city": "Noida", "type": "Private Autonomous", "est": 1998, "naac": "A", "nirf": "101-150", "fee": 138000, "highest_pkg": 57.0, "avg_pkg": 9.8, "placement_pct": 92, "branches": ["CSE", "CSE-AI", "ECE", "ME", "EE", "CE", "IT"], "recruiters": ["Adobe", "Amazon", "Cisco", "TCS Digital", "Palo Alto", "Commvault", "Infosys SP"], "url": "/colleges/profiles/jss-noida-profile-2026.html"}, {"name": "KIET Group of Institutions (KIET Ghaziabad)", "code": "029", "city": "Ghaziabad", "type": "Private Autonomous", "est": 1998, "naac": "A+", "nirf": "76-100", "fee": 139000, "highest_pkg": 48.5, "avg_pkg": 9.5, "placement_pct": 93, "branches": ["CSE", "CSE-AI", "CSE-DS", "ECE", "ME", "CE", "IT"], "recruiters": ["Atlassian", "Amazon", "Capgemini", "TCS Digital", "Wipro Elite", "Cognizant"], "url": "/colleges/profiles/kiet-ghaziabad-profile-2026.html"}, {"name": "Ajay Kumar Garg Engineering College (AKGEC Ghaziabad)", "code": "027", "city": "Ghaziabad", "type": "Private Autonomous", "est": 1998, "naac": "A", "nirf": "101-150", "fee": 141000, "highest_pkg": 44.0, "avg_pkg": 9.2, "placement_pct": 91, "branches": ["CSE", "CSE-AI", "CSE-DS", "ECE", "ME", "CE", "IT"], "recruiters": ["Amazon", "Microsoft", "IBM", "TCS", "Infosys", "Wipro", "Capgemini"], "url": "/colleges/profiles/akgec-ghaziabad-profile-2026.html"}, {"name": "GL Bajaj Institute of Technology & Management", "code": "192", "city": "Greater Noida", "type": "Private Autonomous", "est": 2005, "naac": "A+", "nirf": "76-100", "fee": 128000, "highest_pkg": 58.0, "avg_pkg": 9.0, "placement_pct": 95, "branches": ["CSE", "CSE-AI", "CSE-DS", "ECE", "ME", "CE", "IT"], "recruiters": ["Palo Alto Networks", "Commvault", "Amazon", "Microsoft", "TCS Digital", "Infosys"], "url": "/colleges/profiles/gl-bajaj-greater-noida-profile-2026.html"}, {"name": "Galgotias College of Engineering and Technology", "code": "097", "city": "Greater Noida", "type": "Private Autonomous", "est": 1999, "naac": "A", "nirf": "101-150", "fee": 125000, "highest_pkg": 52.0, "avg_pkg": 9.2, "placement_pct": 93, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "IT", "CSE-DS"], "recruiters": ["Google", "Amazon", "Microsoft", "Adobe", "Cisco", "TCS Digital", "Wipro Elite"], "url": "/colleges/profiles/galgotias-college-greater-noida-profile.html"}, {"name": "ABES Engineering College (ABES EC Ghaziabad)", "code": "032", "city": "Ghaziabad", "type": "Private Autonomous", "est": 2000, "naac": "A", "nirf": "201-300", "fee": 135000, "highest_pkg": 50.0, "avg_pkg": 8.2, "placement_pct": 90, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "IT"], "recruiters": ["Microsoft", "Google", "Amazon", "TCS Digital", "Infosys", "Wipro", "Capgemini"], "url": "/colleges/profiles/abes-engineering-ghaziabad-profile-2026.html"}, {"name": "Pranveer Singh Institute of Technology (PSIT Kanpur)", "code": "164", "city": "Kanpur", "type": "Private Autonomous", "est": 2004, "naac": "A", "nirf": "201-300", "fee": 120000, "highest_pkg": 40.0, "avg_pkg": 7.8, "placement_pct": 88, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "IT", "MBA"], "recruiters": ["TCS Digital", "Infosys SP", "Wipro Elite", "HCL", "Tech Mahindra", "Capgemini"], "url": "/colleges/profiles/psit-kanpur-profile-2026.html"}, {"name": "Noida Institute of Engineering & Technology (NIET)", "code": "133", "city": "Greater Noida", "type": "Private Autonomous", "est": 2001, "naac": "A", "nirf": "201-300", "fee": 130000, "highest_pkg": 44.0, "avg_pkg": 8.0, "placement_pct": 91, "branches": ["CSE", "CSE-AI", "CSE-DS", "ECE", "ME", "CE", "IT"], "recruiters": ["Samsung R&D", "TCS Digital", "Infosys", "Capgemini", "Wipro", "Amazon"], "url": "/colleges/profiles/niet-greater-noida-profile-2026.html"}, {"name": "Meerut Institute of Engineering & Technology (MIET Meerut)", "code": "108", "city": "Meerut", "type": "Private Autonomous", "est": 1995, "naac": "A", "nirf": "201-300", "fee": 118000, "highest_pkg": 35.0, "avg_pkg": 7.5, "placement_pct": 86, "branches": ["CSE", "ECE", "ME", "CE", "IT", "EE"], "recruiters": ["TCS Digital", "Infosys", "Wipro", "Amazon", "HCL", "Capgemini"], "url": "/colleges/profiles/miet-meerut-profile.html"}, {"name": "IMS Engineering College (IMS EC Ghaziabad)", "code": "070", "city": "Ghaziabad", "type": "Private Autonomous", "est": 2001, "naac": "A", "nirf": "201-300", "fee": 128000, "highest_pkg": 38.0, "avg_pkg": 7.8, "placement_pct": 88, "branches": ["CSE", "ECE", "ME", "CE", "IT"], "recruiters": ["Amazon", "TCS Digital", "Infosys SP", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/ims-ghaziabad-profile.html"}, {"name": "Raj Kumar Goel Institute of Technology (RKGIT Ghaziabad)", "code": "126", "city": "Ghaziabad", "type": "Private Autonomous", "est": 2000, "naac": "A", "nirf": "201-300", "fee": 122000, "highest_pkg": 30.0, "avg_pkg": 7.0, "placement_pct": 84, "branches": ["CSE", "ECE", "ME", "CE", "IT"], "recruiters": ["TCS", "Amazon", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/raj-kumar-goel-ghaziabad-profile.html"}, {"name": "Shri Ramswaroop Memorial College (SRMCEM Lucknow)", "code": "130", "city": "Lucknow", "type": "Private Autonomous", "est": 2001, "naac": "A", "nirf": "201-300", "fee": 115000, "highest_pkg": 32.0, "avg_pkg": 7.2, "placement_pct": 85, "branches": ["CSE", "ECE", "ME", "CE", "IT", "MBA"], "recruiters": ["TCS Digital", "Amazon", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/shri-ramswaroop-memorial-lucknow-profile.html"}, {"name": "Rajkiya Engineering College Banda (REC Banda)", "code": "842", "city": "Banda", "type": "Government", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 58000, "highest_pkg": 15.0, "avg_pkg": 5.5, "placement_pct": 75, "branches": ["CSE", "ECE", "EE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "BHEL", "L&T"], "url": "/colleges/profiles/rec-banda-profile.html"}, {"name": "Rajkiya Engineering College Bijnor (REC Bijnor)", "code": "843", "city": "Bijnor", "type": "Government", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 58000, "highest_pkg": 16.5, "avg_pkg": 5.6, "placement_pct": 76, "branches": ["CSE", "IT", "EE", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "Capgemini", "Tech Mahindra"], "url": "/colleges/profiles/rec-bijnor-profile.html"}, {"name": "Rajkiya Engineering College Azamgarh (REC Azamgarh)", "code": "844", "city": "Azamgarh", "type": "Government", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 58000, "highest_pkg": 14.5, "avg_pkg": 5.2, "placement_pct": 74, "branches": ["CSE", "IT", "ME", "CE"], "recruiters": ["TCS", "Infosys", "HCL", "Wipro", "Cognizant"], "url": "/colleges/profiles/rec-azamgarh-profile.html"}, {"name": "Rajkiya Engineering College Ambedkar Nagar (REC Ambedkar Nagar)", "code": "845", "city": "Ambedkar Nagar", "type": "Government", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 58000, "highest_pkg": 15.5, "avg_pkg": 5.4, "placement_pct": 75, "branches": ["CSE", "IT", "EE", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/rec-ambedkar-nagar-profile.html"}, {"name": "Rajkiya Engineering College Kannauj (REC Kannauj)", "code": "846", "city": "Kannauj", "type": "Government", "est": 2015, "naac": "B", "nirf": "401-500", "fee": 56000, "highest_pkg": 13.0, "avg_pkg": 5.0, "placement_pct": 72, "branches": ["CSE", "ECE", "EE", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "Tech Mahindra"], "url": "/colleges/profiles/rec-kannauj-profile.html"}, {"name": "Rajkiya Engineering College Mainpuri (REC Mainpuri)", "code": "847", "city": "Mainpuri", "type": "Government", "est": 2015, "naac": "B", "nirf": "401-500", "fee": 56000, "highest_pkg": 12.5, "avg_pkg": 4.8, "placement_pct": 70, "branches": ["CSE", "ME", "EE", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/rec-mainpuri-profile.html"}, {"name": "Rajkiya Engineering College Sonbhadra (REC Sonbhadra)", "code": "848", "city": "Sonbhadra", "type": "Government", "est": 2015, "naac": "B", "nirf": "401-500", "fee": 56000, "highest_pkg": 14.0, "avg_pkg": 5.1, "placement_pct": 73, "branches": ["CSE", "ECE", "EE", "Mining"], "recruiters": ["NTPC", "Hindalco", "TCS", "Infosys", "Wipro"], "url": "/colleges/profiles/rec-sonbhadra-profile.html"}, {"name": "Rampur Engineering College (REC Rampur)", "code": "128", "city": "Rampur", "type": "Government", "est": 2010, "naac": "B", "nirf": "401-500", "fee": 55000, "highest_pkg": 12.0, "avg_pkg": 4.5, "placement_pct": 68, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/rait-rampur-profile.html"}, {"name": "University Institute of Engineering and Technology (UIET CSJMU Kanpur)", "code": "UIET-K", "city": "Kanpur", "type": "Government University", "est": 1996, "naac": "A+", "nirf": "151-200", "fee": 75000, "highest_pkg": 25.0, "avg_pkg": 7.2, "placement_pct": 84, "branches": ["CSE", "IT", "ECE", "ME", "Chemical", "Materials"], "recruiters": ["TCS", "Infosys", "Wipro", "Cognizant", "L&T", "Samsung"], "url": "/colleges/profiles/uiet-csjmu-kanpur-profile.html"}, {"name": "Faculty of Engineering & Technology Lucknow University (LU FoET)", "code": "LU-ENG", "city": "Lucknow", "type": "Government University", "est": 2017, "naac": "A++", "nirf": "101-150", "fee": 80000, "highest_pkg": 28.0, "avg_pkg": 7.5, "placement_pct": 85, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "EE"], "recruiters": ["Amazon", "TCS", "Infosys", "Wipro", "Capgemini", "HCL"], "url": "/colleges/profiles/uiet-lucknow-university-profile.html"}, {"name": "Faculty of Engineering & Technology MJPRU Bareilly", "code": "MJPRU-ENG", "city": "Bareilly", "type": "Government University", "est": 1995, "naac": "A+", "nirf": "151-200", "fee": 68000, "highest_pkg": 20.0, "avg_pkg": 6.5, "placement_pct": 80, "branches": ["CSE", "IT", "ECE", "ME", "EE", "Chemical"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/foet-mjpru-bareilly-profile.html"}, {"name": "Babu Banarasi Das Institute of Technology & Management (BBDITM)", "code": "091-L", "city": "Lucknow", "type": "Private", "est": 2000, "naac": "B+", "nirf": "301-400", "fee": 105000, "highest_pkg": 18.0, "avg_pkg": 5.8, "placement_pct": 78, "branches": ["CSE", "ECE", "ME", "CE", "IT"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant", "Capgemini"], "url": "/colleges/profiles/bbditm-lucknow-profile.html"}, {"name": "BBD Northern India Institute of Technology (BBDNIIT Lucknow)", "code": "056", "city": "Lucknow", "type": "Private", "est": 1999, "naac": "B+", "nirf": "301-400", "fee": 108000, "highest_pkg": 20.0, "avg_pkg": 6.0, "placement_pct": 80, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/bbd-niit-lucknow-profile.html"}, {"name": "Babu Banarasi Das Engineering College (BBDEC Lucknow)", "code": "508", "city": "Lucknow", "type": "Private", "est": 2008, "naac": "B", "nirf": "401-500", "fee": 95000, "highest_pkg": 15.0, "avg_pkg": 5.0, "placement_pct": 72, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "Tech Mahindra"], "url": "/colleges/profiles/bbdec-lucknow-profile.html"}, {"name": "SRM College of Engineering & Management (SRM Lucknow)", "code": "195", "city": "Lucknow", "type": "Private", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 110000, "highest_pkg": 22.0, "avg_pkg": 6.2, "placement_pct": 80, "branches": ["CSE", "ECE", "ME", "CE", "IT", "MBA"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/srmcem-lucknow-profile.html"}, {"name": "Goel Institute of Technology & Management (GITM Lucknow)", "code": "392", "city": "Lucknow", "type": "Private", "est": 2008, "naac": "B+", "nirf": "301-400", "fee": 98000, "highest_pkg": 16.0, "avg_pkg": 5.2, "placement_pct": 74, "branches": ["CSE", "ECE", "ME", "CE", "IT", "MBA"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Tech Mahindra"], "url": "/colleges/profiles/gitm-lucknow-profile.html"}, {"name": "Amity University Lucknow Campus Engineering", "code": "AMITY-L", "city": "Lucknow", "type": "Private University", "est": 2004, "naac": "A+", "nirf": "101-150", "fee": 180000, "highest_pkg": 35.0, "avg_pkg": 8.0, "placement_pct": 88, "branches": ["CSE", "CSE-AI", "ECE", "ME", "Biotech", "CE"], "recruiters": ["Amazon", "Microsoft", "TCS Digital", "Infosys", "Capgemini"], "url": "/colleges/profiles/amity-lucknow-profile.html"}, {"name": "Integral University Faculty of Engineering", "code": "INTEGRAL-L", "city": "Lucknow", "type": "Private University", "est": 2004, "naac": "A+", "nirf": "151-200", "fee": 125000, "highest_pkg": 22.0, "avg_pkg": 6.4, "placement_pct": 81, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "EE", "Biotech"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini", "Cognizant"], "url": "/colleges/profiles/integral-university-lucknow-profile.html"}, {"name": "Bansal Institute of Engineering & Technology (BIET Lucknow)", "code": "422", "city": "Lucknow", "type": "Private", "est": 2008, "naac": "B+", "nirf": "401-500", "fee": 92000, "highest_pkg": 14.0, "avg_pkg": 4.8, "placement_pct": 70, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/bansal-institute-lucknow-profile.html"}, {"name": "Hygia Institute of Technology & Management Lucknow", "code": "567", "city": "Lucknow", "type": "Private", "est": 2005, "naac": "B", "nirf": "401-500", "fee": 88000, "highest_pkg": 12.0, "avg_pkg": 4.5, "placement_pct": 68, "branches": ["CSE", "ECE", "ME", "CE", "B.Pharm"], "recruiters": ["TCS", "Infosys", "Sun Pharma", "Cipla"], "url": "/colleges/profiles/hygia-institute-lucknow-profile.html"}, {"name": "R.R. Institute of Modern Technology (RRIMT Lucknow)", "code": "406", "city": "Lucknow", "type": "Private", "est": 2008, "naac": "B", "nirf": "401-500", "fee": 85000, "highest_pkg": 13.5, "avg_pkg": 4.6, "placement_pct": 69, "branches": ["CSE", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "Tech Mahindra"], "url": "/colleges/profiles/rr-institute-lucknow-profile.html"}, {"name": "Mahatma Gandhi Institute of Technology Lucknow", "code": "621", "city": "Lucknow", "type": "Private", "est": 2009, "naac": "B", "nirf": "401-500", "fee": 82000, "highest_pkg": 11.0, "avg_pkg": 4.2, "placement_pct": 65, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Wipro", "HCL", "Teleperformance"], "url": "/colleges/profiles/mgim-lucknow-profile.html"}, {"name": "B.N. College of Engineering & Technology (BNCET Lucknow)", "code": "425", "city": "Lucknow", "type": "Private", "est": 2008, "naac": "B", "nirf": "401-500", "fee": 86000, "highest_pkg": 12.5, "avg_pkg": 4.5, "placement_pct": 67, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/bncet-lucknow-profile.html"}, {"name": "Azad Institute of Engineering & Technology (AIET Lucknow)", "code": "053", "city": "Lucknow", "type": "Private", "est": 1998, "naac": "B+", "nirf": "301-400", "fee": 95000, "highest_pkg": 16.0, "avg_pkg": 5.2, "placement_pct": 73, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/azad-institute-lucknow-profile.html"}, {"name": "Rama University Faculty of Engineering & Technology Kanpur", "code": "RAMA-K", "city": "Kanpur", "type": "Private University", "est": 2008, "naac": "A", "nirf": "201-300", "fee": 110000, "highest_pkg": 24.0, "avg_pkg": 6.2, "placement_pct": 80, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "Biotech"], "recruiters": ["Amazon", "TCS", "Infosys", "Wipro", "Capgemini"], "url": "/colleges/profiles/rama-university-kanpur-profile.html"}, {"name": "Axis Institute of Technology & Management (AITM Kanpur)", "code": "514", "city": "Kanpur", "type": "Private", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 98000, "highest_pkg": 18.0, "avg_pkg": 5.5, "placement_pct": 76, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/axis-colleges-kanpur-profile.html"}, {"name": "Maharana Pratap Engineering College (MPEC Kanpur)", "code": "047", "city": "Kanpur", "type": "Private", "est": 1999, "naac": "B+", "nirf": "301-400", "fee": 105000, "highest_pkg": 22.0, "avg_pkg": 6.0, "placement_pct": 81, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant", "Tech Mahindra"], "url": "/colleges/profiles/maharana-pratap-kanpur-profile.html"}, {"name": "Kanpur Institute of Technology (KIT Kanpur)", "code": "165", "city": "Kanpur", "type": "Private", "est": 2004, "naac": "B+", "nirf": "301-400", "fee": 98000, "highest_pkg": 16.5, "avg_pkg": 5.4, "placement_pct": 75, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/kanpur-institute-technology-profile.html"}, {"name": "Apollo Institute of Technology (AIT Kanpur)", "code": "428", "city": "Kanpur", "type": "Private", "est": 2008, "naac": "B", "nirf": "401-500", "fee": 85000, "highest_pkg": 12.0, "avg_pkg": 4.4, "placement_pct": 66, "branches": ["CSE", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/apollo-institute-kanpur-profile.html"}, {"name": "GNIOT Institute of Management and Technology Gr. Noida", "code": "132", "city": "Greater Noida", "type": "Private", "est": 2001, "naac": "A", "nirf": "201-300", "fee": 120000, "highest_pkg": 30.0, "avg_pkg": 7.2, "placement_pct": 85, "branches": ["CSE", "CSE-AI", "IT", "ECE", "ME", "CE"], "recruiters": ["Amazon", "TCS Digital", "Infosys", "Wipro", "Capgemini"], "url": "/colleges/profiles/gniot-greater-noida-profile.html"}, {"name": "KCC Institute of Technology and Management Gr. Noida", "code": "486", "city": "Greater Noida", "type": "Private", "est": 2009, "naac": "B+", "nirf": "301-400", "fee": 95000, "highest_pkg": 16.0, "avg_pkg": 5.2, "placement_pct": 72, "branches": ["CSE", "CSE-AI", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/kcc-itm-greater-noida-profile.html"}, {"name": "I.T.S Engineering College Greater Noida", "code": "222", "city": "Greater Noida", "type": "Private", "est": 2006, "naac": "A", "nirf": "201-300", "fee": 115000, "highest_pkg": 28.0, "avg_pkg": 6.8, "placement_pct": 83, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "EE"], "recruiters": ["Amazon", "TCS Digital", "Infosys", "Wipro", "Cognizant"], "url": "/colleges/profiles/its-greater-noida-profile.html"}, {"name": "Accurate Institute of Management and Technology Gr. Noida", "code": "225", "city": "Greater Noida", "type": "Private", "est": 2006, "naac": "B+", "nirf": "301-400", "fee": 112000, "highest_pkg": 24.0, "avg_pkg": 6.2, "placement_pct": 80, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/accurate-greater-noida-profile.html"}, {"name": "Dronacharya Group of Institutions Greater Noida", "code": "230", "city": "Greater Noida", "type": "Private", "est": 2006, "naac": "A", "nirf": "201-300", "fee": 118000, "highest_pkg": 32.0, "avg_pkg": 7.0, "placement_pct": 84, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "EE"], "recruiters": ["Amazon", "Cisco", "TCS Digital", "Infosys", "Wipro"], "url": "/colleges/profiles/dronacharya-greater-noida-profile.html"}, {"name": "IIMT College of Engineering Greater Noida", "code": "216", "city": "Greater Noida", "type": "Private", "est": 2005, "naac": "B+", "nirf": "301-400", "fee": 110000, "highest_pkg": 22.0, "avg_pkg": 6.0, "placement_pct": 79, "branches": ["CSE", "CSE-AI", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/iimt-greater-noida-profile.html"}, {"name": "Skyline Institute of Engineering and Technology Gr. Noida", "code": "067", "city": "Greater Noida", "type": "Private", "est": 2002, "naac": "B", "nirf": "401-500", "fee": 92000, "highest_pkg": 14.0, "avg_pkg": 4.8, "placement_pct": 68, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/skyline-greater-noida-profile.html"}, {"name": "Lloyd Institute of Engineering and Technology Gr. Noida", "code": "172", "city": "Greater Noida", "type": "Private", "est": 2002, "naac": "B+", "nirf": "301-400", "fee": 105000, "highest_pkg": 20.0, "avg_pkg": 5.8, "placement_pct": 77, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/lloyd-greater-noida-profile.html"}, {"name": "Mangalayatan University Faculty of Engineering Aligarh", "code": "MANG-AL", "city": "Aligarh", "type": "Private University", "est": 2006, "naac": "A+", "nirf": "151-200", "fee": 115000, "highest_pkg": 26.0, "avg_pkg": 6.5, "placement_pct": 82, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "Biotech"], "recruiters": ["Amazon", "TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/mangalayatan-aligarh-profile.html"}, {"name": "School of Engineering and Technology Sharda University", "code": "SHARDA-GN", "city": "Greater Noida", "type": "Private University", "est": 2009, "naac": "A+", "nirf": "87", "fee": 195000, "highest_pkg": 48.0, "avg_pkg": 8.8, "placement_pct": 91, "branches": ["CSE", "CSE-AI", "CSE-Cyber", "ECE", "ME", "CE", "Biotech"], "recruiters": ["Amazon", "Microsoft", "TCS Digital", "Infosys", "Wipro", "Cognizant"], "url": "/colleges/profiles/sharda-university-greater-noida-profile.html"}, {"name": "Bennett University School of Engineering Greater Noida", "code": "BENNETT-GN", "city": "Greater Noida", "type": "Private University", "est": 2016, "naac": "A+", "nirf": "51-100", "fee": 360000, "highest_pkg": 57.0, "avg_pkg": 11.2, "placement_pct": 95, "branches": ["CSE", "CSE-AI", "CSE-DS", "ECE", "ME", "Biotech"], "recruiters": ["Google", "Amazon", "Microsoft", "Adobe", "Goldman Sachs", "Cisco"], "url": "/colleges/profiles/bennett-university-greater-noida-profile.html"}, {"name": "GLA University Institute of Engineering and Technology Mathura", "code": "GLA-MATH", "city": "Mathura", "type": "Private University", "est": 1998, "naac": "A+", "nirf": "101-150", "fee": 165000, "highest_pkg": 55.0, "avg_pkg": 8.5, "placement_pct": 92, "branches": ["CSE", "CSE-AI", "CSE-Cyber", "ECE", "ME", "CE", "EE"], "recruiters": ["Amazon", "Microsoft", "TCS Digital", "Infosys SP", "Capgemini", "Wipro"], "url": "/colleges/profiles/gla-university-mathura-profile.html"}, {"name": "Hindustan College of Science and Technology (HCST Mathura)", "code": "064", "city": "Mathura", "type": "Private", "est": 1996, "naac": "A", "nirf": "201-300", "fee": 115000, "highest_pkg": 28.0, "avg_pkg": 6.8, "placement_pct": 82, "branches": ["CSE", "IT", "ECE", "ME", "CE", "Chemical"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant", "Capgemini"], "url": "/colleges/profiles/hindustan-mathura-profile.html"}, {"name": "Anand Engineering College (AEC Agra)", "code": "001", "city": "Agra", "type": "Private", "est": 1998, "naac": "A", "nirf": "201-300", "fee": 118000, "highest_pkg": 30.0, "avg_pkg": 7.0, "placement_pct": 83, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE", "Biotech"], "recruiters": ["Amazon", "TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/anand-engineering-agra-profile.html"}, {"name": "Faculty of Engineering & Technology Agra College", "code": "062", "city": "Agra", "type": "Private", "est": 1999, "naac": "B+", "nirf": "301-400", "fee": 95000, "highest_pkg": 16.0, "avg_pkg": 5.2, "placement_pct": 74, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/agra-college-engineering-profile.html"}, {"name": "Raja Balwant Singh Engineering Technical Campus Bichpuri Agra", "code": "127", "city": "Agra", "type": "Private", "est": 2001, "naac": "A", "nirf": "201-300", "fee": 98000, "highest_pkg": 22.0, "avg_pkg": 6.0, "placement_pct": 78, "branches": ["CSE", "IT", "ECE", "ME", "CE", "Food Tech", "Chemical"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Nestle", "PepsiCo"], "url": "/colleges/profiles/rbs-engineering-agra-profile.html"}, {"name": "ABES Institute of Technology (ABESIT Ghaziabad)", "code": "290", "city": "Ghaziabad", "type": "Private", "est": 2007, "naac": "A", "nirf": "201-300", "fee": 125000, "highest_pkg": 32.0, "avg_pkg": 7.2, "placement_pct": 85, "branches": ["CSE", "CSE-AI", "CSE-DS", "IT", "ECE", "ME"], "recruiters": ["Amazon", "TCS Digital", "Infosys", "Wipro", "Capgemini"], "url": "/colleges/profiles/abesit-ghaziabad-profile.html"}, {"name": "Raj Kumar Goel Engineering College (RKGEC Ghaziabad)", "code": "246", "city": "Ghaziabad", "type": "Private", "est": 2007, "naac": "B+", "nirf": "301-400", "fee": 110000, "highest_pkg": 20.0, "avg_pkg": 5.8, "placement_pct": 78, "branches": ["CSE", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/rkgit-ghaziabad-profile.html"}, {"name": "HR Institute of Technology (HRIT Ghaziabad)", "code": "220", "city": "Ghaziabad", "type": "Private", "est": 2005, "naac": "B+", "nirf": "301-400", "fee": 102000, "highest_pkg": 18.0, "avg_pkg": 5.4, "placement_pct": 75, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Tech Mahindra"], "url": "/colleges/profiles/hr-institute-ghaziabad-profile.html"}, {"name": "Sunder Deep Engineering College (SDEC Ghaziabad)", "code": "240", "city": "Ghaziabad", "type": "Private", "est": 2006, "naac": "B+", "nirf": "301-400", "fee": 105000, "highest_pkg": 19.0, "avg_pkg": 5.6, "placement_pct": 76, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/sunder-deep-ghaziabad-profile.html"}, {"name": "Ideal Institute of Technology Ghaziabad", "code": "028", "city": "Ghaziabad", "type": "Private", "est": 1998, "naac": "B", "nirf": "401-500", "fee": 95000, "highest_pkg": 15.0, "avg_pkg": 4.8, "placement_pct": 70, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/ideal-institute-ghaziabad-profile.html"}, {"name": "Bhagwant Institute of Technology (BIT Muzaffarnagar)", "code": "119", "city": "Muzaffarnagar", "type": "Private", "est": 2000, "naac": "B+", "nirf": "401-500", "fee": 88000, "highest_pkg": 14.0, "avg_pkg": 4.8, "placement_pct": 71, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/bhagwant-institute-muzaffarnagar-profile.html"}, {"name": "Shanti Institute of Technology (SIT Meerut)", "code": "416", "city": "Meerut", "type": "Private", "est": 2008, "naac": "B", "nirf": "401-500", "fee": 82000, "highest_pkg": 12.0, "avg_pkg": 4.4, "placement_pct": 66, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/shanti-institute-meerut-profile.html"}, {"name": "Forte Institute of Technology Meerut", "code": "109", "city": "Meerut", "type": "Private", "est": 1998, "naac": "B", "nirf": "401-500", "fee": 85000, "highest_pkg": 13.0, "avg_pkg": 4.5, "placement_pct": 68, "branches": ["CSE", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/forte-institute-meerut-profile.html"}, {"name": "Vidya College of Engineering Meerut", "code": "233", "city": "Meerut", "type": "Private", "est": 2006, "naac": "A", "nirf": "201-300", "fee": 110000, "highest_pkg": 25.0, "avg_pkg": 6.5, "placement_pct": 82, "branches": ["CSE", "CSE-AI", "IT", "ECE", "ME", "CE"], "recruiters": ["TCS Digital", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/vidya-college-engineering-meerut-profile.html"}, {"name": "IIMT Engineering College Meerut", "code": "127-M", "city": "Meerut", "type": "Private", "est": 2001, "naac": "A", "nirf": "201-300", "fee": 115000, "highest_pkg": 28.0, "avg_pkg": 6.8, "placement_pct": 83, "branches": ["CSE", "CSE-AI", "IT", "ECE", "ME", "CE"], "recruiters": ["Amazon", "TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/iimt-engineering-meerut-profile.html"}, {"name": "Moradabad Institute of Technology (MIT Moradabad)", "code": "082", "city": "Moradabad", "type": "Private", "est": 1996, "naac": "A", "nirf": "201-300", "fee": 112000, "highest_pkg": 28.0, "avg_pkg": 7.0, "placement_pct": 82, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS Digital", "Infosys", "Amazon", "HCL", "Wipro", "Capgemini"], "url": "/colleges/profiles/moradabad-institute-technology-profile.html"}, {"name": "Kashi Institute of Technology (KIT Varanasi)", "code": "427", "city": "Varanasi", "type": "Private", "est": 2008, "naac": "A", "nirf": "201-300", "fee": 105000, "highest_pkg": 24.0, "avg_pkg": 6.2, "placement_pct": 81, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini", "Cognizant"], "url": "/colleges/profiles/kashi-institute-technology-varanasi-profile.html"}, {"name": "Ashoka Institute of Technology & Management Varanasi", "code": "490", "city": "Varanasi", "type": "Private", "est": 2010, "naac": "B+", "nirf": "301-400", "fee": 98000, "highest_pkg": 18.0, "avg_pkg": 5.5, "placement_pct": 77, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/ashoka-institute-varanasi-profile.html"}, {"name": "School of Management Sciences (SHEAT College Varanasi)", "code": "370", "city": "Varanasi", "type": "Private", "est": 2007, "naac": "B+", "nirf": "301-400", "fee": 92000, "highest_pkg": 16.0, "avg_pkg": 5.2, "placement_pct": 74, "branches": ["CSE", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/sheat-college-varanasi-profile.html"}, {"name": "Buddha Institute of Technology (BIT Gorakhpur)", "code": "525", "city": "Gorakhpur", "type": "Private", "est": 2009, "naac": "B+", "nirf": "301-400", "fee": 94000, "highest_pkg": 16.5, "avg_pkg": 5.3, "placement_pct": 75, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Cognizant"], "url": "/colleges/profiles/buddha-institute-gorakhpur-profile.html"}, {"name": "Institute of Technology & Management (ITM Gorakhpur)", "code": "120", "city": "Gorakhpur", "type": "Private", "est": 2001, "naac": "B+", "nirf": "301-400", "fee": 96000, "highest_pkg": 18.0, "avg_pkg": 5.5, "placement_pct": 76, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/itms-gorakhpur-profile.html"}, {"name": "Kailash Institute of Engineering & Technology Gorakhpur", "code": "654", "city": "Gorakhpur", "type": "Private", "est": 2012, "naac": "B", "nirf": "401-500", "fee": 82000, "highest_pkg": 11.0, "avg_pkg": 4.2, "placement_pct": 65, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Wipro", "HCL", "Teleperformance"], "url": "/colleges/profiles/kuiet-gorakhpur-profile.html"}, {"name": "Shambhunath Institute of Engineering & Technology Allahabad", "code": "162", "city": "Prayagraj", "type": "Private", "est": 2004, "naac": "A", "nirf": "201-300", "fee": 105000, "highest_pkg": 22.0, "avg_pkg": 6.2, "placement_pct": 80, "branches": ["CSE", "CSE-AI", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS Digital", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/shambhunath-institute-allahabad-profile.html"}, {"name": "LDC Institute of Technical Studies Prayagraj", "code": "387", "city": "Prayagraj", "type": "Private", "est": 2007, "naac": "B+", "nirf": "301-400", "fee": 92000, "highest_pkg": 15.0, "avg_pkg": 5.0, "placement_pct": 72, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/ldc-institute-allahabad-profile.html"}, {"name": "S.P. Memorial Institute of Technology Prayagraj", "code": "418", "city": "Prayagraj", "type": "Private", "est": 2008, "naac": "B", "nirf": "401-500", "fee": 85000, "highest_pkg": 13.0, "avg_pkg": 4.6, "placement_pct": 68, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/sp-memorial-allahabad-profile.html"}, {"name": "BBS College of Engineering & Technology Prayagraj", "code": "138", "city": "Prayagraj", "type": "Private", "est": 2002, "naac": "B+", "nirf": "301-400", "fee": 95000, "highest_pkg": 16.0, "avg_pkg": 5.2, "placement_pct": 74, "branches": ["CSE", "IT", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Capgemini"], "url": "/colleges/profiles/bbs-college-allahabad-profile.html"}, {"name": "Prasad Institute of Technology Jaunpur", "code": "144", "city": "Jaunpur", "type": "Private", "est": 2002, "naac": "B+", "nirf": "401-500", "fee": 88000, "highest_pkg": 14.5, "avg_pkg": 4.8, "placement_pct": 70, "branches": ["CSE", "IT", "ECE", "ME", "CE", "B.Pharm"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL", "Sun Pharma"], "url": "/colleges/profiles/prasad-institute-jaunpur-profile.html"}, {"name": "Kunwar Haribansh Singh College of Management & Tech Jaunpur", "code": "489", "city": "Jaunpur", "type": "Private", "est": 2009, "naac": "B", "nirf": "401-500", "fee": 82000, "highest_pkg": 11.5, "avg_pkg": 4.2, "placement_pct": 66, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Wipro", "HCL", "Tech Mahindra"], "url": "/colleges/profiles/kunwar-haribansh-jaunpur-profile.html"}, {"name": "Technical Education & Research Institute Ghazipur", "code": "589", "city": "Ghazipur", "type": "Private", "est": 2009, "naac": "B", "nirf": "401-500", "fee": 80000, "highest_pkg": 10.5, "avg_pkg": 4.0, "placement_pct": 64, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Wipro", "HCL"], "url": "/colleges/profiles/technical-education-society-ghazipur-profile.html"}, {"name": "Shri Ramswaroop Memorial University (SRMU Barabanki)", "code": "SRMU-BBK", "city": "Barabanki", "type": "Private University", "est": 2012, "naac": "A+", "nirf": "151-200", "fee": 135000, "highest_pkg": 34.0, "avg_pkg": 7.5, "placement_pct": 86, "branches": ["CSE", "CSE-AI", "ECE", "ME", "CE", "Biotech"], "recruiters": ["Amazon", "Microsoft", "TCS Digital", "Infosys", "Wipro", "Capgemini"], "url": "/colleges/profiles/shri-ramswaroop-memorial-university-barabanki-profile.html"}, {"name": "Jahangirabad Institute of Technology (JIT Barabanki)", "code": "442", "city": "Barabanki", "type": "Private", "est": 2009, "naac": "B+", "nirf": "401-500", "fee": 88000, "highest_pkg": 14.0, "avg_pkg": 4.8, "placement_pct": 71, "branches": ["CSE", "ECE", "ME", "CE", "EE"], "recruiters": ["TCS", "Infosys", "Wipro", "HCL"], "url": "/colleges/profiles/jahangirabad-institute-barabanki-profile.html"}, {"name": "Saghir Fatima Memorial Institute of Technology Barabanki", "code": "610", "city": "Barabanki", "type": "Private", "est": 2010, "naac": "B", "nirf": "401-500", "fee": 78000, "highest_pkg": 10.0, "avg_pkg": 3.8, "placement_pct": 62, "branches": ["CSE", "ECE", "ME", "CE"], "recruiters": ["TCS", "Wipro", "HCL"], "url": "/colleges/profiles/saghir-fatima-barabanki-profile.html"}];
 
     let currentFilters = {
       search: '',
@@ -3053,26 +601,62 @@
       sort: 'pkg_desc'
     };
 
+    function resetFilters() {
+      currentFilters = {
+        search: '',
+        city: 'all',
+        fee: 'all',
+        branch: 'all',
+        naac: 'all',
+        type: 'all',
+        sort: 'pkg_desc'
+      };
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortSelect').value = 'pkg_desc';
+      document.querySelectorAll('.filter-pill').forEach(p => {
+        if (p.dataset.val === 'all') p.classList.add('active');
+        else p.classList.remove('active');
+      });
+      renderColleges();
+    }
+
+    function applyPreset(type) {
+      resetFilters();
+      if (type === 'govt') {
+        currentFilters.type = 'govt_only';
+        document.querySelector('[data-filter="type"][data-val="govt_only"]').classList.add('active');
+        document.querySelector('#naacGroup .filter-pill[data-val="all"]').classList.remove('active');
+      } else if (type === 'ncr') {
+        currentFilters.city = 'Noida';
+        renderColleges();
+      } else if (type === 'high_pkg') {
+        currentFilters.sort = 'pkg_desc';
+      } else if (type === 'budget') {
+        currentFilters.fee = 'budget';
+        document.querySelector('[data-filter="fee"][data-val="budget"]').classList.add('active');
+        document.querySelector('#feeGroup .filter-pill[data-val="all"]').classList.remove('active');
+      }
+      renderColleges();
+    }
+
     function renderColleges() {
       const grid = document.getElementById('collegeGrid');
       const countEl = document.getElementById('resultsCount');
       
       let filtered = collegesData.filter(c => {
-        // Search filter
         if (currentFilters.search) {
           const q = currentFilters.search.toLowerCase();
           const matchName = c.name.toLowerCase().includes(q);
           const matchCity = c.city.toLowerCase().includes(q);
+          const matchCode = c.code.toLowerCase().includes(q);
           const matchBranch = c.branches.some(b => b.toLowerCase().includes(q));
-          if (!matchName && !matchCity && !matchBranch) return false;
+          if (!matchName && !matchCity && !matchCode && !matchBranch) return false;
         }
 
-        // City filter
         if (currentFilters.city !== 'all' && c.city.toLowerCase() !== currentFilters.city.toLowerCase()) {
           return false;
         }
 
-        // Fee filter
         if (currentFilters.fee !== 'all') {
           if (currentFilters.fee === 'govt' && c.fee > 70000) return false;
           if (currentFilters.fee === 'budget' && (c.fee < 70000 || c.fee > 100000)) return false;
@@ -3080,17 +664,14 @@
           if (currentFilters.fee === 'premium' && c.fee <= 130000) return false;
         }
 
-        // Branch filter
         if (currentFilters.branch !== 'all' && !c.branches.includes(currentFilters.branch)) {
           return false;
         }
 
-        // NAAC filter
         if (currentFilters.naac !== 'all' && c.naac !== currentFilters.naac) {
           return false;
         }
 
-        // Type filter (Govt only)
         if (currentFilters.type === 'govt_only' && !c.type.toLowerCase().includes('government')) {
           return false;
         }
@@ -3098,7 +679,6 @@
         return true;
       });
 
-      // Sorting
       filtered.sort((a, b) => {
         if (currentFilters.sort === 'pkg_desc') return b.highest_pkg - a.highest_pkg;
         if (currentFilters.sort === 'placement_desc') return b.placement_pct - a.placement_pct;
@@ -3113,7 +693,8 @@
         grid.innerHTML = `
           <div class="empty-state">
             <h3>No Colleges Found</h3>
-            <p style="color:var(--text-muted);">Try adjusting your search criteria or reset filters to view all colleges.</p>
+            <p style="color:var(--text-muted);margin-bottom:14px;">Try adjusting your search criteria or reset filters to view all colleges.</p>
+            <button onclick="resetFilters()" class="btn-reset">Reset Filters</button>
           </div>
         `;
         return;
@@ -3157,12 +738,16 @@
             </div>
           </div>
 
-          <a href="${c.url}" class="card-btn">View Complete Profile & Fees →</a>
+          <div class="card-actions">
+            <a href="${c.url}" class="card-btn">Full Profile & Fees →</a>
+            <a href="/admissions/uptac-choice-filling-predictor-2026.html" class="card-btn-secondary" title="Check Cutoffs">🎯 Predict</a>
+          </div>
         </div>
       `).join('');
     }
 
-    // Event listeners
+    document.getElementById('resetFiltersBtn').addEventListener('click', resetFilters);
+
     document.getElementById('searchInput').addEventListener('input', (e) => {
       currentFilters.search = e.target.value;
       renderColleges();
@@ -3198,7 +783,6 @@
       renderColleges();
     });
 
-    // Initial render
     renderColleges();
   </script>
   <script defer src="/js/community-banner-widget.js"></script>
