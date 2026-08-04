@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKTU Subject Notes & Quantum Live Search Engine 2026</title>
+    <meta name="description"
+        content="Instant Search Engine for AKTU Subject Notes & Quantum Series PDFs. Type any subject name or subject code (e.g. BCS-301, DAA, DSTL, DBMS) for 1-click PDF download." />
+    <meta name="keywords"
+        content="aktu quantum pdf search engine, aktu subject code finder, bcs-301 quantum pdf, daa quantum pdf aktu, dstl quantum pdf download" />
+    <link rel="canonical" href="https://akturesults.in/tools/aktu-notes-search-widget.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --border-color: #cbd5e1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; padding: 25px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .site-title { font-size: 28px; font-weight: 800; text-decoration: none; color: white; }
+        .site-title span { color: #38bdf8; }
+
+        .breadcrumb { background: white; padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb span { margin: 0 8px; color: #64748b; }
+
+        .hero-banner { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: white; padding: 35px 25px; border-radius: 16px; margin: 25px 0; text-align: center; }
+        .hero-banner h1 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+
+        .search-box { margin-bottom: 30px; }
+        .search-input { width: 100%; padding: 18px 24px; border: 3px solid var(--primary); border-radius: 14px; font-size: 18px; outline: none; font-weight: 600; box-shadow: 0 4px 20px rgba(79, 70, 229, 0.15); }
+
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .res-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: 0.25s; }
+        .res-card:hover { border-color: var(--primary); transform: translateY(-3px); }
+
+        footer { background: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
+    </style>
+
+    <!-- ===== NON-ADSENSE ADS INTEGRATION ===== -->
+    <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+    <script src="https://quge5.com/88/tag.min.js" data-zone="257542" async data-cfasync="false"></script>
+    <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="site-title">🎓 AKTU Results <span>2026</span></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> <span>›</span> <a href="/tools/">Tools</a> <span>›</span> <span>Notes Live Search Engine</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-banner">
+            <h1>🔍 Instant AKTU Quantum & Notes Live Search Engine</h1>
+            <p>Type any subject name or code (e.g. <code>DAA</code>, <code>DSTL</code>, <code>BCS-301</code>, <code>DBMS</code>, <code>Physics</code>) to filter instant download notes.</p>
+        </section>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Type Subject Name or Code (e.g. DAA, BCS-301, DBMS)..." onkeyup="searchNotes()" autofocus />
+        </div>
+
+        <div id="resultsGrid" class="results-grid">
+            <!-- Populated via JS -->
+        </div>
+    </div>
+
+    <script>
+        const subjectDB = [
+            { name: "Data Structures (DS)", code: "BCS-301", sem: "3rd Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Computer Organization & Arch (COA)", code: "BCS-302", sem: "3rd Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Discrete Mathematics (DSTL)", code: "BCS-303", sem: "3rd Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Operating Systems (OS)", code: "BCS-401", sem: "4th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Theory of Automata (TAFL)", code: "BCS-402", sem: "4th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Design & Analysis of Algorithms (DAA)", code: "BCS-501", sem: "5th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Database Management Systems (DBMS)", code: "BCS-502", sem: "5th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Compiler Design", code: "BCS-601", sem: "6th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Computer Networks (CN)", code: "BCS-602", sem: "6th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Artificial Intelligence (AI)", code: "BCS-701", sem: "7th Sem", branch: "CSE/IT", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Engineering Physics", code: "BAS-101", sem: "1st Sem", branch: "All Branches", link: "/syllabus/aktu-quantum-pdf-downloads.html" },
+            { name: "Engineering Mathematics-I", code: "BAS-103", sem: "1st Sem", branch: "All Branches", link: "/syllabus/aktu-quantum-pdf-downloads.html" }
+        ];
+
+        function searchNotes() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const grid = document.getElementById('resultsGrid');
+            grid.innerHTML = '';
+
+            const filtered = subjectDB.filter(s => s.name.toLowerCase().includes(query) || s.code.toLowerCase().includes(query) || s.branch.toLowerCase().includes(query));
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'res-card';
+                card.innerHTML = `
+                    <div style="font-size:12px; font-weight:700; color:#4f46e5; margin-bottom:4px;">${item.branch} | ${item.sem} (${item.code})</div>
+                    <div style="font-size:16px; font-weight:700; color:#0f172a; margin-bottom:12px;">${item.name}</div>
+                    <a href="${item.link}" style="display:block; text-align:center; background:#4f46e5; color:white; padding:8px 14px; border-radius:6px; font-size:13px; font-weight:700; text-decoration:none;">📥 Download PDF Notes →</a>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        searchNotes();
+    </script>
+
+    <footer>
+        <div class="container"><p>&copy; 2026 AKTU Results Portal. All rights reserved.</p></div>
+    </footer>
+</body>
+
+</html>

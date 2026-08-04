@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKTU Passing Marks Calculator 2026 | Kitne Marks Chahiye External Exam Me?</title>
+    <meta name="description"
+        content="Free AKTU Passing Marks Calculator 2026. Calculate exact minimum external marks needed out of 70 to pass theory exams, check grace marks eligibility, and avoid carryover back papers." />
+    <meta name="keywords"
+        content="aktu passing marks calculator, kitne marks chahiye aktu me pass hone ke liye, aktu internal external passing criteria, aktu theory passing marks out of 70, aktu 35 percent rule" />
+    <link rel="canonical" href="https://akturesults.in/tools/aktu-passing-marks-calculator.html" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #0284c7;
+            --success: #16a34a;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --border-color: #cbd5e1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--light-bg); color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%); color: white; padding: 25px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .site-title { font-size: 28px; font-weight: 800; text-decoration: none; color: white; }
+        .site-title span { color: #38bdf8; }
+
+        .breadcrumb { background: white; padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .breadcrumb span { margin: 0 8px; color: #64748b; }
+
+        .hero-banner { background: linear-gradient(135deg, #312e81 0%, #4f46e5 100%); color: white; padding: 35px 25px; border-radius: 16px; margin: 25px 0; text-align: center; }
+        .hero-banner h1 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+        .hero-banner p { font-size: 16px; opacity: 0.9; }
+
+        .calc-card { background: white; border-radius: 16px; padding: 30px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
+
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .form-group label { font-size: 13px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 6px; }
+        .form-control { width: 100%; padding: 12px 14px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 15px; outline: none; font-weight: 600; }
+        .form-control:focus { border-color: var(--primary); }
+
+        .btn-calc { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; }
+        .btn-calc:hover { opacity: 0.9; }
+
+        .res-box { display: none; margin-top: 25px; padding: 25px; border-radius: 14px; border-left: 6px solid var(--primary); }
+        .res-status { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+
+        footer { background: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
+        footer a { color: #38bdf8; text-decoration: none; }
+    </style>
+
+    <!-- ===== NON-ADSENSE ADS INTEGRATION ===== -->
+    <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+    <script src="https://quge5.com/88/tag.min.js" data-zone="257542" async data-cfasync="false"></script>
+    <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="site-title">🎓 AKTU Results <span>2026</span></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> <span>›</span> <a href="/tools/">Tools</a> <span>›</span> <span>AKTU Passing Marks Calculator</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-banner">
+            <h1>🎯 AKTU Exam Passing Marks Risk Calculator</h1>
+            <p>Enter your internal sessional marks (out of 30) to calculate exact minimum external marks required out of 70 to pass without back paper.</p>
+        </section>
+
+        <section class="calc-card">
+            <form onsubmit="calculatePass(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="internalMarks">Internal / Sessional Marks (out of 30) *</label>
+                        <input type="number" id="internalMarks" class="form-control" placeholder="e.g. 21" required min="0" max="30" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxExternal">Max External Marks *</label>
+                        <select id="maxExternal" class="form-control">
+                            <option value="70">70 Marks (Standard Theory Exam)</option>
+                            <option value="100">100 Marks (Old Scheme Theory)</option>
+                            <option value="50">50 Marks (Lab / Practical)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-calc">⚡ Calculate Required Marks & Pass Status</button>
+            </form>
+
+            <div id="resultBox" class="res-box">
+                <div id="statusTitle" class="res-status"></div>
+                <div id="statusDesc" style="font-size:16px;"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function calculatePass(e) {
+            e.preventDefault();
+            const internal = parseFloat(document.getElementById('internalMarks').value);
+            const maxExt = parseInt(document.getElementById('maxExternal').value);
+
+            // AKTU Rule: External must be >= 35% AND (Internal + External) >= 40% of total
+            const minExtRule = Math.ceil(maxExt * 0.35); // 25 out of 70
+            const totalMax = internal + maxExt; // e.g. 30 + 70 = 100
+            const minTotalNeeded = Math.ceil(totalMax * 0.40); // 40 out of 100
+
+            const extNeededForTotal = minTotalNeeded - internal;
+            const finalExtRequired = Math.max(minExtRule, extNeededForTotal);
+
+            const resBox = document.getElementById('resultBox');
+            const statusTitle = document.getElementById('statusTitle');
+            const statusDesc = document.getElementById('statusDesc');
+
+            if (finalExtRequired <= minExtRule) {
+                resBox.style.background = '#dcfce7';
+                resBox.style.borderColor = '#16a34a';
+                statusTitle.style.color = '#15803d';
+                statusTitle.innerText = `✅ Safe Zone! You need ${minExtRule} Marks in External Exam`;
+                statusDesc.innerHTML = `Since your internal marks are <strong>${internal}/30</strong>, you only need to score the baseline <strong>${minExtRule} out of 70 marks (35%)</strong> in external theory to pass smoothly!`;
+            } else if (finalExtRequired <= maxExt) {
+                resBox.style.background = '#fef3c7';
+                resBox.style.borderColor = '#d97706';
+                statusTitle.style.color = '#b45309';
+                statusTitle.innerText = `⚠️ Moderate Target: You need ${finalExtRequired} Marks out of ${maxExt}`;
+                statusDesc.innerHTML = `Your internal score is <strong>${internal}/30</strong>. To reach the combined passing requirement of 40/100, you must score at least <strong>${finalExtRequired} out of ${maxExt}</strong> in external theory!`;
+            } else {
+                resBox.style.background = '#fee2e2';
+                resBox.style.borderColor = '#dc2626';
+                statusTitle.style.color = '#b91c1c';
+                statusTitle.innerText = `🚨 High Back Paper Risk! Grace Marks May Apply`;
+                statusDesc.innerHTML = `With internal score of ${internal}/30, scoring enough for 40 total marks requires ${finalExtRequired}/${maxExt}. Prepare well and attempt 7-mark questions to qualify for <strong>AKTU 7-mark Grace Rule (PWG)</strong>.`;
+            }
+
+            resBox.style.display = 'block';
+        }
+    </script>
+
+    <footer>
+        <div class="container"><p>&copy; 2026 AKTU Results Portal. Independent Student Resource.</p></div>
+    </footer>
+</body>
+
+</html>
