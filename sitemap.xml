@@ -697,12 +697,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akturesults.in/adsense-integration.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://akturesults.in/aktu-5th-7th-semester-result-2026.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -7351,12 +7345,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akturesults.in/floating-action-button.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://akturesults.in/grade-calculator.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>daily</changefreq>
@@ -8114,12 +8102,6 @@
   </url>
   <url>
     <loc>https://akturesults.in/revaluation-process.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://akturesults.in/social-share-widget.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -8918,6 +8900,24 @@
   </url>
   <url>
     <loc>https://akturesults.in/syllabus/subjects/subject-bcs-801-machine-learning-ml.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akturesults.in/templates/components/adsense-integration.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akturesults.in/templates/components/floating-action-button.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akturesults.in/templates/components/social-share-widget.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
