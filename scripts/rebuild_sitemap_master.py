@@ -1,70 +1,80 @@
-import os, datetime
+import os, datetime, xml.sax.saxutils
+import xml.etree.ElementTree as ET
 
-BASE_URL = "https://akturesults.in"
-now_date = datetime.date.today().isoformat()
+today = datetime.datetime.now().strftime("%Y-%m-%d")
 
-pages = []
-
-# Scan all html files
+# Find all HTML files
+valid_pages = []
 for root, dirs, files in os.walk("."):
-    if ".git" in root or ".system_generated" in root or "node_modules" in root:
+    if any(p in root for p in [".git", ".system_generated", "node_modules", "scratch", "templates"]):
         continue
-    for file in files:
-        if file.endswith(".html"):
-            rel_path = os.path.relpath(os.path.join(root, file), ".").replace("\\", "/")
-            if rel_path.startswith("./"):
-                rel_path = rel_path[2:]
+    for f in files:
+        if f.endswith(".html"):
+            rel = os.path.relpath(os.path.join(root, f), ".").replace("\\", "/")
+            if rel.startswith("./"): rel = rel[2:]
             
-            # Skip test or scratch files if any
-            if "scratch" in rel_path or "test" in rel_path:
+            # Skip 404 and template snippets
+            if rel == "404.html" or rel.startswith("templates/"):
                 continue
-
-            if rel_path == "index.html":
-                url = f"{BASE_URL}/"
+                
+            # Determine priority & frequency
+            if rel == "index.html":
+                url = "https://akturesults.in/"
                 priority = "1.0"
                 changefreq = "daily"
-            elif rel_path.startswith("colleges/profiles/"):
-                url = f"{BASE_URL}/{rel_path}"
+            elif rel.startswith("tools/") or rel == "grade-calculator.html" or rel == "attendance-calculator.html" or rel == "calculators.html":
+                url = f"https://akturesults.in/{rel}"
                 priority = "0.9"
                 changefreq = "weekly"
-            elif rel_path.startswith("colleges/codes/"):
-                url = f"{BASE_URL}/{rel_path}"
+            elif rel.startswith("colleges/profiles/"):
+                url = f"https://akturesults.in/{rel}"
+                priority = "0.9"
+                changefreq = "weekly"
+            elif rel.startswith("syllabus/") or rel.startswith("notes/"):
+                url = f"https://akturesults.in/{rel}"
                 priority = "0.8"
+                changefreq = "weekly"
+            elif rel.startswith("admissions/") or rel.startswith("results/") or rel.startswith("exams/") or rel.startswith("placements/"):
+                url = f"https://akturesults.in/{rel}"
+                priority = "0.8"
+                changefreq = "weekly"
+            elif rel.startswith("colleges/codes/"):
+                url = f"https://akturesults.in/{rel}"
+                priority = "0.7"
                 changefreq = "monthly"
-            elif "predictor" in rel_path or "calculator" in rel_path or "filter-directory" in rel_path:
-                url = f"{BASE_URL}/{rel_path}"
-                priority = "0.9"
-                changefreq = "daily"
-            elif "district" in rel_path:
-                url = f"{BASE_URL}/{rel_path}"
-                priority = "0.85"
-                changefreq = "weekly"
             else:
-                url = f"{BASE_URL}/{rel_path}"
-                priority = "0.8"
-                changefreq = "weekly"
+                url = f"https://akturesults.in/{rel}"
+                priority = "0.7"
+                changefreq = "monthly"
+                
+            valid_pages.append((url, priority, changefreq))
 
-            pages.append((url, priority, changefreq))
-
-pages.sort(key=lambda x: x[0])
+valid_pages.sort(key=lambda x: x[0])
 
 xml_lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 ]
 
-for url, priority, changefreq in pages:
-    xml_lines.append("  <url>")
-    xml_lines.append(f"    <loc>{url}</loc>")
-    xml_lines.append(f"    <lastmod>{now_date}</lastmod>")
-    xml_lines.append(f"    <changefreq>{changefreq}</changefreq>")
-    xml_lines.append(f"    <priority>{priority}</priority>")
-    xml_lines.append("  </url>")
+for url, priority, changefreq in valid_pages:
+    safe_url = xml.sax.saxutils.escape(url)
+    xml_lines.append('  <url>')
+    xml_lines.append(f'    <loc>{safe_url}</loc>')
+    xml_lines.append(f'    <lastmod>{today}</lastmod>')
+    xml_lines.append(f'    <changefreq>{changefreq}</changefreq>')
+    xml_lines.append(f'    <priority>{priority}</priority>')
+    xml_lines.append('  </url>')
 
-xml_lines.append("</urlset>")
+xml_lines.append('</urlset>')
+xml_content = "\n".join(xml_lines)
 
-sitemap_content = "\n".join(xml_lines)
-with open("sitemap.xml", "w", encoding="utf-8") as f:
-    f.write(sitemap_content)
-
-print(f"Master sitemap.xml generated with {len(pages)} indexed URLs!")
+# Validate XML parsing
+try:
+    root_el = ET.fromstring(xml_content)
+    print(f"XML Validation PASSED: {len(root_el)} URLs parsed successfully with zero errors!")
+    with open("sitemap.xml", "w", encoding="utf-8") as out:
+        out.write(xml_content)
+    print(f"Master sitemap.xml generated and saved with {len(valid_pages)} clean, valid URLs!")
+except Exception as e:
+    print(f"FATAL XML PARSER ERROR: {e}")
+    raise e
