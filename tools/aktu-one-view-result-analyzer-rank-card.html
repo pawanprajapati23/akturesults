@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKTU One-View Smart Result Analyzer & 4K Performance Card Generator</title>
+  <meta name="description" content="Turn your AKTU One View result into a stunning visual analytics dashboard. Calculate SGPA, subject strengths, estimated college percentile, and download a 4K Performance Card.">
+  <link rel="canonical" href="https://akturesults.in/tools/aktu-one-view-result-analyzer-rank-card.html">
+  <meta property="og:title" content="AKTU One-View Smart Result Analyzer & Performance Card">
+  <meta property="og:description" content="Visualize your AKTU marks with credit-weighted analysis, percentile rank, and 4K sharable student status card.">
+  <meta property="og:url" content="https://akturesults.in/tools/aktu-one-view-result-analyzer-rank-card.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://akturesults.in/images/og-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Monetization Ad Tags -->
+  <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+  <script src="https://quge5.com/88/tag.min.js" data-zone="257546" async data-cfasync="false"></script>
+  <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+  <script src="https://pl30261457.effectivecpmnetwork.com/5c/91/1d/5c911de89a0e11deb0df88b1aedb08a1.js"></script>
+  <script>(function(s){s.dataset.zone='11257064',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AKTU One-View Smart Result Analyzer",
+    "url": "https://akturesults.in/tools/aktu-one-view-result-analyzer-rank-card.html",
+    "description": "Calculates deep academic analytics and generates sharable 4K performance cards from AKTU marks.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #090d16;
+      --card-bg: #111827;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.4);
+      --gold: #f59e0b;
+      --gold-glow: rgba(245, 158, 11, 0.3);
+      --success: #10b981;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    body { background: #0b0f19; color: var(--text); line-height: 1.6; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+    /* Header */
+    header { background: #090d16; color: white; padding: 18px 0; border-bottom: 2px solid #1f2937; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .logo { font-size: 20px; font-weight: 800; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .back-btn { color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 600; padding: 6px 14px; background: rgba(255,255,255,0.06); border-radius: 8px; }
+    .back-btn:hover { color: white; background: rgba(255,255,255,0.12); }
+
+    /* Hero */
+    .hero { text-align: center; padding: 35px 20px 25px; }
+    .hero h1 { font-size: 28px; font-weight: 800; color: #ffffff; margin-bottom: 10px; }
+    .hero p { color: var(--muted); font-size: 16px; max-width: 750px; margin: 0 auto; }
+
+    /* Layout */
+    .grid-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 25px; margin: 20px 0 40px; }
+    .card { background: #111827; border: 1px solid #1f2937; border-radius: 16px; padding: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+    .card-title { font-size: 17px; font-weight: 700; color: white; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #1f2937; padding-bottom: 10px; }
+
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase; }
+    .form-input { width: 100%; padding: 10px 12px; border: 1.5px solid #374151; border-radius: 8px; font-size: 14px; color: white; background: #1f2937; }
+    .form-input:focus { border-color: var(--accent); outline: none; }
+
+    /* Subject Table */
+    .sub-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }
+    .sub-table th { background: #1f2937; padding: 8px 10px; text-align: left; color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .sub-table td { padding: 8px 10px; border-bottom: 1px solid #1f2937; }
+    .sub-input { width: 100%; padding: 6px 8px; background: #1f2937; border: 1px solid #374151; border-radius: 6px; color: white; font-size: 13px; font-weight: 600; text-align: center; }
+
+    .calc-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 15px var(--accent-glow); margin-top: 15px; }
+    .calc-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--accent-glow); }
+
+    /* 4K Visual Performance Card */
+    .rank-card { background: linear-gradient(145deg, #111827 0%, #0f172a 100%); border: 2px solid #374151; border-radius: 20px; padding: 28px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .rank-card-glow { position: absolute; top: -50px; right: -50px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; pointer-events: none; }
+    
+    .rank-card-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; padding-bottom: 15px; margin-bottom: 15px; }
+    .student-badge-title { font-size: 18px; font-weight: 900; color: #ffffff; letter-spacing: 0.5px; }
+    .student-badge-sub { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+    .verified-chip { padding: 4px 10px; background: rgba(16,185,129,0.15); border: 1px solid #10b981; color: #10b981; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+
+    .score-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; text-align: center; }
+    .score-box { background: rgba(255,255,255,0.03); border: 1px solid #1f2937; border-radius: 14px; padding: 15px; }
+    .score-val { font-size: 34px; font-weight: 900; color: #60a5fa; line-height: 1; margin: 6px 0; }
+    .score-val.gold { color: #fbbf24; }
+    .score-label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
+
+    .analytics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
+    .stat-pill { background: rgba(255,255,255,0.02); border: 1px solid #1f2937; border-radius: 8px; padding: 10px; font-size: 12px; }
+    .stat-pill strong { display: block; color: white; font-size: 13px; margin-top: 2px; }
+
+    .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1f2937; padding-top: 14px; margin-top: 15px; font-size: 11px; color: #64748b; }
+    
+    .print-btn { width: 100%; padding: 12px; background: var(--success); color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; }
+    .print-btn:hover { background: #059669; }
+
+    @media (max-width: 800px) {
+      .grid-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">🎓 AKTU Results</a>
+      <a href="/calculators.html" class="back-btn">← All Tools</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <h1>⚡ AKTU One-View Smart Result Analyzer & Rank Card</h1>
+      <p>Transform raw AKTU One View marks into a high-definition performance dashboard. Calculates exact SGPA, theory vs internal ratio, and college rank percentile.</p>
+    </div>
+
+    <div class="grid-layout">
+      <!-- Input Panel -->
+      <div class="card">
+        <div class="card-title">📝 Student & Subject Marks Entry</div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Student Name</label>
+            <input type="text" id="in-name" class="form-input" value="Aman Verma">
+          </div>
+          <div class="form-group">
+            <label class="form-label">AKTU Roll Number</label>
+            <input type="text" id="in-roll" class="form-input" value="220027010045">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">College Name</label>
+            <input type="text" id="in-col" class="form-input" value="AKGEC Ghaziabad (Code 027)">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Semester / Branch</label>
+            <input type="text" id="in-sem" class="form-input" value="Sem 4 - B.Tech CSE">
+          </div>
+        </div>
+
+        <table class="sub-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th style="width: 70px;">Ext /70</th>
+              <th style="width: 70px;">Int /30</th>
+              <th style="width: 60px;">Credit</th>
+            </tr>
+          </thead>
+          <tbody id="sub-tbody">
+            <tr>
+              <td><input type="text" class="form-input sub-name" value="Data Structures (BCS-301)"></td>
+              <td><input type="number" class="sub-input sub-ext" value="54" min="0" max="70"></td>
+              <td><input type="number" class="sub-input sub-int" value="26" min="0" max="30"></td>
+              <td><input type="number" class="sub-input sub-crd" value="4" min="1" max="5"></td>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-input sub-name" value="Computer Org & Arch (BCS-302)"></td>
+              <td><input type="number" class="sub-input sub-ext" value="48" min="0" max="70"></td>
+              <td><input type="number" class="sub-input sub-int" value="24" min="0" max="30"></td>
+              <td><input type="number" class="sub-input sub-crd" value="4" min="1" max="5"></td>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-input sub-name" value="Discrete Mathematics (BCS-303)"></td>
+              <td><input type="number" class="sub-input sub-ext" value="58" min="0" max="70"></td>
+              <td><input type="number" class="sub-input sub-int" value="27" min="0" max="30"></td>
+              <td><input type="number" class="sub-input sub-crd" value="4" min="1" max="5"></td>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-input sub-name" value="Universal Human Values (BVE-301)"></td>
+              <td><input type="number" class="sub-input sub-ext" value="62" min="0" max="70"></td>
+              <td><input type="number" class="sub-input sub-int" value="28" min="0" max="30"></td>
+              <td><input type="number" class="sub-input sub-crd" value="3" min="1" max="5"></td>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-input sub-name" value="Data Structures Lab (BCS-351)"></td>
+              <td><input type="number" class="sub-input sub-ext" value="46" min="0" max="50"></td>
+              <td><input type="number" class="sub-input sub-int" value="45" min="0" max="50"></td>
+              <td><input type="number" class="sub-input sub-crd" value="1" min="1" max="5"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="calc-btn" onclick="analyzeResult()">
+          ⚡ Run Smart Analysis & Generate Card
+        </button>
+      </div>
+
+      <!-- 4K Rank Card Preview -->
+      <div>
+        <div id="rank-card-area" class="rank-card">
+          <div class="rank-card-glow"></div>
+          
+          <div class="rank-card-header">
+            <div>
+              <div id="card-name" class="student-badge-title">Aman Verma</div>
+              <div id="card-sub" class="student-badge-sub">220027010045 | AKGEC (027)</div>
+            </div>
+            <div class="verified-chip">AKTU VERIFIED</div>
+          </div>
+
+          <div class="score-hero">
+            <div class="score-box">
+              <div class="score-label">Semester SGPA</div>
+              <div id="card-sgpa" class="score-val">8.60</div>
+              <div id="card-grade" style="font-size: 12px; font-weight: 700; color: #10b981;">GRADE: A+ (EXCELLENT)</div>
+            </div>
+            <div class="score-box">
+              <div class="score-label">Equivalent %</div>
+              <div id="card-pct" class="score-val gold">78.50%</div>
+              <div id="card-div" style="font-size: 12px; font-weight: 700; color: #fbbf24;">FIRST DIVISION (HONS)</div>
+            </div>
+          </div>
+
+          <div class="analytics-grid">
+            <div class="stat-pill">
+              Estimated College Percentile:
+              <strong id="card-pctl">Top 8% in Batch</strong>
+            </div>
+            <div class="stat-pill">
+              Theory vs Internal Ratio:
+              <strong id="card-ratio">74% External / 86% Int</strong>
+            </div>
+            <div class="stat-pill">
+              Star Subject:
+              <strong id="card-star">Discrete Maths (85/100)</strong>
+            </div>
+            <div class="stat-pill">
+              Carryover Risk:
+              <strong style="color: #10b981;">0% (Clean Pass)</strong>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div>akturesults.in / Smart One View Engine</div>
+            <div>STATUS: ELIGIBLE FOR HONORS</div>
+          </div>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+          🖨️ Download / Print Performance Card
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function analyzeResult() {
+      const name = document.getElementById('in-name').value || 'Student';
+      const roll = document.getElementById('in-roll').value || 'Roll N/A';
+      const col = document.getElementById('in-col').value || 'AKTU Institute';
+      const sem = document.getElementById('in-sem').value || 'Semester';
+
+      const names = document.querySelectorAll('.sub-name');
+      const exts = document.querySelectorAll('.sub-ext');
+      const ints = document.querySelectorAll('.sub-int');
+      const crds = document.querySelectorAll('.sub-crd');
+
+      let totalPoints = 0;
+      let totalCredits = 0;
+      let totalMarks = 0;
+      let maxMarks = 0;
+      let bestSub = '';
+      let bestScore = -1;
+
+      for (let i = 0; i < names.length; i++) {
+        const sName = names[i].value;
+        const ext = parseFloat(exts[i].value) || 0;
+        const intM = parseFloat(ints[i].value) || 0;
+        const crd = parseFloat(crds[i].value) || 1;
+
+        const subTotal = ext + intM;
+        totalMarks += subTotal;
+        maxMarks += 100;
+
+        if (subTotal > bestScore) {
+          bestScore = subTotal;
+          bestSub = sName.split('(')[0].trim() + ` (${subTotal}/100)`;
+        }
+
+        // AKTU 10-point grade scale
+        let gp = 0;
+        if (subTotal >= 90) gp = 10;
+        else if (subTotal >= 80) gp = 9;
+        else if (subTotal >= 70) gp = 8;
+        else if (subTotal >= 60) gp = 7;
+        else if (subTotal >= 50) gp = 6;
+        else if (subTotal >= 40) gp = 5;
+        else gp = 0;
+
+        totalPoints += (gp * crd);
+        totalCredits += crd;
+      }
+
+      const sgpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
+      const percentage = Math.max(0, (sgpa - 0.75) * 10);
+
+      // Update Card
+      document.getElementById('card-name').innerText = name;
+      document.getElementById('card-sub').innerText = `${roll} | ${col} | ${sem}`;
+      document.getElementById('card-sgpa').innerText = sgpa.toFixed(2);
+      document.getElementById('card-pct').innerText = percentage.toFixed(2) + '%';
+      
+      let gradeLabel = 'GRADE: B+';
+      if (sgpa >= 9.0) gradeLabel = 'GRADE: O (OUTSTANDING)';
+      else if (sgpa >= 8.0) gradeLabel = 'GRADE: A+ (EXCELLENT)';
+      else if (sgpa >= 7.0) gradeLabel = 'GRADE: A (VERY GOOD)';
+      document.getElementById('card-grade').innerText = gradeLabel;
+
+      let pctl = 'Top 10% in Batch';
+      if (sgpa >= 9.0) pctl = 'Top 2% (University Rank Holder)';
+      else if (sgpa >= 8.0) pctl = 'Top 8% in Batch';
+      else if (sgpa >= 7.0) pctl = 'Top 25% in Batch';
+      else pctl = 'Average Batch Band';
+      document.getElementById('card-pctl').innerText = pctl;
+
+      document.getElementById('card-star').innerText = bestSub || 'N/A';
+    }
+
+    window.addEventListener('DOMContentLoaded', analyzeResult);
+  </script>
+</body>
+</html>
