@@ -5,3 +5,7 @@ User-agent: Mediapartners-Google
 Allow: /
 
 Sitemap: https://akturesults.in/sitemap.xml
+Sitemap: https://akturesults.in/sitemap_index.xml
+Sitemap: https://akturesults.in/sitemap-main.xml
+Sitemap: https://akturesults.in/sitemap-colleges.xml
+Sitemap: https://akturesults.in/sitemap-syllabus.xml
