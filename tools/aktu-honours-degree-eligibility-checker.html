@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKTU B.Tech Honours Degree Eligibility Checker & MOOCs Calculator</title>
+  <meta name="description" content="Check if you qualify for an AKTU B.Tech Degree with Honours. Interactive evaluation for 7.50 CGPA rule, zero back paper criteria, and 18-20 NPTEL/MOOCs credits.">
+  <link rel="canonical" href="https://akturesults.in/tools/aktu-honours-degree-eligibility-checker.html">
+  <meta property="og:title" content="AKTU B.Tech Honours Degree Eligibility Checker">
+  <meta property="og:description" content="Check your eligibility for AKTU B.Tech with Honours: 7.50 CGPA threshold, zero carryover (COP), and NPTEL Swayam credit requirements.">
+  <meta property="og:url" content="https://akturesults.in/tools/aktu-honours-degree-eligibility-checker.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://akturesults.in/images/og-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Monetization Ad Tags -->
+  <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
+  <script src="https://quge5.com/88/tag.min.js" data-zone="257546" async data-cfasync="false"></script>
+  <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
+  <script src="https://pl30261457.effectivecpmnetwork.com/5c/91/1d/5c911de89a0e11deb0df88b1aedb08a1.js"></script>
+  <script>(function(s){s.dataset.zone='11257064',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AKTU B.Tech Honours Degree Eligibility Checker",
+    "url": "https://akturesults.in/tools/aktu-honours-degree-eligibility-checker.html",
+    "description": "Calculates eligibility for AKTU B.Tech Degree with Honours based on SGPA, back paper history, and NPTEL MOOCs credits.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-dark: #312e81;
+      --accent: #6366f1;
+      --success: #059669;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    body { background: #f8fafc; color: var(--text); line-height: 1.6; }
+    .container { max-width: 1050px; margin: 0 auto; padding: 20px; }
+    
+    /* Header */
+    header { background: #1e1b4b; color: white; padding: 18px 0; border-bottom: 3px solid var(--accent); }
+    .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1050px; margin: 0 auto; padding: 0 20px; }
+    .logo { font-size: 20px; font-weight: 800; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .back-btn { color: #c7d2fe; text-decoration: none; font-size: 14px; font-weight: 600; padding: 6px 14px; background: rgba(255,255,255,0.08); border-radius: 8px; }
+    .back-btn:hover { color: white; background: rgba(255,255,255,0.15); }
+    
+    /* Hero */
+    .hero { text-align: center; padding: 35px 20px 25px; }
+    .hero h1 { font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
+    .hero p { color: var(--muted); font-size: 16px; max-width: 750px; margin: 0 auto; }
+
+    /* Layout */
+    .grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 25px; margin: 20px 0 40px; }
+    .card { background: white; border-radius: 16px; padding: 25px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+    .card-title { font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+
+    .sem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
+    .sem-item label { display: block; font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 4px; text-transform: uppercase; }
+    .sem-input { width: 100%; padding: 8px 10px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 14px; text-align: center; font-weight: 700; color: #0f172a; }
+    .sem-input:focus { border-color: var(--accent); outline: none; }
+
+    .check-group { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .check-label { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; font-weight: 600; color: #1e293b; cursor: pointer; }
+    .check-label input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--danger); }
+    .check-desc { font-size: 12px; color: #64748b; margin-top: 4px; font-weight: normal; }
+
+    .check-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(99,102,241,0.25); margin-top: 10px; }
+    .check-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(99,102,241,0.35); }
+
+    /* Result Dashboard */
+    .status-banner { padding: 20px; border-radius: 14px; text-align: center; margin-bottom: 20px; }
+    .status-banner.eligible { background: #ecfdf5; border: 2px solid #10b981; color: #065f46; }
+    .status-banner.partial { background: #fffbeb; border: 2px solid #f59e0b; color: #92400e; }
+    .status-banner.ineligible { background: #fef2f2; border: 2px solid #ef4444; color: #991b1b; }
+
+    .status-badge { font-size: 26px; font-weight: 900; margin-bottom: 6px; }
+    .status-desc { font-size: 14px; font-weight: 500; }
+
+    .criteria-list { list-style: none; margin: 15px 0; }
+    .criteria-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+    .criteria-item:last-child { border-bottom: none; }
+    .criteria-badge { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 700; }
+    .criteria-badge.pass { background: #dcfce7; color: #15803d; }
+    .criteria-badge.fail { background: #fee2e2; color: #b91c1c; }
+
+    /* Content & Guidelines */
+    .content-card { background: white; border-radius: 16px; padding: 35px; margin: 30px 0; border: 1px solid #e2e8f0; }
+    .content-card h2 { font-size: 22px; font-weight: 800; color: #0f172a; margin: 25px 0 12px; }
+    .content-card h2:first-child { margin-top: 0; }
+    .content-card p, .content-card li { font-size: 15px; color: #334155; line-height: 1.7; margin-bottom: 12px; }
+    .content-card ul { padding-left: 20px; }
+
+    @media (max-width: 800px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .sem-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">🎓 AKTU Results</a>
+      <a href="/calculators.html" class="back-btn">← All Calculators</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <h1>🎖️ AKTU B.Tech Honours Degree Eligibility Checker</h1>
+      <p>Evaluate your eligibility for "B.Tech with Honours" award based on AKTU Ordinance 10.1 (>= 7.50 CGPA rule, zero carryover policy, and 18-20 MOOCs/NPTEL credit requirements).</p>
+    </div>
+
+    <div class="grid-2">
+      <!-- Input Card -->
+      <div class="card">
+        <div class="card-title">📊 Enter Semester SGPAs</div>
+        
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 13px; font-weight: 700; color: #334155;">Admission Mode</label>
+          <select id="adm-mode" class="sem-input" style="text-align: left; margin-top: 5px;" onchange="toggleMode()">
+            <option value="regular" selected>Regular 4-Year B.Tech (Sem 1 to Sem 8)</option>
+            <option value="lateral">Lateral Entry 3-Year B.Tech (Sem 3 to Sem 8)</option>
+          </select>
+        </div>
+
+        <div class="sem-grid">
+          <div id="box-sem1" class="sem-item"><label>Sem 1</label><input type="number" id="sgpa-1" class="sem-input" step="0.01" value="7.80"></div>
+          <div id="box-sem2" class="sem-item"><label>Sem 2</label><input type="number" id="sgpa-2" class="sem-input" step="0.01" value="8.10"></div>
+          <div class="sem-item"><label>Sem 3</label><input type="number" id="sgpa-3" class="sem-input" step="0.01" value="7.90"></div>
+          <div class="sem-item"><label>Sem 4</label><input type="number" id="sgpa-4" class="sem-input" step="0.01" value="8.30"></div>
+          <div class="sem-item"><label>Sem 5</label><input type="number" id="sgpa-5" class="sem-input" step="0.01" value="7.70"></div>
+          <div class="sem-item"><label>Sem 6</label><input type="number" id="sgpa-6" class="sem-input" step="0.01" value="8.00"></div>
+          <div class="sem-item"><label>Sem 7</label><input type="number" id="sgpa-7" class="sem-input" step="0.01" value="8.40"></div>
+          <div class="sem-item"><label>Sem 8</label><input type="number" id="sgpa-8" class="sem-input" step="0.01" value="8.50"></div>
+        </div>
+
+        <div class="check-group">
+          <label class="check-label">
+            <input type="checkbox" id="has-back">
+            <div>
+              Did you ever have a Back Paper / COP in ANY semester?
+              <div class="check-desc">Even if you cleared it later in special carryover, AKTU requires zero back papers in first attempt.</div>
+            </div>
+          </label>
+        </div>
+
+        <div class="check-group">
+          <label class="check-label">
+            <input type="checkbox" id="has-grace">
+            <div>
+              Did you ever receive PWG Grace Marks?
+              <div class="check-desc">Passing with grace (PWG) automatically disqualifies honours degree eligibility.</div>
+            </div>
+          </label>
+        </div>
+
+        <div style="margin-top: 15px;">
+          <label style="font-size: 13px; font-weight: 700; color: #334155;">NPTEL / Swayam MOOCs Credits Earned</label>
+          <input type="number" id="nptel-credits" class="sem-input" style="text-align: left; margin-top: 5px;" min="0" max="30" value="20" placeholder="e.g. 20 credits">
+          <div style="font-size: 12px; color: #64748b; margin-top: 4px;">AKTU requires minimum 18-20 approved MOOCs credits for Specialization Honours.</div>
+        </div>
+
+        <button class="check-btn" onclick="evaluateHonours()">
+          🎯 Evaluate Honours Degree Eligibility
+        </button>
+      </div>
+
+      <!-- Result Card -->
+      <div class="card">
+        <div class="card-title">📋 Eligibility Evaluation Result</div>
+        
+        <div id="status-card" class="status-banner eligible">
+          <div id="status-text" class="status-badge">🎉 ELIGIBLE FOR HONOURS</div>
+          <div id="status-desc" class="status-desc">You meet all AKTU ordinance requirements for B.Tech Degree with Honours.</div>
+        </div>
+
+        <ul class="criteria-list">
+          <li class="criteria-item">
+            <div>
+              <strong>Calculated 4-Year CGPA:</strong>
+              <div style="font-size: 12px; color: #64748b;">Must be &ge; 7.50 / 10.00</div>
+            </div>
+            <div id="crit-cgpa" class="criteria-badge pass">8.09 (PASSED)</div>
+          </li>
+          <li class="criteria-item">
+            <div>
+              <strong>First Attempt Subject Clear:</strong>
+              <div style="font-size: 12px; color: #64748b;">Zero Back Paper History</div>
+            </div>
+            <div id="crit-back" class="criteria-badge pass">0 Backs (PASSED)</div>
+          </li>
+          <li class="criteria-item">
+            <div>
+              <strong>Grace Marks (PWG) Status:</strong>
+              <div style="font-size: 12px; color: #64748b;">No Grace Marks Awarded</div>
+            </div>
+            <div id="crit-grace" class="criteria-badge pass">Clean (PASSED)</div>
+          </li>
+          <li class="criteria-item">
+            <div>
+              <strong>MOOCs / NPTEL Credits:</strong>
+              <div style="font-size: 12px; color: #64748b;">Minimum 18-20 Credits Needed</div>
+            </div>
+            <div id="crit-moocs" class="criteria-badge pass">20 Credits (PASSED)</div>
+          </li>
+        </ul>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 15px; font-size: 13px; color: #334155; margin-top: 15px;">
+          <strong>💡 Pro Tip:</strong> If your CGPA is above 7.50 with zero backs, ensure you submit your NPTEL certificates to your college departmental coordinator before the 8th semester exam form deadline.
+        </div>
+      </div>
+    </div>
+
+    <!-- Guidelines Section -->
+    <div class="content-card">
+      <h2>AKTU B.Tech Honours Degree Regulations (Ordinance 10.1)</h2>
+      <p>Under Dr. A.P.J. Abdul Kalam Technical University (AKTU) Choice Based Credit System (CBCS) and National Education Policy (NEP) curriculum, a student is eligible to obtain a <strong>B.Tech Degree with Honours</strong> only when fulfilling all of the following statutory university conditions:</p>
+
+      <ul>
+        <li><strong>Condition 1 (Minimum CGPA Threshold):</strong> The student must secure a Cumulative Grade Point Average (CGPA) of <strong>7.50 or higher</strong> at the end of the final semester.</li>
+        <li><strong>Condition 2 (Zero Back Paper & First Attempt Clearance):</strong> The candidate must have passed all theory subjects, lab practicals, seminars, and project vivas in the <strong>very first attempt</strong>. If a candidate secures an 'F' grade in any semester and clears it later via carryover (COP) examination, they automatically become ineligible for the Honours degree.</li>
+        <li><strong>Condition 3 (No Grace Marks / PWG):</strong> Passing any subject with university grace marks (PWG) voids the Honours award.</li>
+        <li><strong>Condition 4 (Prescribed Time Limit):</strong> The degree must be completed within the minimum normal duration (4 academic years for regular students, 3 academic years for lateral entry students). No year-drop or repeat is permitted.</li>
+        <li><strong>Condition 5 (18-20 NPTEL Swayam MOOCs Credits):</strong> For 2018-19 batch onwards, students seeking an Honours specialization (e.g., <em>B.Tech in CSE with Honours in Artificial Intelligence</em>) must complete 18 to 20 additional MOOCs credits from the university's approved Swayam/NPTEL list.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const mode = document.getElementById('adm-mode').value;
+      const sem1 = document.getElementById('box-sem1');
+      const sem2 = document.getElementById('box-sem2');
+      if (mode === 'lateral') {
+        sem1.style.display = 'none';
+        sem2.style.display = 'none';
+      } else {
+        sem1.style.display = 'block';
+        sem2.style.display = 'block';
+      }
+      evaluateHonours();
+    }
+
+    function evaluateHonours() {
+      const mode = document.getElementById('adm-mode').value;
+      const hasBack = document.getElementById('has-back').checked;
+      const hasGrace = document.getElementById('has-grace').checked;
+      const nptelCredits = parseInt(document.getElementById('nptel-credits').value) || 0;
+
+      let sems = [];
+      if (mode === 'regular') {
+        sems = [
+          parseFloat(document.getElementById('sgpa-1').value) || 0,
+          parseFloat(document.getElementById('sgpa-2').value) || 0,
+          parseFloat(document.getElementById('sgpa-3').value) || 0,
+          parseFloat(document.getElementById('sgpa-4').value) || 0,
+          parseFloat(document.getElementById('sgpa-5').value) || 0,
+          parseFloat(document.getElementById('sgpa-6').value) || 0,
+          parseFloat(document.getElementById('sgpa-7').value) || 0,
+          parseFloat(document.getElementById('sgpa-8').value) || 0
+        ];
+      } else {
+        sems = [
+          parseFloat(document.getElementById('sgpa-3').value) || 0,
+          parseFloat(document.getElementById('sgpa-4').value) || 0,
+          parseFloat(document.getElementById('sgpa-5').value) || 0,
+          parseFloat(document.getElementById('sgpa-6').value) || 0,
+          parseFloat(document.getElementById('sgpa-7').value) || 0,
+          parseFloat(document.getElementById('sgpa-8').value) || 0
+        ];
+      }
+
+      const sum = sems.reduce((a, b) => a + b, 0);
+      const cgpa = sems.length > 0 ? (sum / sems.length) : 0;
+
+      const passCgpa = cgpa >= 7.50;
+      const passBack = !hasBack;
+      const passGrace = !hasGrace;
+      const passMoocs = nptelCredits >= 18;
+
+      // Update Badges
+      const bCgpa = document.getElementById('crit-cgpa');
+      bCgpa.innerText = `${cgpa.toFixed(2)} (${passCgpa ? 'PASSED' : 'BELOW 7.50'})`;
+      bCgpa.className = `criteria-badge ${passCgpa ? 'pass' : 'fail'}`;
+
+      const bBack = document.getElementById('crit-back');
+      bBack.innerText = passBack ? '0 Backs (PASSED)' : 'Had Back Paper (FAILED)';
+      bBack.className = `criteria-badge ${passBack ? 'pass' : 'fail'}`;
+
+      const bGrace = document.getElementById('crit-grace');
+      bGrace.innerText = passGrace ? 'Clean (PASSED)' : 'Had Grace Marks (FAILED)';
+      bGrace.className = `criteria-badge ${passGrace ? 'pass' : 'fail'}`;
+
+      const bMoocs = document.getElementById('crit-moocs');
+      bMoocs.innerText = `${nptelCredits} Credits (${passMoocs ? 'PASSED' : 'NEEDS 18+'})`;
+      bMoocs.className = `criteria-badge ${passMoocs ? 'pass' : 'fail'}`;
+
+      // Overall Card
+      const card = document.getElementById('status-card');
+      const stText = document.getElementById('status-text');
+      const stDesc = document.getElementById('status-desc');
+
+      if (passCgpa && passBack && passGrace && passMoocs) {
+        card.className = 'status-banner eligible';
+        stText.innerText = '🎉 ELIGIBLE FOR HONOURS';
+        stDesc.innerText = 'You satisfy all conditions: CGPA >= 7.50, 0 carryover backs, no grace marks, and 18+ MOOCs credits.';
+      } else if (passCgpa && passBack && passGrace && !passMoocs) {
+        card.className = 'status-banner partial';
+        stText.innerText = '🟡 PARTIALLY ON TRACK (MOOCs Pending)';
+        stDesc.innerText = `Your CGPA (${cgpa.toFixed(2)}) and clean back record qualify you for Honours, but you need ${18 - nptelCredits} more NPTEL credits.`;
+      } else {
+        card.className = 'status-banner ineligible';
+        stText.innerText = '❌ NOT ELIGIBLE FOR HONOURS';
+        let reasons = [];
+        if (!passCgpa) reasons.push('CGPA is below 7.50');
+        if (!passBack) reasons.push('Had back paper history');
+        if (!passGrace) reasons.push('Received grace marks');
+        stDesc.innerText = `Disqualification reasons: ${reasons.join(', ')}. Standard Degree will be awarded.`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', evaluateHonours);
+  </script>
+</body>
+</html>
