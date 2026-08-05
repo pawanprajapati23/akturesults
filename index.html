@@ -1865,6 +1865,15 @@
                     <h1>AKTU Result <mark>2026</mark> &amp; UPTAC Counselling Portal</h1>
                     <p class="hero-desc">Fast, accurate &amp; reliable portal for AKTU semester results, ERP login, CGPA
                         calculators, UPTAC choice filling rank predictor, college fee structures, and admissions.</p>
+                    <!-- FAST SEARCH FINDER BAR -->
+                    <div style="position:relative; width:100%; max-width:620px; margin: 18px auto 25px;">
+                        <div style="display:flex; align-items:center; background:white; border:2px solid #cbd5e1; border-radius:14px; padding:6px 16px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.08); transition:border 0.2s;" onfocuswithin="this.style.borderColor='#2563eb'">
+                            <span style="font-size:18px; margin-right:10px;">🔍</span>
+                            <input type="text" id="hero-portal-search" placeholder="Quick Search: Type College Code (e.g. 027), Tool or Subject..." style="width:100%; border:none; outline:none; font-size:15px; font-weight:600; color:#0f172a; font-family:'Plus Jakarta Sans', sans-serif;" />
+                        </div>
+                        <div id="hero-search-results" style="display:none; position:absolute; top:calc(100% + 6px); left:0; right:0; background:white; border-radius:14px; border:1px solid #e2e8f0; box-shadow:0 15px 35px rgba(0,0,0,0.15); z-index:1000; max-height:360px; overflow-y:auto; text-align:left;"></div>
+                    </div>
+
                     <div class="hero-btns">
                         <a href="/admissions/uptac-choice-filling-predictor-2026.html" class="btn-blue" style="background:#4f46e5;">🎯 Choice Filling Predictor 2026</a>
                         <a href="https://erp.aktu.ac.in" target="_blank" rel="noopener noreferrer" class="btn-blue">🔐
@@ -2682,7 +2691,14 @@
 
     <!-- ===== FLOATING COMMUNITY BANNER WIDGET ===== -->
     <script src="/js/community-banner-widget.js" defer></script>
-
+    <script src="/js/hero-fast-search.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.initHeroSearch) {
+          window.initHeroSearch('hero-portal-search', 'hero-search-results');
+        }
+      });
+    </script>
 </body>
 
 </html>
