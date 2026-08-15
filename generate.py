@@ -17,10 +17,10 @@ template = """<!DOCTYPE html>
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"EducationalOrganization","name":"{name}","alternateName":"{short_name}","url":"{website}","description":"{about}","address":{{"@type":"PostalAddress","streetAddress":"{address}","addressLocality":"{city}","addressRegion":"Uttar Pradesh","addressCountry":"IN"}},"telephone":"{phone}","email":"{email}"}}</script>
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://akturesults.in/"}},{{"@type":"ListItem","position":2,"name":"Colleges","item":"https://akturesults.in/colleges/"}},{{"@type":"ListItem","position":3,"name":"{short_name}","item":"https://akturesults.in/colleges/profiles/{filename}"}}]}}</script>
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{"@type":"Question","name":"What is the fee at {short_name}?","acceptedAnswer":{{"@type":"Answer","text":"Tuition fee Rs {fee_fmt}/yr, hostel Rs {hostel_double_fmt}/yr, mess Rs {mess_fmt}/yr. Total ~Rs {total_yr_fmt}/yr."}}}},{{"@type":"Question","name":"Highest package at {short_name}?","acceptedAnswer":{{"@type":"Answer","text":"Highest package is {highest_pkg}. Avg CSE package is {avg_pkg} with {placement_pct}% placement."}}}}]}}</script>
-    <meta name="monetag" content="4b20c6816d7cac00b3d6430a41d4d86f" />
-    <script src="https://quge5.com/88/tag.min.js" data-zone="257546" async data-cfasync="false"></script>
-    <script async="async" data-cfasync="false" src="https://pl30261454.effectivecpmnetwork.com/1018cdea726c22b2c7ca9bbd11cccba8/invoke.js"></script>
-    <script>(function(s){{s.dataset.zone='11257064',s.src='https://nap5k.com/tag.min.js'}})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    
+    
+    
+    
 <style>
 :root{{--p:#4f46e5;--pd:#3730a3;--dark:#0f172a;--bg:#f8fafc;--bdr:#e2e8f0;--grn:#16a34a;}}
 *{{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;}}
