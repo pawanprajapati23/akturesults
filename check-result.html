@@ -135,7 +135,9 @@
             footer p { font-size: 13px; }
         }
     </style>
-</meta></head>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
 <body>
 <!-- Header -->
 <header class="header">
@@ -162,6 +164,47 @@
 
 
 </div>
+<!-- Instant Launcher Widget -->
+<div style="background: linear-gradient(135deg, #1e1b4b, #312e81); border-radius: 14px; padding: 25px 20px; margin: 25px auto; color: white; box-shadow: 0 10px 25px rgba(49, 46, 129, 0.25); max-width: 800px;">
+  <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 8px; color: #fbbf24;">⚡ Instant Roll Number One View Launcher</h3>
+  <p style="font-size: 14px; opacity: 0.9; margin-bottom: 18px;">Apna AKTU Roll Number enter karein — ye automatically copy ho jayega aur 1-click me official One View portal open ho jayega:</p>
+  <div style="display: flex; gap: 10px; max-width: 600px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+    <input id="rollInput" type="text" placeholder="Enter AKTU Roll No. (e.g. 2100970100...)" style="flex: 1; min-width: 250px; padding: 14px 18px; border-radius: 8px; border: 2px solid #6366f1; font-size: 16px; outline: none; font-weight: 600; background: #ffffff; color: #1e293b;" maxlength="14" />
+    <button onclick="launchOneView()" style="background: #e85d24; color: white; border: none; padding: 14px 24px; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 12px rgba(232,93,36,0.4);">
+      🚀 Launch One View Result →
+    </button>
+  </div>
+  <div id="rollStatus" style="margin-top: 12px; font-size: 14px; color: #a7f3d0; font-weight: 600; display: none;"></div>
+</div>
+<script>
+function launchOneView() {
+  const roll = document.getElementById('rollInput').value.trim();
+  const status = document.getElementById('rollStatus');
+  if(!roll || roll.length < 9) {
+    status.style.display = 'block';
+    status.style.color = '#fca5a5';
+    status.textContent = '⚠️ Kripya valid AKTU Roll Number enter karein (kam se kam 9-13 digits)';
+    return;
+  }
+  try {
+    navigator.clipboard.writeText(roll);
+    localStorage.setItem('aktu_last_roll', roll);
+  } catch(e){}
+  status.style.display = 'block';
+  status.style.color = '#a7f3d0';
+  status.textContent = '✅ Roll number copy ho gaya! Official One View khul raha hai, wahan paste karein aur captcha dalein...';
+  setTimeout(() => {
+    window.open('https://oneview.aktu.ac.in/webpages/aktu/oneview.aspx', '_blank');
+  }, 400);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('aktu_last_roll');
+  if(saved && document.getElementById('rollInput')) {
+    document.getElementById('rollInput').value = saved;
+  }
+});
+</script>
+
 <div class="result-buttons">
 <a class="result-btn official-btn" href="https://erp.aktu.ac.in/WebPages/OneView/OneView.aspx" rel="noopener noreferrer" target="_blank">
 <span class="icon">🔍</span>
